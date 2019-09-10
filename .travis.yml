@@ -3,7 +3,7 @@ node_js:
   - "10"
 before_install:
   - chmod +x publish-book.sh
-  - openssl aes-256-cbc -K $encrypted_b59b36c11738_key -iv $encrypted_b59b36c11738_iv -in cyf-key.enc -out cyf-key -d
+  - openssl aes-256-cbc -K $encrypted_8edb916e3e35_key -iv $encrypted_8edb916e3e35_iv  -in migrabot-key.enc -out migrabot-key -d
 install:
   - npm install -g gitbook-cli markdownlint-cli
 script:
@@ -12,6 +12,6 @@ script:
   - gitbook build .
 after_success:
   - eval "$(ssh-agent)"
-  - chmod 600 ./cyf-key
-  - ssh-add ./cyf-key
+  - chmod 600 ./migrabot-key
+  - ssh-add ./migrabot-key
   - ./publish-book.sh $TRAVIS_BRANCH $TRAVIS_PULL_REQUEST

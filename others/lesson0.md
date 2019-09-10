@@ -4,7 +4,7 @@
 
 **What we will learn today?**
 
-* [CodeYourFuture](#codeyourfuture)
+* [MigraCode](#migracode)
 * [Welcome task](#welcome)
 * [Terminal](#terminal-basics)
 * [Git](#git)
@@ -13,7 +13,7 @@
 
 ---
 
-## CodeYourFuture
+## MigraCode
 
 * Who we are?
 * What we learn?
@@ -28,7 +28,7 @@
 
 ## Welcome!
 
-Welcome to CodeYourFuture and to the world of Web Development! Now that you have
+Welcome to MigraCode and to the world of Web Development! Now that you have
 built a website in CodePen and learned the basics of HTML and CSS, it's time to
 learn about the tools that web developers use in their everyday job. These tools
 will be used during the course, so it is important that you become familiarised
@@ -101,7 +101,7 @@ interact with you computer faster, by helping you to:
 * Create and delete files.
 * Install web development tools.
 * Start a server.
-* Use source control (explained [later in this lesson](#Git)).
+* Use source control (explained [later in this lesson](#git)).
 
 All this will make sense as we progress with the lessons. For now, we would like
 you to get familiar with it by following this tutorial:
@@ -240,7 +240,7 @@ During our course, we will be using [Github](https://github.com) to store our
 code. Github is the most popular Git service around, and is used by many large
 companies, like Facebook, Airbnb and The Guardian.
 
-[CodeYourFuture's Github page >](https://github.com/Code-Your-Future)
+[MigraCode's Github page >](https://github.com/Code-Your-Future)
 
 ### More Resources
 

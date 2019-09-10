@@ -4,7 +4,8 @@
 
 * Before you start
   * [Week 0 - Introduction and basic setup](/others/lesson0.md)
-  * [House Rules](house-rules.md)
+  * [House Rules](/others/house-rules.md)
+  * [Code of Conduct](CODE_OF_CONDUCT.md)
 * [HTML/CSS](/html-css/index.md)
   * [Week 1 - Semantic HTML and CSS](/html-css/week-01/lesson.md) | [Homework](/html-css/week-01/homework.md)
   * [Week 2 - Responsive Web, Layout and Flexbox](/html-css/week-02/lesson.md) | [Homework](/html-css/week-02/homework.md)
@@ -35,8 +36,6 @@
   * [Week 21 - React-router & Recap](/react/week-21/lesson.md) | [Homework](/react/week-21/homework.md)
 
 ### Useful information
-
-* [Code of Conduct](CODE_OF_CONDUCT.md)
 * [Useful links](/others/useful-links.md)
 * [Coding Standards and Best Practices](/others/PRACTICES.md)
 * [Making a Pull Request](/others/making-a-pull-request.md)
