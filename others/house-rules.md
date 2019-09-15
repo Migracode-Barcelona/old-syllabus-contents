@@ -35,6 +35,7 @@
 
 ## Code of Conduct
 
+Short version: Be nice and respectful - Long Version: [Code of Conduct](../CODE_OF_CONDUCT.md)
 Our project is dedicated to providing a harassment-free experience for everyone,
 regardless of gender, gender identity and expression, age, nationality, sexual
 orientation, disability, physical appearance, body size, race, ethnicity,

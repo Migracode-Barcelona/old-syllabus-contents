@@ -53,7 +53,7 @@ Community members have a responsibility to behave in a way that is not offensive
 ## Reporting
 
 If you are being harassed or bullied or notice that this is happening to someone else, or have any other concerns, please let a mentor know. We will help take appropriate actions to stop this behaviour, and will not take any actions without your agreement and consent.
-If you would prefer to report anonymously, [please use this form](https://goo.gl/forms/OvIFhRTpuGO6AXtA3)
+If you would prefer to report anonymously, please contact vincent@openculturalcenter.org 
 
 ## Enforcement
 

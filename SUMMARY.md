@@ -42,12 +42,8 @@
 * [Making a Pull Request](/others/making-a-pull-request.md)
 * [Career Development](/others/career-development.md)
 
-### Workshops and other resources
-
+### Other resources
 * [Coding 101](/others/coding-101.md)
-* Instructions: [Compiling SCSS](/html-css/compile-scss-instructions.md)
-* [Express Workshop](/node-db/week-13/workshop.md)
-* [Hotel Workshop](/node-db/week-15/workshop.md)
 * [AWS - DynamoDB](/others/aws-workshop-2.md)
 * [Java module](https://github.com/Thomas-Stewart/syllabus/tree/master/java)
 
@@ -55,5 +51,3 @@
 
 * [Contributing](CONTRIBUTING.md)
 * [Lesson Template](/others/lesson-template.md)
-* JavaScript I
-  * [Week 4 - Hello JavaScript](/js-core/week-04/mentors.md)
