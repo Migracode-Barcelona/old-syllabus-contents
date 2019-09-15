@@ -27,14 +27,13 @@
   * [Week 14 - Reacting to Changes](/react/week-2/lesson.md)homework.md)
   * [Week 15 - Fetching Data](/react/week-3/lesson.md)
   * [Routing (optional)](/react/week-4/lesson.md)
-* [Node/DB I](/node-db/index.md)
-  * [Week 16 - Node and Express 101](/node-db/week-13/lesson.md) | [Homework](/node-db/week-13/homework.md) | [Workshop](/node-db/week-13/workshop.md)
-  * [Week 17 - Middleware, Templating and APIs](/node-db/week-14/lesson.md) | [Homework](/node-db/week-14/homework.md)
-  * [Week 18 - Advanced Node](/node-db/week-15/lesson.md) | [Homework](/node-db/week-15/homework.md) | [Workshop](/node-db/week-15/workshop.md)
-* [Databases](/db/index.md)
-  * [Week 19 - Introduction to SQL](/db/week-1/lesson.md)
-  * [Week 20 - More SQL and integration with NodeJS](/db/week-2/lesson.md)
-  * [Week 21 - More integration with NodeJS](/db/week-3/lesson.md)
+* [Node/DB](/node/index.md)
+  * [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Homework](/node/week-13/homework.md) | [Workshop](/node/week-13/workshop.md)
+  * Week 17 - More APIs in Node
+  * [Week 18 - Introduction to SQL](/db/week-1/lesson.md)
+  * [Week 19 - More SQL and integration with NodeJS](/db/week-2/lesson.md)
+  * [Week 20 - More integration with NodeJS](/db/week-3/lesson.md)
+  * Revision
 
 ### Useful information
 * [Useful links](/others/useful-links.md)
