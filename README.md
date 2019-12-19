@@ -7,7 +7,7 @@ During the course you will learn a technology stack that helps you build
 anything from a simple website to a powerful database-driven web application or
 even a mobile app!
 
-The six-months course contains:
+The eight-months course contains:
 
 * HTML/CSS
 * Core JavaScript
