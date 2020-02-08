@@ -4,18 +4,26 @@ So far, we've been writing JavaScript in the _client_. For the _front-end_.
 Remember in our React applications, when we write code like this:
 
 ```js
-// Part of React Component that gets Beyonce albums data
-class BeyonceApp extends React.Component {
+class MartianPhotoFetcher extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgSrc: null
+    };
+  }
+
   componentDidMount() {
-    fetch(
-      "https://rawgit.com/rarmatei/f5ae92ac93d9716affab822a3f54f95b/raw/e62641b3f5ddd12c4fe34aa0912488224594e5a7/beyonce-albums.json"
-    )
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        this.setState({ songs: data });
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${this.props.date}`)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          imgSrc: data.photos[0].img_src
+        })
       });
+  }
+
+  render() {
+    return <img src={this.state.imgSrc} />;
   }
 }
 ```
@@ -370,10 +378,10 @@ Our **API** will manage Beyonce albums: Create a new album, retrieve a list of a
 
 We will build an API to manage Beyone albums. We will build these endpoints:
 
-`GET /albums` should return all the albums  
-`GET /albums/:albumId` should return a single album (that matches the passed albumId)  
-`POST /albums` should save a new album  
-`PUT /albums/:albumId` should update the album (that matches the passed albumId)  
+`GET /albums` should return all the albums
+`GET /albums/:albumId` should return a single album (that matches the passed albumId)
+`POST /albums` should save a new album
+`PUT /albums/:albumId` should update the album (that matches the passed albumId)
 `DELETE /albums/:albumId` should delete the album (that matches the passed albumId)
 
 ## GET /Albums
