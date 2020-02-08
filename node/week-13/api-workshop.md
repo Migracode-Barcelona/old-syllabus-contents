@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/status-review-orange.svg)
-
 # What did we build so far?
 
 So far, we've been writing JavaScript in the _client_. For the _front-end_.
@@ -47,11 +45,11 @@ For the server there are a lot of programming languages you can use: PHP, Python
 
 > Checkpoint: Do you understand all these terms?
 
-* [ ] Client
-* [ ] Server
-* [ ] Front-end
-* [ ] Back-end
-* [ ] Full stack developer
+- [ ] Client
+- [ ] Server
+- [ ] Front-end
+- [ ] Back-end
+- [ ] Full stack developer
 
 ## Get Started
 
@@ -82,7 +80,7 @@ Let's start by creating the `package.json` file. We can add things to it as the 
 Type the following command into your terminal to get started:
 
 ```sh
-$ npm init
+  \$ npm init
 ```
 
 This command will initialise a step-by-step process for creating a `package.json` file. You should see something like this:
@@ -106,10 +104,10 @@ Here is an example `package.json` file for a project called
 
 ### What is JSON?
 
-* JSON is a file format for saving data in a readable way
-* It is a really popular format for sending data across the web
-* JSON is a string representation of a Javascript object
-* JSON objects convert really easily to Javascript objects, and vice versa, with `JSON.parse()` and `JSON.stringify()`
+- JSON is a file format for saving data in a readable way
+- It is a really popular format for sending data across the web
+- JSON is a string representation of a Javascript object
+- JSON objects convert really easily to Javascript objects, and vice versa, with `JSON.parse()` and `JSON.stringify()`
 
 # Step 2 - Installing Express
 
@@ -231,7 +229,7 @@ Go to the terminal and type `npm start` and make sure that the server still runs
 Now that we've built the server, we need to communicate with it. We are going to
 control the server with **handler functions**.
 
-### What is a handler function?
+## What is a handler function?
 
 When a request reaches the server, we need a way of responding to it. In comes
 the handler function. The handler function is just a function which receives
@@ -295,16 +293,16 @@ congratulations! You just sent your first response from the server.
 
 > Checkpoint: Do you understand all these terms?
 
-* [ ] Client
-* [ ] Server
-* [ ] Front-end
-* [ ] Back-end
-* [ ] Full stack developer
-* [ ] Request
-* [ ] Response
-* [ ] HTTP
-* [ ] HTTP Response Codes
-* [ ] HTTP Request Methods (or Verbs)
+- [ ] Client
+- [ ] Server
+- [ ] Front-end
+- [ ] Back-end
+- [ ] Full stack developer
+- [ ] Request
+- [ ] Response
+- [ ] HTTP
+- [ ] HTTP Response Codes
+- [ ] HTTP Request Methods (or Verbs)
 
 > Exercise: Try to `console.log` the `request` object inside the handler
 > function. Restart your server, send the request again with Postman, then go to your terminal
@@ -315,12 +313,12 @@ congratulations! You just sent your first response from the server.
 At the moment our server only does one thing. When it receives a request from
 the `/` endpoint, it sends back the same response: "Yay Node Girls!".
 
-> Try typing http://localhost:3000/nodegirls and see what happens.
+> Try typing [http://localhost:3000/nodegirls](http://localhost:3000/nodegirls) and see what happens.
 
 However by making use of endpoints, we can make the server send different
 responses for different requests. This concept is called **routing**.
 
-### What is an endpoint?
+## What is an endpoint?
 
 An endpoint is the part of the URL which comes after `/`. For example:
 `/chocolate` is the "chocolate" endpoint. It's the URL to which you send a
@@ -382,7 +380,7 @@ We will build an API to manage Beyone albums. We will build these endpoints:
 
 ## GET /Albums
 
-1.  In `server.js` Add the endpoint for `GET /albums`.
+1. In `server.js` Add the endpoint for `GET /albums`.
 
 ```js
 const albumsData = [
@@ -415,9 +413,9 @@ app.get("/albums", function(req, res) {
 });
 ```
 
-2.  Test the endpoint with Postman. `GET /songs` should return a JSON reply with the array we specified.
+1. Test the endpoint with Postman. `GET /songs` should return a JSON reply with the array we specified.
 
-3.  Add another item to the array and test that the `GET /songs` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
+1. Add another item to the array and test that the `GET /songs` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
 
 # Step 7: GET /albums/:albumId
 
@@ -472,7 +470,7 @@ app.post("/albums", function(req, res) {
 
 Let's start by testing using Postman. Do a `POST` request to the endpoint and make sure it prints the console.log message we have added.
 
-> In Postman, change the request `method` to `POST` instead of `GET` and test our endpoint. It should log the message to the terminal but the request will hang because we did not end it, i.e. we did not say `res.send(something)` > ![](../assets/postman-post-method.png)
+> In Postman, change the request `method` to `POST` instead of `GET` and test our endpoint. It should log the message to the terminal but the request will hang because we did not end it, i.e. we did not say `res.send(something)` > ![POST](../assets/postman-post-method.png)
 
 So what format does the client send the data with? It is up to us, but since we already are familiar with `json`, let us use it.
 
@@ -501,19 +499,17 @@ app.post("/albums", function(req, res) {
 
 > Exercise: Use Postman to `POST` this data to `/albums` endpoint.
 
-![](../assets/postman-post.png)
+![POSTMAN POST](../assets/postman-post.png)
 
 ```json
 {
   "albumId": "13",
   "artistName": "Beyoncé",
   "collectionName": "B'Day (Deluxe Edition)",
-  "artworkUrl100":
-    "http://is5.mzstatic.com/image/thumb/Music/v4/6c/fc/6a/6cfc6a13-0633-f96b-9d72-cf56774beb4b/source/100x100bb.jpg",
+  "artworkUrl100": "http://is5.mzstatic.com/image/thumb/Music/v4/6c/fc/6a/6cfc6a13-0633-f96b-9d72-cf56774beb4b/source/100x100bb.jpg",
   "releaseDate": "2007-05-29T07:00:00Z",
   "primaryGenreName": "Pop",
-  "url":
-    "https://www.youtube.com/embed/RQ9BWndKEgs?rel=0&amp;controls=0&amp;showinfo=0"
+  "url": "https://www.youtube.com/embed/RQ9BWndKEgs?rel=0&amp;controls=0&amp;showinfo=0"
 }
 ```
 

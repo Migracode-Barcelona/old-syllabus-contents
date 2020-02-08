@@ -1,15 +1,13 @@
-![](https://img.shields.io/badge/status-review-orange.svg)
-
 # Node 1
 
 **What we will learn today?**
 
-* [What is a server?](#what-is-a-server)
-* [Node and its ecosystem](#node-and-its-ecosystem)
-* [HTTP](#http)
-* [Express](#express)
-* [APIs](#apis)
-* [Workshop](#workshop)
+- [What is a server?](#what-is-a-server)
+- [Node and its ecosystem](#node-and-its-ecosystem)
+- [HTTP](#http)
+- [Express](#express)
+- [APIs](#apis)
+- [Workshop](#workshop)
 
 ---
 
@@ -31,6 +29,15 @@ files it needs to display the website properly.
 
 ![Server flow](https://files.gitter.im/heron2014/FiiK/server.png)
 
+## HTTP
+
+> It is a protocol that browser and the server uses to talk to each other
+
+![HTTP](../assets/http_diagram.png)
+
+Read more on Mozilla's
+[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+
 ## Node and its ecosystem
 
 > [Node.js®](https://nodejs.org/en/) is a **JavaScript runtime** built on
@@ -39,12 +46,12 @@ files it needs to display the website properly.
 
 ## What is it used for?
 
-* web servers, so creating dynamic websites
-* set up a local web development environment
-* easier to build desktop applications with Electron: Slack, Visual Code, Atom
-* some of the biggest companies use Node.js in production: Netflix, Walmart,
+- web servers, so creating dynamic websites
+- set up a local web development environment
+- easier to build desktop applications with Electron: Slack, Visual Code, Atom
+- some of the biggest companies use Node.js in production: Netflix, Walmart,
   IBM, etc.
-* JavaScript everywhere (used to be PHP, Python, JavaScript, MySQL, Apache, now
+- JavaScript everywhere (used to be PHP, Python, JavaScript, MySQL, Apache, now
   JavaScript full stack)
 
 ## A simple Node.js server
@@ -96,16 +103,9 @@ console.log("Node.js web server at port 5000 is running..");
 ```
 
 > Exercise
-> How would you add another route `/mentor`?
+> What is the response if we run this server and call `http://localhost:5000/student`?
 
-## HTTP
-
-> It is a protocol that browser and the server uses to talk to each other
-
-![HTTP](../assets/http_diagram.png)
-
-Read more on Mozilla's
-[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+This server is written in Node without using any frameworks. To make life easier, we will use a popular framework called **Express** to build similar server applications.
 
 ## Express
 
@@ -152,7 +152,7 @@ _Resource_. The Resource in this case is called **posts**.
 REST is a big topic that we will revisit again. The table below from Wikipedia
 shows how a typical RESTful API would look like.
 
-![](../assets/REST.png)
+![POST](../assets/REST.png)
 [Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer#Uniform_interface)
 
 For now, remember when building APIs, to use **Resource** names to identify your
@@ -161,36 +161,34 @@ performed on those resources.
 
 ## Workshop
 
-Buckle up and start the [API workshop](./api-workshop.md).
+Buckle up and start the [API workshop](./workshop.md).
 
 ## Group Research Topics
 
-* Security: (https, same origin, cookies, xss etc..)
-* Performance: Request lifecycle (from browser to server and back), Performance
+- Security: (https, same origin, cookies, xss etc..)
+- Performance: Request lifecycle (from browser to server and back), Performance
   considerations and optimisations
-* HTTP and REST: (headers, status codes, Cookies, REST)
-* Node internals: Node event loop, Node core modules, async/sync (non-blocking
+- HTTP and REST: (headers, status codes, Cookies, REST)
+- Node internals: Node event loop, Node core modules, async/sync (non-blocking
   operations)
 
 ## Resources
 
 Take a look at the following links to learn more about Node.js.
 
-* Read: [The art of node](https://github.com/maxogden/art-of-node/#the-art-of-node)
-* Read: [Node Resources](https://node.cool#resources)
+- Read: [The art of node](https://github.com/maxogden/art-of-node/#the-art-of-node)
+- Read: [Node Resources](https://node.cool#resources)
 
 More about HTTP:
 [Tutsplus tutorial](https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
 
 More about JSON:
 
-* https://en.wikipedia.org/wiki/JSON
-* https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+- [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
+- [https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
 Heroku:
 
-* [Deploying from Git](https://devcenter.heroku.com/articles/git)
-* [Deploying Node Apps](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-
-{% include "../../others/escalation-policy.md" %}
+- [Deploying from Git](https://devcenter.heroku.com/articles/git)
+- [Deploying Node Apps](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)

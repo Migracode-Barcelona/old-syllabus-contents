@@ -8,4 +8,4 @@
 
 ## Workshop
 
-We will continue with the [API workshop](../week-13/api-workshop.md) from last week.
+We will continue with the [API workshop](../week-13/workshop.md) from last week.
