@@ -133,7 +133,7 @@ npm install express --save
 Express should now be installed. Check your `package.json` file to make sure it
 has been added as a dependency. It will look like this:
 
-![package.json screenshot](../assets/package.png)
+![package.json screenshot](./assets/package.png)
 
 # Step 3 - Building the server
 
@@ -220,7 +220,7 @@ To exit the running the server, type `crtl + c`. Instead of running the server w
 
 Under the `scripts` property, add `start: node server.js`. We can now run our server using `npm start` which will be an alias (a shortcut) to `node server.js`.
 
-![npm start](../assets/package-npm-start.png)
+![npm start](./assets/package-npm-start.png)
 
 Go to the terminal and type `npm start` and make sure that the server still runs.
 
@@ -326,7 +326,7 @@ request.
 
 ### What is URL?
 
-![alt text](../assets/http1-url-structure.png)
+![alt text](./assets/http1-url-structure.png)
 
 ## 1. Create your own endpoints and send different responses
 
@@ -470,7 +470,7 @@ app.post("/albums", function(req, res) {
 
 Let's start by testing using Postman. Do a `POST` request to the endpoint and make sure it prints the console.log message we have added.
 
-> In Postman, change the request `method` to `POST` instead of `GET` and test our endpoint. It should log the message to the terminal but the request will hang because we did not end it, i.e. we did not say `res.send(something)` > ![POST](../assets/postman-post-method.png)
+> In Postman, change the request `method` to `POST` instead of `GET` and test our endpoint. It should log the message to the terminal but the request will hang because we did not end it, i.e. we did not say `res.send(something)` > ![POST](./assets/postman-post-method.png)
 
 So what format does the client send the data with? It is up to us, but since we already are familiar with `json`, let us use it.
 
@@ -499,7 +499,7 @@ app.post("/albums", function(req, res) {
 
 > Exercise: Use Postman to `POST` this data to `/albums` endpoint.
 
-![POSTMAN POST](../assets/postman-post.png)
+![POSTMAN POST](./assets/postman-post.png)
 
 ```json
 {

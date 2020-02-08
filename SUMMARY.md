@@ -28,7 +28,7 @@
   - [Week 15 - Fetching Data](/react/week-3/lesson.md)
   - [Routing (optional)](/react/week-4/lesson.md)
 - [Node/DB](/node/index.md)
-  - [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Homework](/node/week-13/homework.md) | [Workshop](/node/week-13/workshop.md)
+  - [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Workshop](/node/workshop.md) | [Homework](/node/week-13/homework.md)
   - [Week 17 - More APIs in Node](/node/week-14/lesson.md)
   - [Week 18 - Introduction to SQL](/db/week-1/lesson.md)
   - [Week 19 - More SQL and integration with NodeJS](/db/week-2/lesson.md)

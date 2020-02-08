@@ -161,7 +161,7 @@ performed on those resources.
 
 ## Workshop
 
-Buckle up and start the [API workshop](./workshop.md).
+Buckle up and start the [API workshop](../workshop.md).
 
 ## Group Research Topics
 
