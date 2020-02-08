@@ -56,7 +56,7 @@ Read more on Mozilla's
 
 ## A simple Node.js server
 
-### Simple server\*\*
+### Simple server
 
 ```js
 const http = require("http");
@@ -70,7 +70,7 @@ server.listen(5000);
 console.log("Node.js web server at port 5000 is running..");
 ```
 
-### Server with two routes\*\*
+### Server with two routes
 
 ```js
 const http = require("http");

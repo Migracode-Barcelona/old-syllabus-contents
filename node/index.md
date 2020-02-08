@@ -2,6 +2,8 @@
 
 | Week | Content | Workshop |
 | ------------------------------- | ---------------------- ||
-| [week-13](./week-13/lesson.md) | Node, Express workshop | [Express Workshop 1](./week-13/workshop.md)|
-| [week-14](./week-14/lesson.md) | More Express | [Express Workshop 2](./week-14/lesson.md#workshop) |
-| [week-15](./week-15/lesson.md) | Node Best Practices |[Hotel workshop](./week-15/workshop.md) |
+| [week-16](./week-13/lesson.md) | Node, Express workshop | [Express Workshop](./week-13/workshop.md)|
+| [week-17](./week-14/lesson.md) | More Express | [Continue with Express Workshop ](./week-13/workshop.md)
+| [week-18](../db/week-1/lesson.md) | Introduction to SQL |
+| [week-19](../db/week-2/lesson.md) | More SQL and integration with NodeJS |
+| [week-20](../db/week-3/lesson.md) | More integration with NodeJS |
