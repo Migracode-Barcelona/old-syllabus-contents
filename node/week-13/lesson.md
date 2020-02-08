@@ -161,7 +161,7 @@ performed on those resources.
 
 ## Workshop
 
-Buckle up and start the [API workshop](../workshop.md).
+Buckle up and start the [API workshop](https://github.com/Migracode-Barcelona/syllabus-contents/blob/master/node/workshop.md).
 
 ## Group Research Topics
 

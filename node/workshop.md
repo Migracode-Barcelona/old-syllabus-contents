@@ -53,9 +53,7 @@ For the server there are a lot of programming languages you can use: PHP, Python
 
 ## Get Started
 
-Fork and clone the repo [https://github.com/CodeYourFuture/node-api-workshop](https://github.com/CodeYourFuture/node-api-workshop).
-
-It is an empty project that only includes a `.gitignore` file.
+Create a new folder called `express-api` and add a `.gitignore` file with `node_modules`.
 
 > `.gitignore` will tell Git to ignore certain files or folders and not commit them to the repository.
 

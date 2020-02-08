@@ -8,4 +8,4 @@
 
 ## Workshop
 
-We will continue with the [API workshop](../workshop.md) from last week.
+We will continue with the [API workshop](https://github.com/Migracode-Barcelona/syllabus-contents/blob/master/node/workshop.md) from last week.
