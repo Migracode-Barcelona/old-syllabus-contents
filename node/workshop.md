@@ -419,9 +419,9 @@ app.get("/albums", function(req, res) {
 });
 ```
 
-1. Test the endpoint with Postman. `GET /songs` should return a JSON reply with the array we specified.
+1. Test the endpoint with Postman. `GET /albums` should return a JSON reply with the array we specified.
 
-1. Add another item to the array and test that the `GET /songs` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
+1. Add another item to the array and test that the `GET /albums` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
 
 # Step 7: GET /albums/:albumId
 
@@ -538,25 +538,3 @@ Add the route `PUT /albums/:albumId` should update the album (that matches the p
 Change the route `GET /albums` to filter based on Genre (add more _mock_ data to the Albums Data with different Genre types)
 
 The endpoint should be `GET /albums?genre=pop` or `GET /albums?genre=rock` for example. The part of the url after the `?` is called query string parameter. Here is the documentation to show how you can retrieve and use it [http://expressjs.com/en/4x/api.html#req.query](http://expressjs.com/en/4x/api.html#req.query)
-
-## Back to React: Add a Song
-
-Back to React, change the React App for Beyonce App to add a form that adds a song to the list of songs. It should call `POST /songs/` in your API and pass it the song name (and other information that the User entered) and the API should save the song to the array of songs.
-
-### Integrate our React App
-
-In order to enable a client (a React app for example) that lives on a different domain to talk to our API, we need to enable Cross-origin resource sharing (CORS).
-
-> Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served.
-> [https://en.wikipedia.org/wiki/Cross-origin_resource_sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-
-`npm install --save cors`
-
-Then in `server.js`, add:
-
-```js
-const cors = require("cors");
-
-// before routes definition
-app.use(cors());
-```
