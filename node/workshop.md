@@ -419,9 +419,9 @@ app.get("/albums", function(req, res) {
 });
 ```
 
-1. Test the endpoint with Postman. `GET /songs` should return a JSON reply with the array we specified.
+1. Test the endpoint with Postman. `GET /albums` should return a JSON reply with the array we specified.
 
-1. Add another item to the array and test that the `GET /songs` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
+1. Add another item to the array and test that the `GET /albums` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
 
 # Step 7: GET /albums/:albumId
 
@@ -541,7 +541,7 @@ The endpoint should be `GET /albums?genre=pop` or `GET /albums?genre=rock` for e
 
 ## Back to React: Add a Song
 
-Back to React, change the React App for Beyonce App to add a form that adds a song to the list of songs. It should call `POST /songs/` in your API and pass it the song name (and other information that the User entered) and the API should save the song to the array of songs.
+Back to React, change the React App for Beyonce App to add a form that adds a song to the list of songs. It should call `POST /albums/` in your API and pass it the song name (and other information that the User entered) and the API should save the song to the array of songs.
 
 ### Integrate our React App
 
