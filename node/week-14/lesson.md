@@ -8,4 +8,6 @@
 
 ## Workshop
 
-We will continue with the [API workshop](https://github.com/Migracode-Barcelona/syllabus-contents/blob/master/node/workshop.md) from last week.
+We will continue with other [API workshop](https://github.com/alferpal/migracode-express-workshop-2) from last week.
+
+Fork the repository, download it, and start with following the [workshop.md](https://github.com/alferpal/migracode-express-workshop-2/blob/master/workshop.md)
