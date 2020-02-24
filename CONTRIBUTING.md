@@ -9,7 +9,7 @@ about each module and every class in a module, make sure to go through them (or
 add a new issue/discussion point).
 
 To contribute to the Code Your Future syllabus, fork and open a pull request to
-[this repository](https://github.com/code-your-future/syllabus).
+[this repository](https://github.com/Migracode-Barcelona/syllabus-contents).
 
 Contributions are strictly through approved Pull Requests, even for
 administrators of the repo.
