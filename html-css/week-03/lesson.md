@@ -157,7 +157,7 @@ When a user clicks on a submit button, the information in the form is sent to th
 
 ---
 
-Complete exercises 19, 20 and 21 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercises 19, 20 and 21 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## <a name="more-field-types"></a>More Field Types
 
@@ -273,7 +273,7 @@ Radio buttons are just like checkboxes, except the user can only select one opti
 
 ---
 
-Complete exercises 22, 23 and 24 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercises 22, 23 and 24 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## <a name="accessibility"></a>Accessibility
 
@@ -359,7 +359,7 @@ Fieldsets can be used for any fields that are grouped together. This is often us
 
 ---
 
-Complete exercises 25 and 26 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercises 25 and 26 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## <a name="attributes"></a>Form Attributes
 
@@ -431,7 +431,7 @@ The `checked` attribute can be added to a checkbox or radio button to pre-check 
   </label>
 </fieldset>
 
-Complete exercise 27 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercise 27 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## <a name="merge-conflicts"></a>Git Merge Conflicts
 
@@ -445,7 +445,7 @@ Sometimes Git can not automatically merge one branch into another, because each 
 
 As a developer, you have to tell Git which version of the line of code is correct.
 
-Complete exercise 28 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/CodeYourFuture/html-css-git-exercises) to learn how to resolve a merge conflict.
+Complete exercise 28 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises) to learn how to resolve a merge conflict.
 
 ## <a name="retrospective"></a>Retrospective
 

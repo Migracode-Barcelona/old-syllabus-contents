@@ -41,7 +41,7 @@ In this media query, we're assigning a red background color to the `<body>` elem
 
 Finally, we wrap all of our styles for this media query in the brackets `{` and `}`, just like a CSS rule.
 
-Complete exercise 10 from the [exercise project](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercise 10 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## Flexbox
 
@@ -159,7 +159,7 @@ Once you have flexbox applied to the container you can start adding more rules t
 
 Learn more about flexbox by reading this [helpful, visual and complete reference](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to the many properties you can use with flexbox.
 
-Complete exercises 11-17 from the [exercise project](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercises 11-17 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## Git Merging
 
@@ -171,7 +171,7 @@ This week you will learn how to merge your changes in one branch back to your ma
 
 ![Visualization of merging one branch into another](../assets/git-merge.png)
 
-Complete exercise 18 from the [exercise project](https://github.com/CodeYourFuture/html-css-git-exercises).
+Complete exercise 18 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## Resources
 
