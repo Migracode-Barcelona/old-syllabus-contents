@@ -8,7 +8,7 @@
 * [AJAX](#ajax)
 ---
 
-> Please make sure you're working on the [js-exercises repo](https://github.com/CodeYourFuture/js-exercises) **Week 5** during this class.
+> Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 5** during this class.
 
 ## JS in the Browser
 

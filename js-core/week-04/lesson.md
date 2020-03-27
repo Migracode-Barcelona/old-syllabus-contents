@@ -18,7 +18,7 @@
 
 ---
 
-> Please make sure you've forked [the js-exercises repo](https://github.com/CodeYourFuture/js-exercises) at the start of the class. This is the repo we will use during the class, and for homework.
+> Please make sure you've forked [the js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) at the start of the class. This is the repo we will use during the class, and for homework.
 
 ## Install Node
 
