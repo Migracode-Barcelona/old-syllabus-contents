@@ -13,7 +13,7 @@
 
 ---
 
-> Please make sure you're working on the [js-exercises repo](https://github.com/CodeYourFuture/js-exercises) **Week 3** during this class.
+> Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 3** during this class.
 
 ## Array find
 
