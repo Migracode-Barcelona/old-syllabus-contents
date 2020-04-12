@@ -4,153 +4,160 @@
 
 **What we will learn today?**
 
-* [Array Find](#array-find)
-* [Array Some](#array-some)
-* [Array Every](#array-every)
-* [Array Filter](#array-every)
-* [Array Map](#array-map)
-* [Array ForEach](#array-foreach)
-
----
+* [Control Flow](#control-flow)
+    * [Conditional Execution](#conditional-execution)
+    * [While loops](#while-loops)
+    * [For loops](#for-loops)
+    * [Break a loop](#break-a-loop)
+    * [Switch statement](#switch-statement)
+    * [Other ways of looping](#other-ways-of-looping)
+* [Callback functions](#callback-functions)
+    * [Arrow functions](#arrow-functions)
+    * [Chaining](#chaining)
 
 > Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 3** during this class.
 
-## Array find
+## Control Flow
 
-Imagine you have an array of names:
+When we wrote our first lines of code we saw that the execution of the program was linear, the expressions executed in a determined order, from top to the bottom of the script.
 
 ```js
-var names = ["Daniel", "James", "Irina", "Mozafar", "Ashleigh"];
+var age = 24;
+console.log("John is " + age + "years old."); // John is 24 years old.
 ```
 
-How would you find the first name that's longer than 6 characters?
+### Conditional execution
 
-You can write a predicate function that checks if a string is longer than 6 characters:
+By introducing the `if` statement, a branch is created in the execution of the program. This is called **conditional execution**, where the logic is split into different branches:
 
 ```js
-function isLongName(name) {
-  return name.length > 6;
+var age = 24;
+if (age > 18) {
+    console.log("John is an adult.")
+} else {
+    console.log("John is a young boy."); 
+} 
+```
+
+The statements inside of each `{ }` represent each branch on the logic.
+
+### While loops
+
+Programs are very efficient when executing recurring tasks, but now imagine you are asked to log numbers from 1 to 100:
+
+```js
+console.log("The count is 1");
+console.log("The count is 2");
+console.log("The count is 3");
+console.log("The count is 4");
+console.log("The count is 5");
+// ...
+console.log("The count is 100");
+```
+
+Although this would work you would need to write 100 lines of code to achieve the desired output. A better solution for this problem would require that we could execute a block of code multiple times. This form of control is what we call a loop.
+
+There are many ways to create a loop in a program, the first we will study is the `while` loop:
+
+### `while ( ) { //... }`
+
+```js
+var count = 1;
+while (count <= 100) {
+  console.log("The count is: " + count);
+  count += 1;
 }
 ```
 
-To find the first item that satisfies the predicate you would have to go through each array item, and pass it into `isLongName`. Once it returns true, we can stop going through the array and grab the item that passed the predicate's test. Sounds complicated! Thankfully there is an array method that does just this!
+The `while` statement creates a loop. The syntax is somehow similar to the `if` statement, it evaluates a condition inside the parentheses `(true|false)` and then it executes the code inside the `{ }` block only if that condition evaluates to `true`. 
 
-### `.find()`
+### For loops
 
-_Searches through the array and returns the value of the first item that satisfies a predicate function._
-
-```js
-var longName = names.find(isLongName);
-
-console.log(longName); // logs Mozafar
-```
-
-## Array some
-
-Imagine you have an array of numbers:
+Alternatively we could use a `for loop`, which will do the same as the `while do` but in a shorter way:
 
 ```js
-var numbers = [1, 3, -1, 5, 9];
-```
-
-You know that the array is supposed to contain positive numbers, but you want to check if it also contains any negative numbers.
-
-We can write a function that checks this:
-
-```js
-function isNegative(number) {
-  return number < 0;
+for (var count = 1; count <= 100; count += 1) {
+  console.log("The count is: " + count);
 }
 ```
 
-To check your array of numbers, you'd have to run this function against every number in the array. Thankfully there is an array method that does just this!
+This `for` loop it prints the same output as the `while` we study previously, the main difference is that the initialization, the condition, and the final-expression are grouped.
 
-### `.some()`
+### `for (initialization; condition; final-expression) { //... }`
 
-_Searches through an array and returns true if at least one array item satisifies the predicate function you provided._
+The initialization is `var count = 1`, the condition is `count <= 100` and the final-expression is `count += 1`. Those blocks can be seen inside the parentheses after the `for` keyword and separated by semicolons `;`, in the following order `(initialization; condition; final-expression)`.
 
-```js
-var containsNegative = ages.some(isNegative);
+### Break a loop
 
-console.log(containsNegative); // logs true
-```
-
-## Array every
-
-Imagine you have an array of people's names:
+There might be cases where you would need to stop a loop from continuing its execution, and waiting for the defined condition to evaluate to `false` is not the only solution. To stop a loop we can use the keyword `break`, let see how:
 
 ```js
-var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley"];
-```
-
-You want to check that every student in the array has a name longer than 3 characters. How do you do that for every value in the array?
-
-We can write a function that returns true or false:
-
-```js
-function isAboveThreshold(name) {
-  return name.length > 3;
+for (var count = 1; ; count += 1) {
+  if (count <= 100) {
+    console.log("The count is: " + count);
+  } else {
+    break;
+  }
 }
 ```
 
-To check that each name is longer than 3 characters, you'd have to run this function against every name in the array and return false if someone's name is 3 or fewer characters. Thankfully there is an array method that does just this!
+The provided code will output the same we saw on previous examples. This time the condition was moved to the body of the `for` loop to illustrate that:
 
-### `.every()`
+1. Use `break` to stop a loop execution.
+2. The condition in the `for` loop can be omitted.
 
-_Searches through an array and returns true if every item satisifies the predicate function you provided. Otherwise, it returns false_.
+### Switch statement
+
+It's a common pattern to see code that looks like:
 
 ```js
-var studentNameLength = students.every(isAboveThreshold);
-
-console.log(studentNameLength); // logs true
+if (os === "windows") startWindows();
+else if (os == "linux") startLinux();
+else if (os == "osx") startOSX();
+else askForOS();
 ```
 
-## Array Filter
-
-Imagine you have an array of students' test scores:
+The `switch` statement is an alternative method to solve this same problem, see the following example:
 
 ```js
-var testScores = [90, 50, 100, 66, 25, 80, 81];
-```
-
-You want to show only the test scores that are higher than 80. How do you do that for every value in the array?
-
-We can write a function that checks if one score is greater than 80:
-
-```js
-function isHighScore(score) {
-  return score > 80;
+switch (os) {
+  case "windows":
+    startWindows();
+    break;
+  case "linux":
+    startLinux();
+    break;
+  case "osx":
+    startOSX();
+    break;
+  default:
+    askForOS();
+    break;
 }
 ```
 
-To find out which scores were greater than 80, you'd have to run this function against every score in the array, and push the 80+ scores into a new array. Thankfully there is an array method that does just this!
+The program will evaluate the condition inside the parentheses `( )` and run the matching `case` statement. Note that after each statement there is a `break`, this ensures that the `switch` block exits, if omitted it will continue executing and might run code that was not intended to be run. 
 
-### `.filter()`
+### Other ways of looping
 
-_Runs every item in the array through a condition that we set, and returns a new array with the values that match the condition_.
-
-```js
-var highTestScores = testScores.filter(isHighScore);
-
-console.log(highTestScores); // logs [90, 100, 81]
-```
-
-## Array Map
-
-We learnt about the `.map()` method in the previous week. This week we'll study how it works in more depth.
-
-You might remember this example:
+As studied in the previous class some array methods will loop through the items in the array and call a function. For example: 
 
 ```js
-function double(number) {
-  return number * 2;
+var names = ["Daniel", "Mozafar", "Irina"];
+function loop(name, index) {
+  console.log("The name " + name + " is at index " + index);
 }
-
-var numbers = [1, 2, 3];
-var numbersDoubled = numbers.map(double);
+names.forEach(loop);
 ```
 
-The `map()` method runs the function we provided (`double`) on each item in the array and uses the return values to create a new array. In the example `numbersDoubled` is a new array containing `[2, 4, 6]`.
+Just like `forEach` there are many others that will also loop the items of an array, here are some examples:
+
+- `.every()`
+- `.some()`
+- `.map()`
+- `.filter()`
+
+Notice that those methods return an array when executed, on contrary to `forEach()` that returns `undefined`. This makes them ideal when you need to modify data contained on the array.
 
 ### Callback functions
 
@@ -158,7 +165,7 @@ A function that we provide to a method is commonly called a _callback_ function.
 
 We'll see callback functions used a lot more in the coming weeks. 
 
-Often, when a function is only needed for a map operation, developers will declare the callback function inside of the method call. Let's try copying and pasting the function declaration inside of the `.map()` method call.
+Often, when a function is only needed for a map operation, it can be declared _inline_. Let's try copying and pasting the function declaration inside of the `.map()` method call.
 
 ```js
 var numbers = [1, 2, 3];
@@ -176,16 +183,18 @@ var numbersDoubled = numbers.map(function (number) {
 });
 ```
 
-We can make this code even shorter still. In the latest versions of JavaScript a way of declaring functions was introduced called _arrow functions_. 
+### Arrow functions
+
+There is an alternative syntax to write a function that was introduced in newer versions of JavaScript (since ES6). It's called _arrow function_, lets see an example:
 
 ```js
 var numbers = [1, 2, 3];
-var numbersDoubled = numbers.map(number => {
+var numbersDoubled = numbers.map((number) => {
   return number * 2
 });
 ```
 
-The arrow function syntax lets you declare a function without the `function` keyword. (There are some other subtle differences between arrow functions and regular functions that you will learn about at a much later stage).
+The arrow function syntax lets you declare a function without the `function` keyword. (There are some other subtle differences between arrow functions and regular functions that you will learn later).
 
 There is one last thing you can do to make your code shorter. If you remove the braces (`{}`) from an arrow function, the body of the function will be returned without needing to write the `return` keyword.
 
@@ -195,54 +204,6 @@ var numbersDoubled = numbers.map(number => number * 2);
 ```
 
 In the example above, the expression `number * 2` is automatically returned because it comes directly after the `=>` arrow (instead of coming after curly braces). This is called an `implicit return`.
-
-## Array Foreach
-
-The `.forEach()` method is similar to `.map()` except it does not return a new array. Therefore `.forEach()` is only useful if you want to perform _side effects_.
-
-### Side effects
-
-Generally, functions should take an input and return an output (based on that input), and not do anything else.
-
-When functions meet this criteria they can be called _pure functions_.
-
-A pure function does not:
-
-* access any data unless it was passed in as a parameter
-* change data declared outside the function
-* interacts with anything outside of the function (e.g. logs a message to the console, shows a message on a website, saves data to disk)
-
-These are all example of _side effects_. Of course, from time to time, we will need to perform side effects, but we should try to avoid side effects inside of functions and only have them when absolutely necessary.
-
-### Example
-
-Say we want to log to the console a list of names.
-
-```js
-var names = ["Daniel", "mozafar", "irina"];
-```
-
-We can use `.forEach()` to go through the array, item by item, and call a function we provide.
-
-```js
-names.forEach(function(name, index) {
-  console.log(index + ": " + name);
-});
-```
-
-This logs each name to the console as hoped, but we notice that the names are not formatted correctly. You might be tempted to format the name inside of the `forEach` function.
-
-However, it is good practise to write small functions with a single responsibility. So instead, we can write a `formatName` function (which we can re-use in other places) and pass it to `.map()` before calling `.forEach()`.
-
-```js
-function formatName(name) {
-  return name.split("")[0].toUpperCase() + name.slice(1);
-}
-
-names.map(formatName).forEach(function(name, index) {
-  console.log(index + ": " + name);
-});
-```
 
 ### Chaining
 
@@ -269,6 +230,6 @@ Be careful though! You can not call `.map()` after `.forEach`.
 names.forEach(log).map(formatName); // ERROR
 ```
 
-This code does not work because `forEach()` does not return a new array (it returns `undefined`). The code is therefore attempting to call `.map()` on `undefined`, and `undefined` does not have a `.map()` method.
+This code does not work because `forEach()` does not return a new array (it returns `undefined`). The code is, therefore, attempting to call `.map()` on `undefined`, and `undefined` does not have a `.map()` method.
 
 {% include "./homework.md" %}
