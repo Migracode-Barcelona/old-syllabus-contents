@@ -71,6 +71,10 @@ while (count <= 100) {
 
 The `while` statement creates a loop. The syntax is somehow similar to the `if` statement, it evaluates a condition inside the parentheses `(true|false)` and then it executes the code inside the `{ }` block only if that condition evaluates to `true`. 
 
+### Exercise
+
+Head over to `exercise.js` and follow the instructions in the comments.
+
 ### For loops
 
 Alternatively we could use a `for loop`, which will do the same as the `while do` but in a shorter way:
@@ -86,6 +90,10 @@ This `for` loop it prints the same output as the `while` we study previously, th
 ### `for (initialization; condition; final-expression) { //... }`
 
 The initialization is `var count = 1`, the condition is `count <= 100` and the final-expression is `count += 1`. Those blocks can be seen inside the parentheses after the `for` keyword and separated by semicolons `;`, in the following order `(initialization; condition; final-expression)`.
+
+### Exercise
+
+Head over to `exercise.js` and follow the instructions in the comments.
 
 ### Break a loop
 
@@ -105,6 +113,10 @@ The provided code will output the same we saw on previous examples. This time th
 
 1. Use `break` to stop a loop execution.
 2. The condition in the `for` loop can be omitted.
+
+### Exercise
+
+Head over to `exercise.js` and follow the instructions in the comments.
 
 ### Switch statement
 
@@ -137,6 +149,10 @@ switch (os) {
 ```
 
 The program will evaluate the condition inside the parentheses `( )` and run the matching `case` statement. Note that after each statement there is a `break`, this ensures that the `switch` block exits, if omitted it will continue executing and might run code that was not intended to be run. 
+
+### Exercise
+
+Head over to `exercise.js` and follow the instructions in the comments.
 
 ### Other ways of looping
 
@@ -204,6 +220,10 @@ var numbersDoubled = numbers.map(number => number * 2);
 ```
 
 In the example above, the expression `number * 2` is automatically returned because it comes directly after the `=>` arrow (instead of coming after curly braces). This is called an `implicit return`.
+
+### Exercise
+
+Head over to `exercise.js` and follow the instructions in the comments.
 
 ### Chaining
 
