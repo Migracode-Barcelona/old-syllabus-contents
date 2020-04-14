@@ -5,15 +5,15 @@
 **What we will learn today?**
 
 * [Control Flow](#control-flow)
-    * [Conditional Execution](#conditional-execution)
-    * [While loops](#while-loops)
-    * [For loops](#for-loops)
-    * [Break a loop](#break-a-loop)
-    * [Switch statement](#switch-statement)
-    * [Other ways of looping](#other-ways-of-looping)
+  * [Conditional Execution](#conditional-execution)
+  * [While loops](#while-loops)
+  * [For loops](#for-loops)
+  * [Break a loop](#break-a-loop)
+  * [Switch statement](#switch-statement)
+  * [Other ways of looping](#other-ways-of-looping)
 * [Callback functions](#callback-functions)
-    * [Arrow functions](#arrow-functions)
-    * [Chaining](#chaining)
+  * [Arrow functions](#arrow-functions)
+  * [Chaining](#chaining)
 
 > Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 3** during this class.
 
@@ -168,10 +168,10 @@ names.forEach(loop);
 
 Just like `forEach` there are many others that will also loop the items of an array, here are some examples:
 
-- `.every()`
-- `.some()`
-- `.map()`
-- `.filter()`
+* `.every()`
+* `.some()`
+* `.map()`
+* `.filter()`
 
 Notice that those methods return an array when executed, on contrary to `forEach()` that returns `undefined`. This makes them ideal when you need to modify data contained on the array.
 
