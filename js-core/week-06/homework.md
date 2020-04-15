@@ -1,31 +1,29 @@
 # Homework
 
-1. Make sure you finish all the pending exercies in [The repo](https://github.com/Migracode-Barcelona/js-exercises).
+1. Review all exercises explained during the class in folder week-3 [Module2-JS1 Repo](https://github.com/Migracode-Barcelona/js-exercises)
+1. Do all exercises in folder week-3-practise [Module2-JS1 Repo](https://github.com/Migracode-Barcelona/js-exercises)
+1. (Delivery) Push the week-3-practise results to your GitHub account and send a notification using [Homework Form](https://form.jotformeu.com/93377027809365), use the form to notify your comments and questions about the exercises
+1. Go to [The Modern JavaScript Tutorial](https://javascript.info) and widen your knowledge on:
+- [2.12 Loops: while and for](https://javascript.info/while-for)
+- [2.13 Switch](https://javascript.info/switch)
+- [5.5 Array methods](https://javascript.info/array-methods)
+1. Go to [Codecademy’s JS Course](https://www.codecademy.com/learn/introduction-to-javascript) and do all the exercises for part 5 and 6.
 
-1. Signup to [CodeWars](https://codewars.com) and work on these challenges
 
-*functions, types, conditionals etc...*
+# Practice class
 
-- [even or odd](https://www.codewars.com/kata/even-or-odd/train/javascript)
-- [code under pressure](https://www.codewars.com/kata/you-cant-code-under-pressure-number-1/train/javascript)
-- [secret message](https://www.codewars.com/kata/jennys-secret-message/train/javascript)
-- [convert boolean](https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/train/javascript)
-- [opposite number](https://www.codewars.com/kata/opposite-number/train/javascript)
-- [return negative](https://www.codewars.com/kata/return-negative/train/javascript)
-- [hydrated](https://www.codewars.com/kata/keep-hydrated-1/train/javascript)
-- [bonus](https://www.codewars.com/kata/do-i-get-a-bonus/train/javascript)
-- [remove string spaces](https://www.codewars.com/kata/remove-string-spaces/train/javascript)
-- [remove first and last character](https://www.codewars.com/kata/remove-first-and-last-character/train/javascript)
-- [string repeat](https://www.codewars.com/kata/string-repeat/train/javascript)
-- [mathematical operations](https://www.codewars.com/kata/basic-mathematical-operations/train/javascript)
-
-Arrays (optional)
-
-- [invert values](https://www.codewars.com/kata/invert-values/train/javascript)
-- [needle in haystack](https://www.codewars.com/kata/a-needle-in-the-haystack/train/javascript)
-- [counting sheep](https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/javascript)
-- [sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
-- [people in bus](https://www.codewars.com/kata/number-of-people-in-the-bus/train/javascript)
-- [sum without highest and lowest](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
-- [reveersed array of digits](https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/javascript)
-- [slash sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
+1. Solve together the most difficult homework exercises
+1. Go to [CodeWars](https://codewars.com) and solve as many katas as you can:
+- [Reversed Strings](https://www.codewars.com/kata/reversed-strings/javascript)
+- [Remove First and Last Character](https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0)
+- [Stats: Sum of positive](https://www.codewars.com/kata/5715eaedb436cf5606000381)
+- [Find the smallest integer in the array](https://www.codewars.com/kata/find-the-smallest-integer-in-the-array/javascript)
+- [Counting sheep…](https://www.codewars.com/kata/counting-sheep-dot-dot-dot/javascript)
+- [Grasshopper - Summation](https://www.codewars.com/kata/grasshopper-summation/javascript)
+- [Stats: Square(n) Sum](https://www.codewars.com/kata/515e271a311df0350d00000f)
+- [Invert values](https://www.codewars.com/kata/invert-values/train/javascript)
+- [A Needle in the Haystack](https://www.codewars.com/kata/56676e8fabd2d1ff3000000c/javascript)
+- [Sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
+- [Number of People in the Bus](https://www.codewars.com/kata/5648b12ce68d9daa6b000099/javascript)
+- [Sum without highest and lowest number](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
+- [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
