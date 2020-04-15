@@ -316,10 +316,6 @@ var numbersDoubled = numbers.map(number => number * 2);
 
 In the example above, the expression `number * 2` is automatically returned because it comes directly after the `=>` arrow (instead of coming after curly braces). This is called an `implicit return`.
 
-### Exercise
-
-Head over to `exercise.js` and follow the instructions in the comments.
-
 ### Chaining
 
 Notice how we were able to write one method after another e.g. `names.map(formatName).forEach(log)`? This is called _method chaining_.
