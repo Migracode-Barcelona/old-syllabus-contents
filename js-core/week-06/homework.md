@@ -11,7 +11,6 @@
 
 1. Go to [Codecademy’s JS Course](https://www.codecademy.com/learn/introduction-to-javascript) and do all the exercises for part 5 and 6.
 
-
 # Practice class
 
 1. Solve together the most difficult homework exercises
@@ -30,4 +29,3 @@
 - [Number of People in the Bus](https://www.codewars.com/kata/5648b12ce68d9daa6b000099/javascript)
 - [Sum without highest and lowest number](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
 - [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
-
