@@ -203,9 +203,11 @@ The program will evaluate the condition inside the parentheses `( )` and run the
 ### Exercise
 
 Using a switch statement call the matching operative system function for each system:
+
 * windows
 * linux
 * osx
+
 Consider also the case where other values can be passed to the init function,
 if the system is not supported call the function prompt
 
