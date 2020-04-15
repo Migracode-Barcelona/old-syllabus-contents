@@ -166,7 +166,14 @@ The provided code will output the same we saw on previous examples. This time th
 
 ### Exercise
 
-Head over to `exercise.js` and follow the instructions in the comments.
+Write a program that given an array of strings, logs the first one that has length greater than 6.
+
+```js
+const names = ["Daniel", "James", "Irina", "Mozafar", "Ashleigh"];
+for (var i = 0; i < names.length; i++) {
+
+}
+```
 
 ### Switch statement
 
