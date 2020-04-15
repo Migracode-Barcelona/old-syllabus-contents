@@ -4,6 +4,12 @@
 
 **What we will learn today?**
 
+In this class you will learn when and how use loops in a programming language, one of the most important utility of computers, that is repeat tasks in a very short time very easy.
+To solve repetitive problems you will use loops `while` and `for` 
+In addition, you will learn how to use `callback functions`   
+
+**Index**
+
 * [Control Flow](#control-flow)
   * [Conditional Execution](#conditional-execution)
   * [While loops](#while-loops)
@@ -14,8 +20,6 @@
 * [Callback functions](#callback-functions)
   * [Arrow functions](#arrow-functions)
   * [Chaining](#chaining)
-
-> Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 3** during this class.
 
 ## Control Flow
 
@@ -73,7 +77,29 @@ The `while` statement creates a loop. The syntax is somehow similar to the `if` 
 
 ### Exercise
 
-Head over to `exercise.js` and follow the instructions in the comments.
+Log the Apollo 11 countdown, use the message provided as the last output.
+It starts from 8 till 0!
+
+```js
+var apolloCountdownMessage = "all engine running... LIFT-OFF!";
+var countdown = 8;
+
+console.log(apolloCountdownMessage);
+```
+
+Expected output
+```js
+8
+7
+6
+5
+4
+3
+2
+1
+0
+all engine running... LIFT-OFF!
+```
 
 ### For loops
 
@@ -93,7 +119,29 @@ The initialization is `var count = 1`, the condition is `count <= 100` and the f
 
 ### Exercise
 
-Head over to `exercise.js` and follow the instructions in the comments.
+Calculate the exponential of the even numbers from 5 to 20
+Using a for loop and the helper functions provided.
+
+```js
+function exponential(number) {
+  return number * number;
+}
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+```
+
+Expected output
+```js
+The exponential of 6 is 36
+The exponential of 8 is 64
+The exponential of 10 is 100
+The exponential of 12 is 144
+The exponential of 14 is 196
+The exponential of 16 is 256
+The exponential of 18 is 324
+```
 
 ### Break a loop
 
@@ -152,7 +200,42 @@ The program will evaluate the condition inside the parentheses `( )` and run the
 
 ### Exercise
 
-Head over to `exercise.js` and follow the instructions in the comments.
+Using a switch statement call the matching operative system function for each system:
+  - windows
+  - linux
+  - osx
+Consider also the case where other values can be passed to the init function,
+if the system is not supported call the function prompt
+
+```js
+function startWindows() {
+  console.log("Windows has started");
+}
+function startLinux() {
+  console.log("Linux has started");
+}
+function startOSX() {
+  console.log("OSX has started");
+}
+function prompt() {
+  console.log("The OS provided is not supported");
+}
+
+function init(os) {
+  // write your code here
+}
+
+init("linux");
+init("osx");
+init("other");
+```
+
+Expected output
+```js
+Linux has started
+OSX has started
+The OS provided is not supported
+```
 
 ### Other ways of looping
 
