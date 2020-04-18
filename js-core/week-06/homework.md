@@ -22,6 +22,5 @@
     1. [Invert values](https://www.codewars.com/kata/invert-values/train/javascript)
     1. [A Needle in the Haystack](https://www.codewars.com/kata/56676e8fabd2d1ff3000000c/javascript)
     1. [Sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
-    1. [Number of People in the Bus](https://www.codewars.com/kata/5648b12ce68d9daa6b000099/javascript)
     1. [Sum without highest and lowest number](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
     1. [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)

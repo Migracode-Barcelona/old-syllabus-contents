@@ -4,6 +4,12 @@
 
 **What we will learn today?**
 
+When you look at the world around you, what do you see? You see objects. In programming, objects are nothing more than representations of things. 
+In this class you will learn how to manage objects, and arrays of objects.
+At the end you will be able to manage a shopping cart of an e-commerce
+
+## Index
+
 * [Objects](#objects)
 * [Objects Get and Set](#objects-get-and-set)
 * [More complex objects](#more-complex-objects)
@@ -12,7 +18,7 @@
 * [Object.Keys()](#object-keys)
 ---
 
-> Please make sure you're working on the [js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) **Week 4** during this class.
+> Please before start the class fork and clone [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1)
 
 ## Objects
 
@@ -32,6 +38,10 @@ Useful words to remember when talking about objects:
 - **object literal**: anything that has a set of `{...}` around a set of properties is an object literal
 - **property** or **key**: `brand`, `screenSize` and `isTouchScreen` are properties/keys of the object
 - **values**: `"Lenovo"`, `13` and `true` are values of the object's properties
+
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/A-objects-intro/**
 
 ## Objects Get and Set
 
@@ -85,6 +95,10 @@ laptop.screenSize = "15 inch";
 laptop.screenSize = 15;
 ```
 
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/B-objects-get-set/**
+
 ## More Complex Objects
  Object properties can even be assigned other objects or variables too. The example below shows an object with keys that have been assigned a variable, an array, and an object.
 
@@ -101,6 +115,10 @@ var kitten = {
     }
 };
 ```
+
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/C-more-complex-objects/**
 
 ## Object Methods
 
@@ -172,6 +190,10 @@ console.log(athlete.goldMedals); // prints "25"
 console.log(athlete.silverMedals); // prints "8"
 ```
 
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/D-methods/**
+
 ## Arrays of objects
 
 In the past weeks, you've learned about using arrays of numbers, arrays of string etc... In the following, we will learn how to use arrays of objects.
@@ -214,6 +236,49 @@ function getName(kitten) {
 
 kittens.map(getName);   // returns ["Fluffy", "Megatron", "Billy"]
 ```
+
+The push method adds values to the end of an array, and the pop method does the opposite, removing the last value in the array and returning it.
+
+```js
+var sequence = [1, 2, 3];
+sequence.push(4);
+sequence.push(5);
+console.log(sequence);
+// → [1, 2, 3, 4, 5]
+```
+
+The splice method removes elements in an array, first parameter is the index of the array starting with 0, and second parameter is the number of elements to remove. 
+More info in [How to use splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+```js
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(3, 1);
+
+// removed is ["mandarin"]
+// myFish is ["angel", "clown", "drum", "sturgeon"] 
+```
+
+We can also use push and splice in arrays with objects
+
+```js
+var animals = [];
+var animal1 = {
+    name: "dog",
+    legs: 4
+};
+var animal2 = {
+    name: "chicken",
+    legs: 2
+};
+animals.push(animal1);
+animals.push(animal2);
+console.log("Name of animals = " + animals.map(a=>a.name));
+```
+
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/E-arrays-of-objects/**
+
 ## Object.Keys()
 
 Since we started JavaScript, we have used `console.log` to print things to our console.
@@ -236,5 +301,9 @@ var footballClubs = {
 console.log(Object.keys(footballClubs));
 // prints [ 'chelsea_fc', 'fc_barcelona', 'ac_milan' ]
 ```
+
+### Exercises
+
+Do all exercises in [exercises-js2-week1 repo](https://github.com/Migracode-Barcelona/exercises-js2-week1) in folder **class/F-object-keys/**
 
 {% include "./homework.md" %}
