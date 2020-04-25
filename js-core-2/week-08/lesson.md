@@ -29,15 +29,9 @@ with HTML and CSS in a browser, changing elements dynamically from user actions.
 
   - [The DOM](#the-dom)
   - [Access DOM elements](#access-dom-elements)
-    - [Preparation for exercises](#preparation-for-exercises)
-    - [Exercise (1)](#exercise-1)
   - [Attach events to DOM elements](#attach-events-to-dom-elements)
-    - [Exercise (2)](#exercise-2)
-    - [Exercise (3)](#exercise-3)
   - [Create DOM elements](#create-dom-elements)
-    - [Exercise (4)](#exercise-4)
   - [Manipulate DOM elements](#manipulate-dom-elements)
-    - [Exercise (5)](#exercise-5)
 
 ---
 
@@ -83,27 +77,9 @@ document.querySelectorAll("p");
 Both `.querySelector` and `querySelectorAll` accept a CSS selector as an input.
 `.querySelector` selects only the first element it finds, `querySelectorAll` selects all elements (it returns an array).
 
-#### Exercise (1)
+#### Exercises
 
-```js
-/*
-Task 1
-=======
-Write JavaScript below that logs:
-    1. all the "p" element nodes of the document,
-    --> should log a list of nodes with a length of 6
-
-    2. the first div element node
-    --> should log the ".site-header" node
-
-    3. the element with id "jumbotron-text"
-    --> should log the "#jumbotron-text" node
-
-    4. all the "p" elements contained inside  the .primary-content element node
-    --> should log a list of nodes with a length of 3
-
-*/
-```
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task1 in exercise.js
 
 ### Attach events to DOM elements
 
@@ -120,16 +96,9 @@ function alertSomething() {
 
 You will notice in the example that we passed a second argument to `addEventListener`. That second argument is the **function** that we want to invoke when that event has happened.
 
-#### Exercise (2)
+#### Exercises
 
-```js
-/*
-Task 2
-======
-
-When a user clicks the "ALERT" button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
-*/
-```
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task2 in exercise.js
 
 The elements returned by `document.querySelector` have the same properties as a normal HTML element: for example, you can get access to their css **styles**.
 
@@ -138,16 +107,9 @@ var myElement = document.querySelector("#myElement");
 myElement.style.backgroundColor = "red";
 ```
 
-#### Exercise (3)
+#### Exercises
 
-```js
-/*
-Task 3
-=======
-
-Write JavaScript below that changes the background colour of the page when the "Change colour" button is clicked.
-*/
-```
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task3 in exercise.js
 
 ### Create DOM elements
 
@@ -160,16 +122,9 @@ myElement.appendChild(paragraph); // now the element is added to our view, but i
 
 `document.createElement` accepts as an input any element type. So for example `document.createElement("article")` will create a new article element.
 
-#### Exercise (4)
+#### Exercises
 
-```js
-/*
-Task 4
-======
-
-When a user clicks the "Add some text" button, a new paragraph should be added below the buttons that says "Read more below."
-*/
-```
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4 in exercise.js
 
 ### Manipulate DOM elements
 
@@ -219,15 +174,8 @@ updateTitleBtn.addEventListener("click", function () {
 The above waits for click on a button. When the button is clicked, it gets the input box element (`inputBox` variable).
 To get the entered text from it, we use the `value` property: `var title = inputBox.value`.
 
-#### Exercise (5)
+#### Exercises
 
-```js
-/*
-Task 5
-======
-
-When the "Larger links!" button is clicked, the text of all links on the page should increase.
-*/
-```
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task5 in exercise.js
 
 {% include "./homework.md" %}
