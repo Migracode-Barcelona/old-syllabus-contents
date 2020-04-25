@@ -237,7 +237,7 @@ function getName(kitten) {
 kittens.map(getName);   // returns ["Fluffy", "Megatron", "Billy"]
 ```
 
-The push method adds values to the end of an array, and the pop method does the opposite, removing the last value in the array and returning it.
+The push method adds values to the end of an array.
 
 ```js
 var sequence = [1, 2, 3];
@@ -292,14 +292,14 @@ Like arrays, objects have build in methods that can help us. In this lesson, we 
 Here is an example output for using `.keys()`:
 
 ```js
-var footballClubs = {
-  chelsea_fc: 'England',
-  fc_barcelona: 'Spain',
-  ac_milan: 'Italy'
+var laptop = {
+    brand: "Lenovo",
+    screenSize: 13,
+    isTouchscreen: true
 };
 
-console.log(Object.keys(footballClubs));
-// prints [ 'chelsea_fc', 'fc_barcelona', 'ac_milan' ]
+console.log(Object.keys(laptop));
+// prints [ 'brand', 'screenSize', 'isTouchscreen' ]
 ```
 
 ### Exercises
