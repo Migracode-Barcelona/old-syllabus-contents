@@ -4,20 +4,16 @@
 
 **What we will learn today?**
 
-After long days working on black screen, with the only output of `console.log`...Today we will learn how to combine all this javascript knowledge
+After long days working on a black screen, with the only output of `console.log`...Today we will learn how to combine all this javascript knowledge
 with HTML and CSS in a browser, changing elements dynamically from user actions.
 
 **Before the class**
 
-> Please before start the class fork and clone [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2)
-
 > ---
-> Let's work on the code provided here:
-> https://github.com/Migracode-Barcelona/exercises-js2-week2/InClass/A-dom-manipulation
->
-> 1. Open "A-dom-manipulation" project in VS code
-> 2. You will have to work on the `exercise.js` file for today's homework
-> 3. View your changes by
+> 1. Please before start the class fork and clone [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2)
+> 2. Open "A-dom-manipulation" project in VS code
+> 3. You will have to work on the `exercise.js` file for today's homework
+> 4. View your changes by
 >    - using [vscode-live-server](https://github.com/ritwickdey/vscode-live-server) plugin to get live updates of your changes.
 >      - Install the plugin
 >      - Right click on `index.html` and select "Open with Live Server"
@@ -179,3 +175,4 @@ To get the entered text from it, we use the `value` property: `var title = input
 From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task5 in exercise.js
 
 {% include "./homework.md" %}
+
