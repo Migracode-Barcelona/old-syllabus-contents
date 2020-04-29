@@ -22,11 +22,11 @@ What is Code? Computer code is a **set of rules or instructions**. It is made up
 
 Let's trace these code samples together:
 
-- [Sample 1](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/I.write-tests/01-greet-people/greet-people.js) 
+- [Sample 1](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/01-greet-people/greet-people.js) 
 
-- [Sample 2](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/I.write-tests/02-remove-vowels/remove-vowels.js) 
+- [Sample 2](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/02-remove-vowels/remove-vowels.js) 
 
-- [Sample 3](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/I.write-tests/03-remove-vowels-from-array/remove-vowels-in-array.js) 
+- [Sample 3](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/03-remove-vowels-from-array/remove-vowels-in-array.js) 
 
 ## Testing our code
 
@@ -152,7 +152,7 @@ equals(myNewFunction(arg1, arg2, etc), expectedOutput)
 ```
 As you can see in this example, instead of using a number as the first argument to the `equals()` function, we have used a function instead; the one we wish to test.
 
-> Exercise: Write tests for the the exercises under `I.write-tests`
+> Exercise: Write tests for the the exercises under `II.write-tests`
 
 ### Unit testing frameworks
 

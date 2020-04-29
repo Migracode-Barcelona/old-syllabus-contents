@@ -118,10 +118,6 @@ myElement.appendChild(paragraph); // now the element is added to our view, but i
 
 `document.createElement` accepts as an input any element type. So for example `document.createElement("article")` will create a new article element.
 
-#### Exercises
-
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4 in exercise.js
-
 ### Manipulate DOM elements
 
 You can then change the text displayed inside elements using the `innerText` property:
@@ -172,7 +168,7 @@ To get the entered text from it, we use the `value` property: `var title = input
 
 #### Exercises
 
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task5 in exercise.js
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4 and Task5 in exercise.js
 
 {% include "./homework.md" %}
 
