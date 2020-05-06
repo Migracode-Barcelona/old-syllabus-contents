@@ -2,6 +2,15 @@
 
 **What we will learn today?**
 
+In this lesson you will learn about Synchronous and Asynchronous programming and what is a callback, complex concepts that write code is needed to understand them.
+Also, you will understand the architecture client/server, what HTTP works and how to use fetch.
+
+**Before the class**
+
+> 1. Please before start the class fork and clone [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3)
+
+**What we will learn today?**
+
 - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
   - [A real life example](#a-real-life-example)
   - [A Javascript example](#javascript-examples)
@@ -12,6 +21,8 @@
   - [Fetch](#fetch)
 
 ---
+
+https://github.com/Migracode-Barcelona/exercises-js2-week3
 
 ![](https://img.shields.io/badge/status-draft-darkred.svg)
 
