@@ -1,3 +1,5 @@
+![Draft lesson](https://img.shields.io/badge/status-draft-darkred.svg)
+
 # JavaScript Core II - 3
 
 **What we will learn today?**
@@ -7,9 +9,9 @@ Also, you will understand the architecture client/server, what HTTP works and ho
 
 **Before the class**
 
-> 1. Please before start the class fork and clone [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3)
+> Please before start the class fork and clone [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3)
 
-**What we will learn today?**
+## Index
 
 - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
   - [A real life example](#a-real-life-example)
@@ -21,10 +23,6 @@ Also, you will understand the architecture client/server, what HTTP works and ho
   - [Fetch](#fetch)
 
 ---
-
-https://github.com/Migracode-Barcelona/exercises-js2-week3
-
-![](https://img.shields.io/badge/status-draft-darkred.svg)
 
 ## Synchronous and Asynchronous programming
 
