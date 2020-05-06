@@ -73,6 +73,39 @@ document.querySelectorAll("p");
 Both `.querySelector` and `querySelectorAll` accept a CSS selector as an input.
 `.querySelector` selects only the first element it finds, `querySelectorAll` selects all elements (it returns an array).
 
+We can use a `<script>` tag to add JavaScript code to an HTML page.
+You should put it in the last lines of the `<body>`
+
+```js
+<html>
+  <head>
+  </head>
+  <body>
+    <h1 id="title">Hello HTML!</h1>
+
+    <script src="myfirstscript.js"></script>
+  </body>
+</html>
+```
+
+If the script is not in the same folder, in the src attribute you can lead the html to find the javascript file. The type and language attributes are not required. But use `type="text/javascript"` to define a javascript
+
+```js
+<script type="text/javascript" src="/js/myfirstscript.js"></script> 
+```
+
+And, how do we use the console.log() in the browser? Using the element panel, it is available in all browsers.
+
+Accessing element panel from Google Chrome is quite easy. All you do is head to the upper right side of your screen and click on the Menu bar -> More tools -> Developer tools.
+
+https://developers.google.com/web/tools/chrome-devtools/open
+
+When you access to it, you’ll see that it’s divided into different parts. Here’s a little breakdown of the most important parts:
+
+Elements: DOM panel is a tool used to change the page layout. You’ll have full control of HTML and CSS files and can modify them freely. 
+Console: panel will show you what’s new in developer tools. here is where you will see the output of console.log().
+
+
 #### Exercises
 
 From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task1 in exercise.js
@@ -168,7 +201,7 @@ To get the entered text from it, we use the `value` property: `var title = input
 
 #### Exercises
 
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4 and Task5 in exercise.js
+From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4, Task5 and Task6 in exercise.js
 
 {% include "./homework.md" %}
 

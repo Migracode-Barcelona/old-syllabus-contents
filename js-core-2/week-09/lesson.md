@@ -2,17 +2,14 @@
 
 **What we will learn today?**
 
-- [JavaScript Core II - 3](#javascript-core-ii---3)
-  - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
-    - [A real life example](#a-real-life-example)
-    - [A Javascript example](#a-javascript-example)
-    - [The Callstack](#the-callstack)
-    - [Callbacks](#callbacks)
-      - [Exercise (1)](#exercise-1)
-  - [How does the web work?](#how-does-the-web-work)
-    - [Client/Server architecture](#clientserver-architecture)
-    - [HTTP Requests](#http-requests)
-      - [Exercise (2)](#exercise-2)
+- [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
+  - [A real life example](#a-real-life-example)
+  - [A Javascript example](#javascript-examples)
+  - [Callbacks](#callbacks)
+- [How does the web work?](#how-does-the-web-work)
+  - [Client/Server architecture](#clientserver-architecture)
+  - [HTTP Requests](#http-requests)
+  - [Fetch](#fetch)
 
 ---
 
@@ -35,7 +32,9 @@ An example of this in real life, are phone calls and text messages.
 - Text messages are `asynchronous`. When you send a text, you can go away and do
   something else, until the other person responds.
 
-### A Javascript example
+### Javascript examples
+
+Can you analyze in what order these messages will be printed?
 
 ```js
 //synchronous
@@ -53,42 +52,43 @@ setTimeout(function () {
 console.log("Third action");
 ```
 
-### The Callstack
+And now?
 
-How does JavaScript 'know' what order its code should be run in?
+```js
+//functions
+function first(){
+  console.log("First action");
+  setTimeout(firstWithTimeout, 2000);
+}
+function firstWithTimeout(){
+  console.log("First action with timeout");
+}
 
-JavaScript is a single-threaded language, which means that normally it can handle one task at a time or a piece of code at a time. It orders what it needs to do using something called the `call stack`.
+function second(){
+  console.log("Second action");
+  setTimeout(secondWithTimeout, 1000);
+}
 
-The call stack is a data structure that works by the "Last in, First out" principle (LIFO) to store and run functions. Whenever you call a function, it gets pushed onto the stack, and when the function returns, it is popped off of the call stack.
+function secondWithTimeout(){
+  console.log("Second action with timeout");
+}
 
-This is why when you get an error in Javascript, you may see multiple lines with line numbers in the error, like:
+function third(){
+  console.log("Third action");
+}
 
+//main
+first();
+second();
+third();
 ```
-$ node my.js
-/home/dwh/my.js:2
-    console.log(message);
-                ^
 
-ReferenceError: message is not defined
-    at logSomething (/home/dwh/my.js:2:17)
-    at computeSomething (/home/dwh/my.js:6:5)
-    at Object.<anonymous> (/home/dwh/my.js:9:1)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-    at Module.load (internal/modules/cjs/loader.js:599:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)
-    at startup (internal/bootstrap/node.js:266:19)
-```
+As you can observe, functions in Javascript are asynchronous, the main code continues without waiting the function is finished.
+In some other programming languages, functions by default are synchronous.
 
-This error happened because of a problem in the `logSomething` function on line 2, which was called by the `computeSomething` function on line 6, and so on. Each line represents one entry on the call stack.
+#### Exercise
 
-Since there is only one call stack in Javascript, function execution is done one at a time from top to bottom. This means that the last function that gets pushed into the call stack is always the one to be executed when the call stack is popped. Think of it like pushing to, and popping from, an array; it's always the last item of the array that is affected.
-
-> [Let's use this tool to see how the Callstack works!](http://latentflip.com/loupe/)
-
-> So, how to the `call stack` and `asynchronous` work together? Asynchronous programming essentially helps us to make JavaScript act like a multi-threaded language -- although JavaScript only has a single call stack managing function execution, coding our JavaScript asynchronously means that we can have several functions executing at the same time.
+From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/A-timeout** do exercise.js
 
 ### Callbacks
 
@@ -143,14 +143,10 @@ function myCallbackFunction() {
 mainFunction(myCallbackFunction);
 ```
 
-#### Exercise (1)
+#### Exercise
 
-> - Using setTimeout, change the background colour of the page after 5 seconds (5000 milliseconds).
-> - Update your code to make the colour change _every_ 5 seconds to something different. Hint: try searching for `setInterval`.
->
-> ![](http://g.recordit.co/g2EqBccNzh.gif)
->
-> Complete the exercises in this [CodePen](https://codepen.io/makanti/pen/abOreLg?editors=1011)
+From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/B-movies** do exercise.js
+
 
 ## How does the web work?
 
@@ -185,16 +181,31 @@ There are two main types of requests: **GET** and **POST**.
 
 HTTP is the language of the internet. In our case we're using Javascript, but you can send HTTP requests with other laguages as well.
 
-#### Exercise (2)
+### Fetch
 
-> Complete the exercises in this [CodePen](https://codepen.io/textbook/pen/MWwMgmW?editors)
->
-> - You are given a list of movie objects to work with<br/>
-> - Use setTimeout to imitate that some actions take time
-> - Remember that setTimeout behaves asynchronously
->
-> All set, go! Work on the tasks given. Your result html will look like this:
->
-> <img alt="preview-exercise-2-result" src="https://i.imgur.com/wbrtLNL.png" width="500">
+The interface through which browser JavaScript can make HTTP requests is called fetch. By default, fetch uses GET method.
+Calling fetch returns a promise that resolves to a Response object holding information about the server’s response, such as its status code and its headers.
+The first argument to fetch is the URL that should be requested. When that URL doesn’t start with a protocol name (such as http:). When it starts with a slash (/), it replaces the current path, which is the part after the server name.
+
+The following code go to an API endpoint and get an object with weather information, as temperature and humidity.
+Execute the URL directly in the browser to see the structure and information of the result object
+
+```js
+fetch('https://fcc-weather-api.glitch.me/api/current?lat=35&lon=160')
+  .then(function(response) {
+    console.log(response.status);
+    return response.json();
+  })
+  .then(function(myJson) {
+    //console.log(myJson);
+    console.log(myJson.main.temp);
+  });
+```
+
+Get more information about fetch in [Developer Mozilla: Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+#### Exercise
+
+From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/C-fetch** do exercise.js
 
 {% include "./homework.md" %}
