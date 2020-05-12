@@ -3,303 +3,267 @@
 # JS Core III - 2
 
 ** What we will learn today?**
-* [Debugging](#good-design)
-* [Good Design](#good-design)
-* [Async and Sync revisited](#async-vs-sync)
-* [Intro to ES6](#intro-to-es6)
+
+* [Testing](#testing-our-code)
+* [Unit Testing](#unit-testing)
+* [Unit Testing Frameworks - JEST](#jest)
+* [Test-driven Development](#test-driven-development)
+* More on Testing
+  * [Test coverage](#test-coverage)
+
 
 ---
 
-# Debugging
 
-Debugging is the process of finding and resolving defects or problems within a computer program that prevent correct operation of computer software or a system.
+## Testing our code
 
-## Syntax bugs
-A syntax bug is an error caused by something the programmer has typed – it could be a spelling mistake or a command that the computer doesn’t understand.
+We have just traced the output of some code on paper, but how do ensure that the code actually does what it is supposed to do when we run it.
 
-## Logical bugs
-A logical bug is an error which means that even though the computer is able to carry out its instructions, it doesn’t act as the programmer intended or the user expects.
+> Discussion: How have we been testing our code so far? How do ensure it is *correct*. What is "*correct*" anyhow?
 
-> Exercise: This website ([https://kabaros.github.io/dom-ajax-repo-solution](https://kabaros.github.io/dom-ajax-repo-solution)) has *bugs*. Use Chrome Developer Tools to find out what is causing these issues.
+In many organisations, there are full teams dedicated to **testing** and ensuring that the code written behaves correctly, to report **bugs** and make sure that they are fixed on time. In general, **Quality Assurance** is a responsibility of everyone in a team starting from Project Manager, Scrum Masters, Developers and Testers.
 
-> Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+There are typically several levels of testing when working on a project:
 
-> The terms "bug" and "debugging" are popularly attributed to Admiral Grace Hopper in the 1940s.[1] While she was working on a Mark II computer at Harvard University, her associates discovered a moth stuck in a relay and thereby impeding operation, whereupon she remarked that they were "debugging" the system
+- Unit testing
+- Integration testing
+- Functional, End to End testing and User Acceptance Testing (UAT)
 
-# Good Design
+[This answer from Stack OverFlow](https://stackoverflow.com/a/4904533) has a good explanation of types of testing. The defintions for Functional, e2e and UAT are often mean different things in different teams, the responisibility for them also falls on different individuals depending on the team.
 
-Design is important if we want our code to be understandable (both to other
-humans, but also to us in the future), to be easy to use and easy to expand.
+*Unit testing* though is always the responsibility of the Developer, and it is a very important skill for any professional developer to be able to write tests, and also write code that is testable.
 
-There are three main principles you need to know now: clarity, reusability and
-extensibility. There are also others, but they are deeply related to these
-three.
-
-* Ease of Maintenance / Clarity
-  * Naming
-  * Commenting
-  * Clear logic
-  * Concise
-  * Formatting
-  * Avoiding Redundancy
-
-* Reusability
-  * DRY
-  * Single Reponsibility
-    * Avoiding global state (scope)
-    * Predictability and Ease of testing
-
-* Extensibility
-  * Avoiding being unnecessarily specific (e.g. magic numbers)
-
-Now let's take a look at a bigger example of a badly written function
+> Discussion: What is testable code?
 
 ```js
-function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
-  var totalIncomeTax = incomeTax1 + incomeTax2;
-  var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
+var result;
 
-  if (taxCode === "1150L") {
-    nationalInsurance = salary * 0.1;
-  } else if (taxCode === "ST") {
-    nationalInsurance = salary * 0.05;
-  } else {
-    nationalInsurance = salary * 0.08;
-  }
+function getMentorInfo(mentors, name) {
+    var greeting = 'Hello ';
 
-  var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
+    result = mentors.find(function (person) {
+        return person.name === name;
+    });
 
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
+    var mentorTitle = 'Junior Developer';
 
-  return (
-    "Your gross income is £" +
-    originalSalary.toString() +
-    " and your net income is £" +
-    salary.toString() +
-    "."
-  );
+    if (result.yearsOfExp > 10) {
+        mentorTitle = 'Senior Developer';
+    } else if (result.yearsOfExp > 20) {
+        mentorTitle = 'Very Senior Developer';
+    }
+
+    result.jobTitle = mentorTitle;
+    result.fullName = result.title + ' ' + result.name;
+
+    return result;
 }
 
-console.log(myFunction(28000, "1150L", 1000, 580, false));
+/*
+  var mentors = [
+      {
+          name: 'Irina',
+          title: 'Dr.',
+          yearsOfExperience: 10
+      }, {
+          name: 'Ashleigh',
+          title: 'Dame',
+          yearsOfExperience: 20
+      }, {
+          name: 'Etza',
+          title: 'Professor',
+          yearsOfExperience: 30
+      }
+  ];
+  
+  var result = getMentorInfo(mentors, 'Etza')
+  Trace the value of "result"
+*/
 ```
 
-What is wrong with this function?
+## Unit Testing
 
-1. Naming: the function has a bad name, myFunction() tells you nothing about
-   what the function does. It's also considered bad practice to name variables
-   vaguely by separating them through numbers (incomeTax1, incomeTax2, etc). If
-   you find yourself doing this then you should either use an array (such as
-   incomeTax[]).
+Testing is a key skill for any software programmer. We need to make sure our
+software is thoroughly tested, otherwise bad things happen. Testing makes sure
+our programs behave like we intend them to do - **if we don't test, we can cause
+severe bugs**. Bad software can make planes crash, companies bankrupt, and users
+of your software really frustrated.
 
-2. Commenting: the function isn't documented at all. It's very difficult to
-   understand what the function's purpose is and how each part of the code
-   contributes to it. By writing comments, the coder communicates their
-   reasoning and helps the function be human readable.
+There are different levels on which we can test software, for example
+integration testing, end-to-end testing, and unit testing. Today we will deal
+with unit testing, which is probably the most universal testing discipline.
 
-3. Layout/formatting: unnecessary spacing between the if and else statement.
+A unit test is exactly that - it tests a _unit_ of code. "Unit" can mean
+different things, but in JavaScript it usually refers to a single function.
 
-4. Single responsibility: the function doesn't have a single purpose. It
-   calculates national insurance and salary deductions. Maybe the national
-   insurance calculation could be moved to a separate function.
+Remember when we talked about functions? Functions take _input_ (as arguments),
+do something with it (in the function body), and return _output_ (using the
+`return` statement). Ideally, a function should always return the same output if
+the same input is given. It makes it predictable and testable - and that's what
+we want!
 
-5. Input variable being overwritten: the function requires gross salary (before
-   deductions) and net salary (after deductions) the `salary` input variable is
-   therefore copied into an `originalSalary` variable so that it can be changed.
-   It would be much clearer to create a new `netSalary` variable and leave
-   `salary` unmodified.
+```
+         |-----------------|
+input => | doing something | => output
+         |-----------------|
+```
 
-6. DRY principle: the function validates the DRY (Don't Repeat Yourself) rule.
-   The line where a deduction is taken from the salary is repeated 3 times with
-   different indices. This can be replaced with a `for` loop.
-
-7. Magic numbers. The code contains a lot of magic numbers, including `17775`,
-   `0.09` and `0.1`.
-
-8. Useless parameters: the code contains a variable which isn't used. They
-   should be removed because they are confusing. It is tempting when you're
-   starting to code a function to add more parameters thinking that you might
-   need them, but it's important to remove them if you don't end up using them.
-
-> Exercise: Working in pairs, go through all of these issues and make
-> appropriate improvements to the code.
-
-# Async vs Sync
-ToDO: Trace async code on paper
-
-- Different ways of doing async in JavaScript
-
-
-# Intro to ES6
-
-ECMAScript 2015 (or ES6) is a significant update to JavaScript that introduces
-new syntax for writing complex applications. 
-
-## const and let
-
-You have already come across the `var` keyword as a way to create new variables.
-The `let` and `const` keywords are also used for variable creation, but the
-variables created using these keywords have different scope. Var has "function
-scope", whereas let and const have "block scope".
-
-> Exercise: This **badly designed** function will throw the error `message is
-> not defined`. What is the problem, and how could we fix it?
+So, when unit testing a function, we want to make sure that _for a certain
+input, we get the expected output_. For this we need to make sure that the
+output matches our expectations. In the simplest form that means we do an
+equality check:
 
 ```js
-function compareNumbers(m, n) {
-  if (m < n) {
-    let message = m + " is smaller than " + n;
-  } else {
-    let message = m + " is bigger than or equal to " + n;
-  }
-
-  return message;
-}
+myFunction(input) === expectedOutput;
 ```
 
-The `const` keyword is similar to `let`, the only difference is that a variable
-declared using `const` can't be changed after it is assigned.
+We can formalise this using another function that compares two values and
+complains when they do not match. Such a function is prepared in
+`unit-testing/equals.js`.
 
-> Exercise: What advantages might a block scope variable have over a function
-> scope variable? In what situation might you want to use `const` instead of a
-> variable that can be re-assigned?
-
-> Exercise: Let's update this code to use `let` and `const` instead of `var`
+We can use this function to simply compare to values:
 
 ```js
-function getCircleArea(radius) {
-  var pi = Math.PI;
-  var rSquared = Math.pow(radius, 2);
-
-  return pi * rSquared;
-}
-
-function getCircleAreas(radiusArr) {
-  var areasArr = [];
-
-  for (var i = 0; i < radiusArr.length; i++) {
-    var circleArea = getCircleArea(radiusArr[i]);
-    areasArr.push(circleArea);
-  }
-
-  return areasArr;
-}
+equals(1, 1); // This should pass
+equals(1, 2); // This should fail
+equals("Hello", "Hello"); // This should pass
 ```
 
-## Template literals
+Now we can use this `equals()` function to test our own code by comparing a
+function result to an expected value.
 
-We do a lot of string concatenation in JavaScript - ES6 introduces a more
-elegant way of accomplishing the same.
+Remember that one function can be used as an argument when a second function is called. In this instance, the function we are testing would represent our first function, and our `equals()` function would represent the second, like so...
 
 ```js
-function greeting(name) {
-  return "Hello " + name + ", welcome to JS core 3!";
-}
+equals(myNewFunction(arg1, arg2, etc), expectedOutput)
+```
+As you can see in this example, instead of using a number as the first argument to the `equals()` function, we have used a function instead; the one we wish to test.
+
+> Exercise: Write tests for the the exercises under `II.write-tests`
+
+### Unit testing frameworks
+
+There are lots of other things you might want to test for than two things being
+equal. You might want to test if a number is smaller or greater than another, if
+a function was called, if an error happened, or if one thing happened before
+another thing, or how long a function call took to execute.
+
+We don't have to build all these things ourselves. Instead there are _unit
+testing frameworks_ that take all that work off our shoulders. All we need to do
+is provide the code and the tests.
+
+### Jest
+
+The unit testing framework we are trying to day is called
+[Jest](https://facebook.github.io/jest/). It's created by Facebook and useful
+for all kinds of unit testing (especially testing React, which we will do in a
+later lesson).
+
+Look into your `jest/` folder. You will find a file there, `sum.test.js`. The
+suffix `.test.js` tells Jest that this file contains tests it should execute. To
+execute the test, run the following command in your terminal:
+
+```sh
+npm test
 ```
 
-Rewriting this function in ES6, we have
+This command runs the test in `sum.test.js`, which tests the `sum()` function.
+You can see the test output and the fact that the test passed.
+
+Tests cases in Jest have the following structure:
 
 ```js
-function greeting(name) {
-  return `Hello ${name}, welcome to JS core 3!`;
-}
+test("test description", function() {
+  // Test instructions
+});
 ```
 
-## Arrow functions
+Jest provides a set of functions that you can use to write your actual tests.
+They are created in a way that imitates natural language, for example:
 
-ES6 also has a new way of declaring functions. Let's see how it works.
+```
+_Expect_ sum of 1 and 2 _to be_ 3
+```
+
+becomes
 
 ```js
-// before 
-function sum(a, b, c) {
-  return a + b + c;
-}
-
-// ES6
-const sum = (a, b, c) => {
-  return a + b + c;
-}
+expect(sum(1, 2)).toBe(3);
 ```
 
-If the function only contains one expression, the curly braces and the `return` 
-are optional and we can write the whole function in one line. 
+You can add multiple test statements in the same test case (a test case is one
+call of the `test` function, but you can also create multiple test cases in one
+file. It is important that you give all your test cases meaningful descriptions.
 
-```js
-const sum = (a, b, c) => a + b + c;
+> _Exercise:_ Add another test case to `sum.test.js`. Is the sum of 10 and -10
+> really zero? Run the tests using Jest.
+
+> _Exercise:_ Take the `findNeedle` function you have tested previously, copy it
+> into the `jest/` folder and call it `findNeedle.test.js`. Then write a test to
+> be used with Jest, similar to `sum.test.js`. Make sure you cover multiple
+> inputs and give all tests meaningful descriptions! Run the tests using Jest.
+
+## Test Driven Development
+
+Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: requirements are turned into very specific test cases, then the software is improved to pass the new tests, only. This is opposed to software development that allows software to be added that is not proven to meet requirements. [Wikipedia]
+
+When developing following TDD, you normally follow this sequence:
+
+1. Add a test
+2. Run all tests and see if the new test fails (Red)
+3. Write the simplest code to make the test pass (Green)
+4. Refactor
+5. Repeat
+
+
+Read more on the [Wikipedia article](https://en.wikipedia.org/wiki/Test-driven_development) and the resources at the end.
+
+[Red Green Refactor](https://www.codecademy.com/articles/tdd-red-green-refactor)
+
+> Exercise: Two mentors pair on a problem doing "ping pong" TDD. One writing the test, the other writing the implementation.
+
+## More on Testing
+
+### Test coverage
+
+Test coverage describes the extent to which a code base is tested. When Jest
+runs your tests, it generates a so-called _coverage report_. This report tells
+you how many of your _lines of code_ are covered by tests, how many functions,
+statements, and branches.
+
+> A branch is one of multiple ways a code control flow can go. For example, if
+> you have an `if() ... else ...`, both the "if" and the "else" branch must be
+> covered by tests.
+
+We want to keep our code coverage as high as possible. Jest allows us to
+generate a coverage report when we run the following command in the terminal:
+
+```sh
+npm test -- --coverage
 ```
 
-> Exercise: Refactor the previous code to have a separate function that checks
-> if gender is 'female' or not, and use it in sayGreeting. Let's try and make
-> the code as compact as possible together using ES6 features.
+> _Exercise:_ Check your code coverage for the tests you wrote. Is any of the
+> numbers below 100%? If so, try and bring it up to 100%!
 
+### Separating code and tests
 
-## Default parameters 
+Exporting and importing modules is really useful for testing, too.
 
-ES6 allows us to declare defaults for function arguments. The default value is 
-used when the argument/parameter is either missing or `undefined`. 
-
-This function returns the sum of three numbers. Let's assume we want to use the 
-same function with only two arguments: 
-
-```js
-// without default parameter
-const sum = (a, b, c) => {
-  c = c || 0;
-  return a + b + c;
-}
-
-console.log(sum(1, 3, 4)) // 8
-console.log(sum(2, 5)) // NaN
-
-// with default parameter 
-const sum = (a, b, c = 0) => {
-  return a + b + c;
-}
-console.log(sum(2, 5)) // 7
-```
-
-
-## Destructuring
-
-In ES6 we can extract data from objects or arrays using destructuring. 
-
-```js
-// before 
-var chicken = {
-  name: 'Maggie', 
-  age: 2
-}
-
-var name = chicken.name;
-var age = chicken.age;
-
-var numbers = [1, 2];
-
-var firstNumber = numbers[0];
-var secondNumber = numbers[1];
-
-
-// in ES6
-const chicken = {
-  name: 'Maggie', 
-  age: 2
-}
-
-const { name, age } = chicken;
-
-const numbers = [1, 2];
-
-const [firstNumber, secondNumber] = numbers;
+As a rule of thumb, we never want to mix our actual code with our tests. It is
+therefore common to put them in separate files. We are going to call the file
+containing the tests after the file containing the code to be tested, just
+appending `.test` at the end of the filename. Like so:
 
 ```
+main.js               # Our main program
+main.test.js          # Tests for our main program
+someOtherCode.js      # A module called "someOtherCode"
+someOtherCode.test.js # Tests for the "someOtherCode" module
+```
 
+> The naming is really up to convention - you can even put your tests in a
+> different folder! However, for Jest it is important to call test files
+> "\*.test.js".
 
-# Resources
-
-* [ES6 features](http://es6-features.org/)
-* [Let and const](http://wesbos.com/let-vs-const/)
 
 {% include "./homework.md" %}

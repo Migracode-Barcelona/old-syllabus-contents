@@ -9,7 +9,6 @@ with HTML and CSS in a browser, changing elements dynamically from user actions.
 
 **Before the class**
 
-> ---
 > 1. Please before start the class fork and clone [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2)
 > 2. Open "A-dom-manipulation" project in VS code
 > 3. You will have to work on the `exercise.js` file for today's homework
@@ -18,7 +17,6 @@ with HTML and CSS in a browser, changing elements dynamically from user actions.
 >      - Install the plugin
 >      - Right click on `index.html` and select "Open with Live Server"
 >    - or just open the `index.html` on your browser and refresh every time you change your code
-> ---
 
 
 ## Index
