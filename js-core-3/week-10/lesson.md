@@ -11,7 +11,7 @@
   * [Modules](#modules)
   * [Refactoring](#refactoring)
 
-> Fork and Clone the [js-exercises-tdd repo](https://github.com/CodeYourFuture/js-exercises-tdd)
+> Fork and Clone the [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises-js3-week1)
 
 
 
@@ -178,11 +178,61 @@ const [firstNumber, secondNumber] = numbers;
 
 ```
 
-
-# Resources
-
-* [ES6 features](http://es6-features.org/)
+Resources:
 * [Let and const](http://wesbos.com/let-vs-const/)
+* [ES6 features](http://es6-features.org/)
+
+#### Exercise
+
+From [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises-js3-week1) in folder **InClass/A-ES6** do exercise1.js
+
+## Classes
+
+Objects in programming languages provide us with an easy way to model data. Let’s say we have an object called polygon. The polygon object has properties: values that contain data about the polygon, and methods: functions that define actions that the polygon can perform. This focus on “objects” and “actions” is the basis of Object Oriented Programming.
+
+```js
+class Polygon {
+  constructor(height, width) {
+    this.name = "Polygon";
+    this.height = height;
+    this.width = width;
+  }
+  sayName() {
+    console.log('Hi, I am a ' + this.name);
+  }
+}
+
+let p = new Polygon('Polygon', 300, 400);
+p.sayName();
+console.log('The area of this polygon is ' + p.area);
+
+class Rectangle extends Polygon {
+  constructor(height, width) {
+    super(height, width);
+    this.name = "Rectangle";
+    this.sides = 4;
+    //this.area = this.height * this.width;
+  }
+  get area() {return this.width * this.height;}
+  sayName() {
+    console.log('Hi I am a polygon and my name is ' + this.name + '.');
+  }
+}
+
+let r = new Rectangle(50, 60);
+r.sayName();
+//r.area = 3;
+console.log('The area of this polygon is ' + r.area);
+```
+
+Resources:
+* [Classes differences in ES5 and ES6](https://medium.com/@luke_smaki/javascript-es6-classes-8a34b0a6720a)
+* [Explanation of Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+#### Exercise
+
+From [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises-js3-week1) in folder **InClass/A-ES6** do exercise2.js
+
 
 ## Tracing Code
 
@@ -190,11 +240,10 @@ What is Code? Computer code is a **set of rules or instructions**. It is made up
 
 Let's trace these code samples together:
 
-- [Sample 1](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/01-greet-people/greet-people.js) 
+- [Exercise 1](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise1.js) 
 
-- [Sample 2](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/02-remove-vowels/remove-vowels.js) 
+- [Exercise 2](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise2.js) 
 
-- [Sample 3](https://github.com/CodeYourFuture/js-exercises-tdd/blob/master/II.write-tests/03-remove-vowels-from-array/remove-vowels-in-array.js) 
 
 
 # Debugging
@@ -207,11 +256,12 @@ A syntax bug is an error caused by something the programmer has typed – it cou
 ## Logical bugs
 A logical bug is an error which means that even though the computer is able to carry out its instructions, it doesn’t act as the programmer intended or the user expects.
 
-> Exercise: This website ([https://kabaros.github.io/dom-ajax-repo-solution](https://kabaros.github.io/dom-ajax-repo-solution)) has *bugs*. Use Chrome Developer Tools to find out what is causing these issues.
+## Debugging with Chrome
 
-> Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 
-> The terms "bug" and "debugging" are popularly attributed to Admiral Grace Hopper in the 1940s.[1] While she was working on a Mark II computer at Harvard University, her associates discovered a moth stuck in a relay and thereby impeding operation, whereupon she remarked that they were "debugging" the system
+Go back to the last Tracing Code exercises, put a breakpoint in the first line of code and debug line by line.
+
 
 # Good Design
 
@@ -274,47 +324,11 @@ function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
 console.log(myFunction(28000, "1150L", 1000, 580, false));
 ```
 
-What is wrong with this function?
+Comment together what is wrong with this function?
 
-1. Naming: the function has a bad name, myFunction() tells you nothing about
-   what the function does. It's also considered bad practice to name variables
-   vaguely by separating them through numbers (incomeTax1, incomeTax2, etc). If
-   you find yourself doing this then you should either use an array (such as
-   incomeTax[]).
+#### Exercise
 
-2. Commenting: the function isn't documented at all. It's very difficult to
-   understand what the function's purpose is and how each part of the code
-   contributes to it. By writing comments, the coder communicates their
-   reasoning and helps the function be human readable.
-
-3. Layout/formatting: unnecessary spacing between the if and else statement.
-
-4. Single responsibility: the function doesn't have a single purpose. It
-   calculates national insurance and salary deductions. Maybe the national
-   insurance calculation could be moved to a separate function.
-
-5. Input variable being overwritten: the function requires gross salary (before
-   deductions) and net salary (after deductions) the `salary` input variable is
-   therefore copied into an `originalSalary` variable so that it can be changed.
-   It would be much clearer to create a new `netSalary` variable and leave
-   `salary` unmodified.
-
-6. DRY principle: the function validates the DRY (Don't Repeat Yourself) rule.
-   The line where a deduction is taken from the salary is repeated 3 times with
-   different indices. This can be replaced with a `for` loop.
-
-7. Magic numbers. The code contains a lot of magic numbers, including `17775`,
-   `0.09` and `0.1`.
-
-8. Useless parameters: the code contains a variable which isn't used. They
-   should be removed because they are confusing. It is tempting when you're
-   starting to code a function to add more parameters thinking that you might
-   need them, but it's important to remove them if you don't end up using them.
-
-> Exercise: Working in pairs, go through all of these issues and make
-> appropriate improvements to the code.
-
-
+From [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises-js3-week1) in folder **InClass/C-Good Design** do exercise1.js
 
 ### Refactoring
 
@@ -328,7 +342,6 @@ we call this a _regression_. Our existing tests can make sure that when we
 refactor, the functionality of our code actually stays the same, and does not
 regress.
 
-> Exercise: Refactor some of the exercise we've written tests for.
 
 ## Modules
 
@@ -395,19 +408,13 @@ printName();
 
 
 
-# Glossary
-
-You should know these terms by the end of this class: Testing, Quality Assurance, Unit Tests, Integration Tests, Refactoring, Regression Tests .. any more?
-
 # Resources
 
 1. [JavaScript: The Good Parts by Douglas Crockford, chapter 4 - Functions](http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf)
 2. [MDN Objects basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
 3. [MDN OOP in JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-4. [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)
-5. [Jest](https://facebook.github.io/jest/)
-6. [Modules](https://nodejs.org/api/modules.html)
-7. [Setup VS Code for Debugging](https://medium.com/software-developer/debugging-facebooks-jest-for-react-in-visual-studio-code-9059223e1e71)
+4. [Modules](https://nodejs.org/api/modules.html)
+5. [Setup VS Code for Debugging](https://medium.com/software-developer/debugging-facebooks-jest-for-react-in-visual-studio-code-9059223e1e71)
 
 ## Tracing code resources
 
