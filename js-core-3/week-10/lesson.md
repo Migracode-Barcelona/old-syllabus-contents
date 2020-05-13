@@ -27,7 +27,7 @@ The `let` and `const` keywords are also used for variable creation, but the
 variables created using these keywords have different scope. Var has "function
 scope", whereas let and const have "block scope".
 
-> Exercise: This **badly designed** function will throw the error `message is
+> This **badly designed** function will throw the error `message is
 > not defined`. What is the problem, and how could we fix it?
 
 ```js
@@ -45,11 +45,11 @@ function compareNumbers(m, n) {
 The `const` keyword is similar to `let`, the only difference is that a variable
 declared using `const` can't be changed after it is assigned.
 
-> Exercise: What advantages might a block scope variable have over a function
+> What advantages might a block scope variable have over a function
 > scope variable? In what situation might you want to use `const` instead of a
 > variable that can be re-assigned?
 
-> Exercise: Let's update this code to use `let` and `const` instead of `var`
+> How can we update this code to use `let` and `const` instead of `var`?
 
 ```js
 function getCircleArea(radius) {
@@ -112,11 +112,6 @@ are optional and we can write the whole function in one line.
 ```js
 const sum = (a, b, c) => a + b + c;
 ```
-
-> Exercise: Refactor the previous code to have a separate function that checks
-> if gender is 'female' or not, and use it in sayGreeting. Let's try and make
-> the code as compact as possible together using ES6 features.
-
 
 ## Default parameters 
 
@@ -190,6 +185,8 @@ From [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises
 
 Objects in programming languages provide us with an easy way to model data. Let’s say we have an object called polygon. The polygon object has properties: values that contain data about the polygon, and methods: functions that define actions that the polygon can perform. This focus on “objects” and “actions” is the basis of Object Oriented Programming.
 
+Analyze the following code, what is a constructor?
+
 ```js
 class Polygon {
   constructor(height, width) {
@@ -202,10 +199,14 @@ class Polygon {
   }
 }
 
-let p = new Polygon('Polygon', 300, 400);
+let p = new Polygon(300, 400);
 p.sayName();
-console.log('The area of this polygon is ' + p.area);
+```
 
+The extends keyword is used in class declarations or class expressions to create a class as a child of another class.
+Why do you think are two lines commented? 
+
+```js
 class Rectangle extends Polygon {
   constructor(height, width) {
     super(height, width);
@@ -240,11 +241,13 @@ What is Code? Computer code is a **set of rules or instructions**. It is made up
 
 Let's trace these code samples together:
 
-- [Exercise 1](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise1.js) 
+- [Exercise 1](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise1/) 
 
-- [Exercise 2](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise2.js) 
+- [Exercise 2](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise2/) 
 
+- [Exercise 3](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise3/) 
 
+What is happening in exercise 3? Do you remember asynchronous programming from last lesson? How can we fix it? 
 
 # Debugging
 
