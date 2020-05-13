@@ -1,14 +1,9 @@
 # Homework
 
-1. Finish the Katas and exercises in the project we've worked on [today](https://github.com/CodeYourFuture/js-exercises-tdd)
+1. Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 
-2. Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
+2. In [exercises-js3-week1 repo](https://github.com/Migracode-Barcelona/exercises-js3-week1) in the `InClass` folder finish all exercises if are not finished and push them
 
-3. Register yourself on the Marc Littlemore's free [JavaScript Testing for Beginners](https://www.marclittlemore.com/courses/javascript-testing-beginners-course/?signup=cyf-course) course and work your way through the 7 lessons, which are delivered via a daily email. The course uses a Mocha/Chai framework, which is in common use within the web development industry. This will give you more TDD practice using a different approach to Jest, as well as more exposure to ES2015/ES6 JavaScript.
+3. Read [Gulp, a JavaScript toolkit](https://medium.com/@uix/enhancing-your-front-end-development-workflow-using-gulp-4-51c5d265c1bd) to understand the structure of the next project, you do not have to understand everything
 
-## Research
-
-1. Research other module formats than CommonJS. What is AMD? What are ES6
-modules and how do their differ from CommonJS?
-1. What are other test frameworks for JavaScript?
-1. More parts of the Jest (Jasmine) DSL than just `.toBe()`
+4. Fork and clone [GitHub API project](https://github.com/CodeYourFuture/dom-ajax-repo), do the requirement 1 of Part 1: My Github Page and push it (you will need to use fetch to get data from the API)
