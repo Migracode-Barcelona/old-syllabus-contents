@@ -2,14 +2,22 @@
 
 # JS Core III - 2
 
+**What we will learn today?**
+
+What is Testing, Unit Testing and TDD, and when and why use them.
+
+**Before the class**
+
+> 1. Clone the [js-exercises-tdd repo](https://github.com/CodeYourFuture/js-exercises-tdd)
+> 2. Install Jest, using the command npm install --save-dev jest
+
+
 ** What we will learn today?**
 
 * [Testing](#testing-our-code)
 * [Unit Testing](#unit-testing)
 * [Unit Testing Frameworks - JEST](#jest)
 * [Test-driven Development](#test-driven-development)
-* More on Testing
-  * [Test coverage](#test-coverage)
 
 
 ---
@@ -19,8 +27,6 @@
 
 We have just traced the output of some code on paper, but how do ensure that the code actually does what it is supposed to do when we run it.
 
-> Discussion: How have we been testing our code so far? How do ensure it is *correct*. What is "*correct*" anyhow?
-
 In many organisations, there are full teams dedicated to **testing** and ensuring that the code written behaves correctly, to report **bugs** and make sure that they are fixed on time. In general, **Quality Assurance** is a responsibility of everyone in a team starting from Project Manager, Scrum Masters, Developers and Testers.
 
 There are typically several levels of testing when working on a project:
@@ -29,7 +35,7 @@ There are typically several levels of testing when working on a project:
 - Integration testing
 - Functional, End to End testing and User Acceptance Testing (UAT)
 
-[This answer from Stack OverFlow](https://stackoverflow.com/a/4904533) has a good explanation of types of testing. The defintions for Functional, e2e and UAT are often mean different things in different teams, the responisibility for them also falls on different individuals depending on the team.
+[This answer from Stack OverFlow](https://stackoverflow.com/a/4904533) has a good explanation of types of testing.
 
 *Unit testing* though is always the responsibility of the Developer, and it is a very important skill for any professional developer to be able to write tests, and also write code that is testable.
 
@@ -117,29 +123,6 @@ equality check:
 myFunction(input) === expectedOutput;
 ```
 
-We can formalise this using another function that compares two values and
-complains when they do not match. Such a function is prepared in
-`unit-testing/equals.js`.
-
-We can use this function to simply compare to values:
-
-```js
-equals(1, 1); // This should pass
-equals(1, 2); // This should fail
-equals("Hello", "Hello"); // This should pass
-```
-
-Now we can use this `equals()` function to test our own code by comparing a
-function result to an expected value.
-
-Remember that one function can be used as an argument when a second function is called. In this instance, the function we are testing would represent our first function, and our `equals()` function would represent the second, like so...
-
-```js
-equals(myNewFunction(arg1, arg2, etc), expectedOutput)
-```
-As you can see in this example, instead of using a number as the first argument to the `equals()` function, we have used a function instead; the one we wish to test.
-
-> Exercise: Write tests for the the exercises under `II.write-tests`
 
 ### Unit testing frameworks
 
@@ -159,12 +142,11 @@ The unit testing framework we are trying to day is called
 for all kinds of unit testing (especially testing React, which we will do in a
 later lesson).
 
-Look into your `jest/` folder. You will find a file there, `sum.test.js`. The
-suffix `.test.js` tells Jest that this file contains tests it should execute. To
+The suffix `.test.js` tells Jest that this file contains tests it should execute. To
 execute the test, run the following command in your terminal:
 
 ```sh
-npm test
+npm test sum.test.js
 ```
 
 This command runs the test in `sum.test.js`, which tests the `sum()` function.
@@ -195,13 +177,12 @@ You can add multiple test statements in the same test case (a test case is one
 call of the `test` function, but you can also create multiple test cases in one
 file. It is important that you give all your test cases meaningful descriptions.
 
-> _Exercise:_ Add another test case to `sum.test.js`. Is the sum of 10 and -10
-> really zero? Run the tests using Jest.
+Read some information about [Jest](https://jestjs.io/docs/en/getting-started)
 
-> _Exercise:_ Take the `findNeedle` function you have tested previously, copy it
-> into the `jest/` folder and call it `findNeedle.test.js`. Then write a test to
-> be used with Jest, similar to `sum.test.js`. Make sure you cover multiple
-> inputs and give all tests meaningful descriptions! Run the tests using Jest.
+> _Exercise:_ From the repo do some exercises in the folder I.pass-test, like in the [CodeWars katas](https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript), you have to write to code to pass the test
+
+
+> _Exercise:_ From the repo try to write some tests in the folder II.write-tests, to test the functions are already implemented
 
 ## Test Driven Development
 
@@ -218,52 +199,7 @@ When developing following TDD, you normally follow this sequence:
 
 Read more on the [Wikipedia article](https://en.wikipedia.org/wiki/Test-driven_development) and the resources at the end.
 
-[Red Green Refactor](https://www.codecademy.com/articles/tdd-red-green-refactor)
-
-> Exercise: Two mentors pair on a problem doing "ping pong" TDD. One writing the test, the other writing the implementation.
-
-## More on Testing
-
-### Test coverage
-
-Test coverage describes the extent to which a code base is tested. When Jest
-runs your tests, it generates a so-called _coverage report_. This report tells
-you how many of your _lines of code_ are covered by tests, how many functions,
-statements, and branches.
-
-> A branch is one of multiple ways a code control flow can go. For example, if
-> you have an `if() ... else ...`, both the "if" and the "else" branch must be
-> covered by tests.
-
-We want to keep our code coverage as high as possible. Jest allows us to
-generate a coverage report when we run the following command in the terminal:
-
-```sh
-npm test -- --coverage
-```
-
-> _Exercise:_ Check your code coverage for the tests you wrote. Is any of the
-> numbers below 100%? If so, try and bring it up to 100%!
-
-### Separating code and tests
-
-Exporting and importing modules is really useful for testing, too.
-
-As a rule of thumb, we never want to mix our actual code with our tests. It is
-therefore common to put them in separate files. We are going to call the file
-containing the tests after the file containing the code to be tested, just
-appending `.test` at the end of the filename. Like so:
-
-```
-main.js               # Our main program
-main.test.js          # Tests for our main program
-someOtherCode.js      # A module called "someOtherCode"
-someOtherCode.test.js # Tests for the "someOtherCode" module
-```
-
-> The naming is really up to convention - you can even put your tests in a
-> different folder! However, for Jest it is important to call test files
-> "\*.test.js".
+> _Exercise:_ From the repo try do just the exercise III.tdd-katas/fizz-buzz/
 
 
 {% include "./homework.md" %}

@@ -245,9 +245,6 @@ Let's trace these code samples together:
 
 - [Exercise 2](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise2/) 
 
-- [Exercise 3](https://github.com/Migracode-Barcelona/exercises-js3-week1/blob/master/InClass/B-Tracing%20code/exercise3/) 
-
-What is happening in exercise 3? Do you remember asynchronous programming from last lesson? How can we fix it? 
 
 # Debugging
 
@@ -262,9 +259,7 @@ A logical bug is an error which means that even though the computer is able to c
 ## Debugging with Chrome
 
 Follow this tutorial about [Debugging with Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/)
-
-Go back to the last Tracing Code exercises, put a breakpoint in the first line of code and debug line by line.
-
+And try to solve the problem in the link 'Open Demo'
 
 # Good Design
 
