@@ -4,11 +4,13 @@
 
 ---
 
-**Teaching this lesson?**
 
-Read the Mentors Notes [here](./mentors.md)
+**Before the class**
+Install a tool to create a react project with a command, go to the terminal and run  
+`npm install create-react-app`
+Once installed, you can go to your working directory and run
+`npx create-react-app pokedex`, which will create a project in a new folder named pokedex
 
----
 
 **What will we learn today?**
 
