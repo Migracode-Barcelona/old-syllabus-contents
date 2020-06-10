@@ -12,7 +12,7 @@ What is Testing, Unit Testing and TDD, and when and why use them.
 > 2. Install Jest, using the command npm install --save-dev jest
 
 
-** What we will learn today?**
+**Index**
 
 * [Testing](#testing-our-code)
 * [Unit Testing](#unit-testing)
@@ -179,7 +179,7 @@ file. It is important that you give all your test cases meaningful descriptions.
 
 Read some information about [Jest](https://jestjs.io/docs/en/getting-started)
 
-> _Exercise:_ From the repo do some exercises in the folder I.pass-test, like in the [CodeWars katas](https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript), you have to write to code to pass the test
+> _Exercise:_ From the repo do some exercises in the folder I.pass-test, like in the [CodeWars katas](https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript), you have to write the code to pass the test
 
 
 > _Exercise:_ From the repo try to write some tests in the folder II.write-tests, to test the functions are already implemented
