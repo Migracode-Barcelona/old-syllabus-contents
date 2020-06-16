@@ -1,5 +1,5 @@
 1. If you haven't already, complete the in-class exercises on your `pokedex` app
-2. Complete all of the lesson 2 exercises in the [cyf-hotel-react](https://github.com/CodeYourFuture/cyf-hotel-react#lesson-2) project
+2. Complete all of the lesson 2 exercises in the [cyf-hotel-react](https://github.com/CodeYourFuture/cyf-hotel-react#lesson-2) project. Push them to your GitHub account and complete the [Homework Form](https://form.jotformeu.com/93377027809365), use the form to notify your comments and questions about the exercises 
 
 ### Prepare for the next class
 

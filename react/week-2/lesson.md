@@ -608,4 +608,7 @@ What happens if you forget to pass a prop to a component? Or if you pass the wro
 >
 > 1. [Use PropTypes to Define the Props You Expect](https://learn.freecodecamp.org/front-end-libraries/react/use-proptypes-to-define-the-props-you-expect/)
 
+
+# Homework
+
 {% include "./homework.md" %}
