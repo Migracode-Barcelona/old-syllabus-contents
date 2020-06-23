@@ -182,7 +182,7 @@ Read more on Mozilla's
 
 ## Workshop
 
-Buckle up and start the [express workshop](https://syllabus.codeyourfuture.io/node/week-1/workshop.html).
+Buckle up and start the [express workshop](../workshop-1/lesson.html).
 
 ## Group Research Topics
 
