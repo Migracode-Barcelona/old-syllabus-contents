@@ -33,7 +33,7 @@
   - [Week 18 - Introduction to SQL](/db/week-1/lesson.md)
   - [Week 19 - More SQL and integration with NodeJS](/db/week-2/lesson.md)
   - [Week 20 - More integration with NodeJS](/db/week-3/lesson.md)
-  - Revision
+  - [Week 21 - NodeJS Workshop](/db/week-4/lesson.md)
 
 ### Useful information
 
