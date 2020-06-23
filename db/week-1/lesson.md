@@ -155,11 +155,24 @@ Few things to mention from the SQL statement above:
 - Other useful types include `INT`, `TEXT`, `BOOLEAN` and `DATE`.
 - The database will reject any values which don't match the type.
 
+### DBeaver, a SQL client software
+
+[DBeaver](https://dbeaver.com/) is a SQL client software application and a database administration tool.
+If you think create tables in the command line is a bit confusing to you, this is your solution.
+
+[Installation](https://dbeaver.com/docs/wiki/Installation/)
+[Overview](https://dbeaver.com/docs/wiki/Application-Window-Overview/)
+[Database Navigator](https://dbeaver.com/docs/wiki/Database-Navigator/)
+[SQL Editor](https://dbeaver.com/docs/wiki/SQL-Editor/)
+
+
+
+
 #### Exercise 1
 
 - Create the `customers` table in the `cyf_hotels` database.
-- Verify that the table `customers` is created with the psql command `\dt` which lists the existing tables.
-- Display the table `customers` definition with the command `\d customers` and verify that it matches what you expect.
+- Verify that the table `customers` is created with the psql command `\dt` which lists the existing tables, or update the list of tables using DBeaver.
+- Display the table `customers` definition with the command `\d customers` and verify that it matches what you expect, or use DBeaver
 - Create a new table `hotels` in the `cyf_hotels` database with the following columns: an `id`, a `name`, the number of `rooms` and the hotel `postcode`. Use the commands above to verify that the table is correctly created.
 
 Now that we have a table to store `customers` and a table to store `hotels`, we can create a table to hold the bookings of customers for an hotel with the checkin date and the number of nights they intend to stay:

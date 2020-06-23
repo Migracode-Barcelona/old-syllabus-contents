@@ -182,7 +182,7 @@ Read more on Mozilla's
 
 ## Workshop
 
-Buckle up and start the [express workshop](./workshop.md).
+Buckle up and start the [express workshop](/workshop.md).
 
 ## Group Research Topics
 
