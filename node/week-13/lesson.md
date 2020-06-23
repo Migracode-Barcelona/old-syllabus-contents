@@ -1,12 +1,21 @@
-# Node 1
+![](https://img.shields.io/badge/status-review-orange.svg)
 
-**What we will learn today?**
+# Node - Week 1
+
+---
+
+**Teaching this lesson?**
+
+Read the Mentors Notes [here](./mentors.md)
+
+---
+
+## Contents
 
 - [What is a server?](#what-is-a-server)
 - [Node and its ecosystem](#node-and-its-ecosystem)
 - [HTTP](#http)
 - [Express](#express)
-- [APIs](#apis)
 - [Workshop](#workshop)
 
 ---
@@ -29,15 +38,6 @@ files it needs to display the website properly.
 
 ![Server flow](https://files.gitter.im/heron2014/FiiK/server.png)
 
-## HTTP
-
-> It is a protocol that browser and the server uses to talk to each other
-
-![HTTP](../assets/http_diagram.png)
-
-Read more on Mozilla's
-[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-
 ## Node and its ecosystem
 
 > [Node.js®](https://nodejs.org/en/) is a **JavaScript runtime** built on
@@ -56,12 +56,12 @@ Read more on Mozilla's
 
 ## A simple Node.js server
 
-### Simple server
+### Simple server\*\*
 
 ```js
 const http = require("http");
 
-const server = http.createServer(function(req, res) {
+const server = http.createServer(function (req, res) {
   res.end("Hello World!");
 });
 
@@ -70,12 +70,12 @@ server.listen(5000);
 console.log("Node.js web server at port 5000 is running..");
 ```
 
-### Server with two routes
+### Server with two routes\*\*
 
 ```js
 const http = require("http");
 
-const server = http.createServer(function(req, res) {
+const server = http.createServer(function (req, res) {
   if (req.url === "/") {
     //check the URL of the current request
     console.log("New request to main page at " + Date());
@@ -103,9 +103,16 @@ console.log("Node.js web server at port 5000 is running..");
 ```
 
 > Exercise
-> What is the response if we run this server and call `http://localhost:5000/student`?
+> How would you add another route `/mentor`?
 
-This server is written in Node without using any frameworks. To make life easier, we will use a popular framework called **Express** to build similar server applications.
+## HTTP
+
+> It is a protocol that browser and the server uses to talk to each other
+
+![HTTP](../assets/http_diagram.png)
+
+Read more on Mozilla's
+[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 ## Express
 
@@ -114,54 +121,14 @@ Node.js. It simplifies base features of Node.js, making it easier and faster to
 build your application's backend. Learning Express gives you a great foundation
 for becoming a Node.js developer.
 
-# APIs
-
-APIs (Application Programming Interfaces) provide a way for applications to
-communicate with each other. We already consumed an API earlier in the day:
-**Github API**. We managed to _communicate_ with Github and get important
-information. We - the client - can use this information in a number of different
-ways. Our client, in this case, is a Web page but it could have easily been a
-Mobile Application, or a TV setbox etc...
-
-> **Let's** watch this video about APIs -
-> [What is an API](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-
-> **Exercise**: Let's expose the `posts.json` as an API for other clients to
-> consume through the url `/api/get-posts`. Hint: make use `res.sendFile`
-
-## REST API
-
-[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) (REpresentational State Transfer) and RESTful APIs provide a convention and architecture for building APIs that is simple and scalable.
-
-There are many constraints and aspects to building a REST API, but one
-fundamental constraint is the use of a URL (Uniform Resource Locator) and HTTP
-Methods (GET, POST, PUT, DELETE etc..)
-
-In our _endpoint_ that we just created `/api/get-posts`, the _get_ part of the
-URL is redundant as the HTTP Method `GET` already tells that we are _GETting_ a
-_Resource_. The Resource in this case is called **posts**.
-
-> Exercise: Let's rename our endpoint to `/posts` so that it follows RESTful
-> architecture.
->
-> **What would the endpoint for creating posts be called?**
-
-> **Watch**: [What is a REST API](https://www.youtube.com/watch?v=7YcW25PHnAA)
-> (up to 3 minutes)
-
-REST is a big topic that we will revisit again. The table below from Wikipedia
-shows how a typical RESTful API would look like.
-
-![POST](../assets/REST.png)
-[Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer#Uniform_interface)
-
-For now, remember when building APIs, to use **Resource** names to identify your
-endpoints and make use of the **HTTP methods (Verbs)** to describe operations
-performed on those resources.
+In the next steps, we will building a **CMS (Content Management System)** - a
+system to write, publish and save blog posts. Even though we could use core
+libraries like `http` to build this system, this becomes very complicated and
+non-maintainable very quickly. That is why we use frameworks like `Express`.
 
 ## Workshop
 
-Buckle up and start the [API workshop](https://github.com/Migracode-Barcelona/syllabus-contents/blob/master/node/workshop.md).
+Buckle up and start the [express workshop](./workshop.html).
 
 ## Group Research Topics
 
@@ -171,6 +138,12 @@ Buckle up and start the [API workshop](https://github.com/Migracode-Barcelona/sy
 - HTTP and REST: (headers, status codes, Cookies, REST)
 - Node internals: Node event loop, Node core modules, async/sync (non-blocking
   operations)
+
+The research will be on a Github repo. One member of the group will be
+responsible of creating a repo, the others will fork it and create Pull Requests
+for it (that the main repo's owner will have to review and merge).
+
+**We expect each repo to have commits from each member of the group**
 
 ## Resources
 
@@ -184,11 +157,14 @@ More about HTTP:
 
 More about JSON:
 
-- [https://en.wikipedia.org/wiki/JSON](https://en.wikipedia.org/wiki/JSON)
-- [https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
-- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- https://en.wikipedia.org/wiki/JSON
+- https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 Heroku:
 
 - [Deploying from Git](https://devcenter.heroku.com/articles/git)
 - [Deploying Node Apps](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
+
+{% include "./homework.md" %}
+{% include "../../others/escalation-policy.md" %}
