@@ -126,10 +126,10 @@ app.METHOD(PATH, HANDLER)
 
 Where:
 
-app is an instance of express.
-METHOD is an HTTP request method, in lowercase.
-PATH is a path on the server.
-HANDLER is the function executed when the route is matched.
+- app is an instance of express.
+- METHOD is an HTTP request method, in lowercase.
+- PATH is a path on the server.
+- HANDLER is the function executed when the route is matched.
 
 The following examples illustrate defining simple routes.
 
@@ -182,7 +182,7 @@ Read more on Mozilla's
 
 ## Workshop
 
-Buckle up and start the [express workshop](/workshop.md).
+Buckle up and start the [express workshop](./workshop.html).
 
 ## Group Research Topics
 

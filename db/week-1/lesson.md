@@ -160,12 +160,16 @@ Few things to mention from the SQL statement above:
 [DBeaver](https://dbeaver.com/) is a SQL client software application and a database administration tool.
 If you think create tables in the command line is a bit confusing to you, this is your solution.
 
-[Installation](https://dbeaver.com/docs/wiki/Installation/)
-[Overview](https://dbeaver.com/docs/wiki/Application-Window-Overview/)
-[Database Navigator](https://dbeaver.com/docs/wiki/Database-Navigator/)
-[SQL Editor](https://dbeaver.com/docs/wiki/SQL-Editor/)
+<!-- ![data-edit](data-edit.png) -->
+<p align="center">
+  <img src="data-edit.png" display="block" width="60%"/>
+</p>
 
 
+- [Installation](https://dbeaver.com/docs/wiki/Installation/)
+- [Overview](https://dbeaver.com/docs/wiki/Application-Window-Overview/)
+- [Database Navigator](https://dbeaver.com/docs/wiki/Database-Navigator/)
+- [SQL Editor](https://dbeaver.com/docs/wiki/SQL-Editor/)
 
 
 #### Exercise 1
