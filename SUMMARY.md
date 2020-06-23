@@ -24,15 +24,16 @@
   - [Week 12 - Recap](/js-core-3/week-12/lesson.md) | [Homework](/js-core-3/week-12/homework.md)
 - [React](/react/index.md)
   - [Week 13 - React 101](/react/week-1/lesson.md)
-  - [Week 14 - Reacting to Changes](/react/week-2/lesson.md)homework.md)
+  - [Week 14 - Reacting to Changes](/react/week-2/lesson.md)
   - [Week 15 - Fetching Data](/react/week-3/lesson.md)
   - [Routing (optional)](/react/week-4/lesson.md)
+  - [Class components (optional)](/react/classes-optional/lesson.md)
 - [Node/DB](/node/index.md)
   - [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Workshop](/node/workshop.md) | [Homework](/node/week-13/homework.md)
   - [Week 17 - More APIs in Node](/node/week-14/lesson.md)
   - [Week 18 - Introduction to SQL](/db/week-1/lesson.md)
   - [Week 19 - More SQL and integration with NodeJS](/db/week-2/lesson.md)
-  - [Week 20 - More integration with NodeJS](/db/week-3/lesson.md)
+  - [Week 20 - SQL with NodeJS](/db/week-3/lesson.md)
   - [Week 21 - NodeJS Workshop](/db/week-4/lesson.md)
 
 ### Useful information
