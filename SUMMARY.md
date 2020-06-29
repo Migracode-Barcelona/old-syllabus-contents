@@ -29,7 +29,7 @@
   - [Routing (optional)](/react/week-4/lesson.md)
   - [Class components (optional)](/react/classes-optional/lesson.md)
 - [Node/DB](/node/index.md)
-  - [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Workshop](/node/week-13/workshop.md) | [Homework](/node/week-13/homework.md)
+  - [Week 16 - Node and Express 101](/node/week-13/lesson.md) | [Homework](/node/week-13/homework.md)
   - [Week 17 - More APIs in Node](/node/week-14/lesson.md)
   - [Week 18 - Introduction to SQL](/db/week-1/lesson.md)
   - [Week 19 - More SQL and integration with NodeJS](/db/week-2/lesson.md)

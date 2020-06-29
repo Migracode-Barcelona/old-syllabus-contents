@@ -75,48 +75,151 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => res.send('Hello World!'))
-
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
+app.get('/', (req, res) => {
+    console.log("a client connected to the endpoint /");
+    res.send('Hello World!');
+})
 ```
 
 This app starts a server and listens on port 3000 for connections. The app responds with “Hello World!” for requests to the root URL (/) or route. For every other path, it will respond with a 404 Not Found.
 
-The example above is actually a working server: Go ahead and click on the URL shown. You’ll get a response, with real-time logs on the page, and any changes you make will be reflected in real time. This is powered by RunKit, which provides an interactive JavaScript playground connected to a complete Node environment that runs in your web browser. Below are instructions for running the same app on your local machine.
+The example above is actually a working server: Go ahead and click on the URL shown. You’ll get a response, with real-time logs on the page, and any changes you make will be reflected in real time. 
 
-  > Exercise: Running Locally 
+To initialise our server, we just need to call the `express()` function. This
+will create an Express application for us to work with.
 
-First create a directory named myapp, change to it and run npm init. Then install express as a dependency, as per the [installation guide](https://expressjs.com/en/starter/installing.html).
+One more step left, we need to set a **port** for our server to listen to. Think
+of a port as a door number; any requests that come to the server will come via
+that door. Setting a port will allow us to find where our server is running.
 
-In the myapp directory, create a file named app.js and copy in the code from the example above.
+We use the **`app.listen`** method to do this. This method takes two arguments:
+a **port** and a **callback function** telling it what to do once the server is
+running. Need clarification? Read more about the `app.listen` method in the
+[Express documentation](https://expressjs.com/en/4x/api.html#app.listen).
 
-Run the app with the following command:
+When a request reaches the server, we need a way of responding to it. In comes
+the handler function. The handler function is just a function which receives
+requests and handles them, hence the name.
+
+The handler function always takes a `request` and `response` object, and sends
+the response back to the client along with some information. You can decide what
+to send back in your response.
+
+We're going to run our server on port `3000`, and run a simple `console.log` as
+our callback function. Update your `server.js` file, calling the `app.listen`
+method:
+
+
+
+  > Exercise A: Running a Server locally
+
+  > 1. First create a directory named myapp to hold your application, and make that your working directory:
+
+```js
+$ mkdir myapp
+$ cd myapp
+```
+
+  > 2. Make a package.json file. The package.json file is easy to create from the command line. Type the following command into your terminal to get started:
+
+```js
+$ npm init
+```
+
+  > This command will initialise a step-by-step process for creating the package.json. It will ask you a bunch of questions.
+
+> You can skip most of the questions but change the `entry point` from
+> `(index.js)` to `server.js`.
+
+> The wizard asks you for the following information: `name`, `version`,
+> `description`, `main`, `test`, `repository`, `keywords`, `author`, `license` -
+> do you understand all of them?
+
+  > At the endo of the wizard, you should see a new file called `package.json` in
+your project's folder.
+
+  > Here is an example `package.json` file for a project called [Passport](https://github.com/jaredhanson/passport/blob/master/package.json).
+
+3. Before we write any code, you'll need to install the Express library. 
+
+As we install Express, we'll need to update the `package.json` to add Express as
+a dependency. We do this so that other people working on the project will know
+to install Express before running any of the code. This can be done by adding
+**`--save`** to the end of your command.
+
+Run the following command in your terminal:
+
+```sh
+npm install express --save
+```
+
+Express should now be installed. Check your `package.json` file to make sure it
+has been added as a dependency. It will look like this:
+
+![package.json screenshot](https://cloud.githubusercontent.com/assets/10683087/16382664/be35f0b4-3c79-11e6-82b6-ae9e4a037c3f.png)
+
+3. In the myapp directory, create a file named server.js and copy in the code from the example above.
+
+
+
+
+4. Run the app with the following command:
 
 ```js
 $ node app.js
 ```
 
-Then, load http://localhost:3000/ in a browser to see the output.
+5. Then, load http://localhost:3000/ in a browser to see the output of the browser and the terminal
+
+
+
 
 ## Routing 
 
 Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
 
-Each route can have one or more handler functions, which are executed when the route is matched.
+### What is an endpoint?
+
+An endpoint is the part of the URL which comes after `/`. For example:
+`/chocolate` is the "chocolate" endpoint. It's the URL to which you send a
+request.
+
+### What is URL?
+
+![URL structure](../assets/http1-url-structure.png "URL")
+
+### A server with different endpoints
+
+We're going to try sending different responses at different endpoints. Remember
+the `app.get()` method? To set up routing in your server, we just need to repeat
+this method with different endpoints.
+
+For example:
 
 ```js
 const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => res.send('Hello world!'))
-app.get('/students', (req, res) => res.send('Hello students!'))
-
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
+app.get('/', (req, res) => {
+    console.log("a client connected to the endpoint /");
+    res.send('Hello World!');
+})
+
+app.get('/weather', (req, res) => {
+    console.log("a client requested the weather");
+    res.send('The weather is 24.5!')
+}) 
 ```
 
-> Exercise: 
-> How would you add another route `/mentors`?
+> **Exercise:** Add some code so that your server sends one message when the
+> endpoint is `/cities`.
+
+Each route can have one or more handler functions, which are executed when the route is matched.
 
 Route definition takes the following structure:
 
@@ -131,52 +234,57 @@ Where:
 - PATH is a path on the server.
 - HANDLER is the function executed when the route is matched.
 
-The following examples illustrate defining simple routes.
 
-Respond with Hello World! on the homepage:
+### Reading endpoint parameters 
 
-```js
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-```
-
-Respond to POST request on the root route (/), the application’s home page:
+http://localhost:3000/weather/Valencia
 
 ```js
-app.post('/', function (req, res) {
-  res.send('Got a POST request')
-})
+app.get('/weather/:cityName', (req, res) => {
+    const name = req.params.cityName;
+    console.log("a client request the weather of " + name);
+    res.send('The weather in ' + name +  ' is 24.5!')
+}) 
 ```
 
-Respond to a PUT request to the /user route:
+### Reading endpoint query 
+
+http://localhost:3000/weather?name=Valencia
 
 ```js
-app.put('/user', function (req, res) {
-  res.send('Got a PUT request at /user')
-})
+app.get('/weather', (req, res) => {
+    const name = req.query.name;
+    console.log("a client request the weather of " + name);
+    res.send('The weather in ' + name +  ' is 24.5!')
+}) 
 ```
 
-Respond to a DELETE request to the /user route:
+### Responding objects
 
 ```js
-app.delete('/user', function (req, res) {
-  res.send('Got a DELETE request at /user')
-})
+app.get('/weather/:cityName', (req, res) => {
+    const name = req.params.cityName;
+    console.log("a client request the weather of " + name);
+    let city = {
+        cityName: name, 
+        weather:24.5
+    };
+    res.send(city)
+}) 
 ```
 
+> Exercise: Add an endpoint that requesting the latitude and longitude of a city, you respond the weather
+
+> Exercise: Add an endpoint called /cities that response an array of cities
+
+> Exercise: Having and array of cities:
 
 
 
-### HTTP
 
-> It is a protocol that browser and the server uses to talk to each other
 
-![HTTP](../assets/http_diagram.png)
 
-Read more on Mozilla's
-[An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-[HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#HTTP_Messages)
+
 
 
 
@@ -215,10 +323,6 @@ More about JSON:
 - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
-Heroku:
-
-- [Deploying from Git](https://devcenter.heroku.com/articles/git)
-- [Deploying Node Apps](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
 
 {% include "./homework.md" %}
 {% include "../../others/escalation-policy.md" %}
