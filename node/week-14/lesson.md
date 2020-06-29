@@ -118,25 +118,21 @@ https://www.postman.com/product/api-client/
 
 Add postman as a Chrome extension
 
-# Workshop - Post
+# Workshop - Blog
 
+In the next steps, we will building a **CMS (Content Management System)** - a
+system to write, publish and save blog posts. Even though we could use core
+libraries like `http` to build this system, this becomes very complicated and
+non-maintainable very quickly. That is why we use frameworks like `Express`.
 
 ### Step 1: Create a node project
 
 ### Step 2: 
 
-All requests use one of the `HTTP methods`. The main ones are: `GET, POST, PUT, DELETE`.
 
-`app.get` deals with requests that use the `GET` HTTP method.
-
-> We will go into these Methods into more details, but for now, think of `GET`
-> as a method for Getting data. `POST` is for POSTing/inserting new data. `PUT`
-> is for updating. `DELETE` is for deleting data.
 
 ### The `POST` http request method
 
-When sending data to the server, we use the `POST` http request method, instead
-of `GET`.
 
 Let's try `POST`ing some text to the server.
 
@@ -170,8 +166,6 @@ When you hit Send, the form will send a `POST` request to the server, using
 whatever is in the `action` attribute as the endpoint. In our case it's
 `/create-post`.
 
-> **Exercise:** Open Chrome Developers tool, click the button and see what
-> happens.
 
 ### Receiving the blog post on the server
 
