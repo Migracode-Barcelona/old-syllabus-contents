@@ -172,36 +172,36 @@ your project's folder.
 
   > Here is an example `package.json` file for a project called [Passport](https://github.com/jaredhanson/passport/blob/master/package.json).
 
-3. Before we write any code, you'll need to install the Express library. 
+> [3] Before we write any code, you'll need to install the Express library. 
 
-As we install Express, we'll need to update the `package.json` to add Express as
+> As we install Express, we'll need to update the `package.json` to add Express as
 a dependency. We do this so that other people working on the project will know
 to install Express before running any of the code. This can be done by adding
 **`--save`** to the end of your command.
 
-Run the following command in your terminal:
+> Run the following command in your terminal:
 
 ```sh
 npm install express --save
 ```
 
-Express should now be installed. Check your `package.json` file to make sure it
+> Express should now be installed. Check your `package.json` file to make sure it
 has been added as a dependency. It will look like this:
 
 ![package.json screenshot](https://cloud.githubusercontent.com/assets/10683087/16382664/be35f0b4-3c79-11e6-82b6-ae9e4a037c3f.png)
 
-3. In the myapp directory, create a file named server.js and copy in the code from the example above.
+[4] In the myapp directory, create a file named server.js and copy in the code from the example above.
 
 
 
 
-4. Run the app with the following command:
+[5] Run the app with the following command:
 
 ```js
 $ node app.js
 ```
 
-5. Then, load http://localhost:3000/ in a browser to see the output of the browser and the terminal
+[6] Then, load http://localhost:3000/ in a browser to see the output of the browser and the terminal
 
 
 
@@ -289,6 +289,8 @@ app.get('/weather', (req, res) => {
 }) 
 ```
 
+> Exercise: Make a calculator adding an endpoint for each operation Add,Substract,Multiply,Divide, each endpoint will receive two numbers and return the result
+
 ### Responding objects
 
 ```js
@@ -303,56 +305,20 @@ app.get('/weather/:cityName', (req, res) => {
 }) 
 ```
 
-> Exercise: Add an endpoint that requesting the latitude and longitude of a city, you respond the weather
 
-> Exercise: Add an endpoint called /cities that response an array of cities
+### Logger
 
-> Exercise: Having and array of cities:
+Adding this logger to your server, will log in the console all the requests
 
-
-
-
-
-
-
-
-
-
-## Workshop
-
-Buckle up and start the [express workshop](https://syllabus.codeyourfuture.io/node/week-1/workshop.html).
-
-## Group Research Topics
-
-- Security: (https, same origin, cookies, xss etc..)
-- Performance: Request lifecycle (from browser to server and back), Performance
-  considerations and optimisations
-- HTTP and REST: (headers, status codes, Cookies, REST)
-- Node internals: Node event loop, Node core modules, async/sync (non-blocking
-  operations)
-
-The research will be on a Github repo. One member of the group will be
-responsible of creating a repo, the others will fork it and create Pull Requests
-for it (that the main repo's owner will have to review and merge).
-
-**We expect each repo to have commits from each member of the group**
-
-## Resources
-
-Take a look at the following links to learn more about Node.js.
-
-- Read: [The art of node](https://github.com/maxogden/art-of-node/#the-art-of-node)
-- Read: [Node Resources](https://node.cool#resources)
-
-More about HTTP:
-[Tutsplus tutorial](https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
-
-More about JSON:
-
-- https://en.wikipedia.org/wiki/JSON
-- https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+```js
+const myLogger = (req, res, next) => {
+  const visitTime = new Date();
+  console.log(`visited ${req.url} at ${visitTime.toLocaleString()}`);
+  next();
+};
+app.use(myLogger);
+```
 
 
 {% include "./homework.md" %}
-{% include "../../others/escalation-policy.md" %}
+

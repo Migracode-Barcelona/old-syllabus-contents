@@ -412,6 +412,22 @@ files back to the client. Feel free to use this with your JSON.
 If all goes well, you should have a fully functional CMS!
 
 
+## Resources
+
+More about HTTP:
+[Tutsplus tutorial](https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
+
+Take a look at the following links to learn more about Node.js.
+
+- Read: [The art of node](https://github.com/maxogden/art-of-node/#the-art-of-node)
+- Read: [Node Resources](https://node.cool#resources)
+
+More about JSON:
+
+- https://en.wikipedia.org/wiki/JSON
+- https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
 
 {% include "./homework.md" %}
 {% include "../../others/escalation-policy.md" %}
