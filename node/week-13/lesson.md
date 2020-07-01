@@ -16,7 +16,6 @@ Read the Mentors Notes [here](./mentors.md)
 - [Node and its ecosystem](#node-and-its-ecosystem)
 - [Express](#express)
 - [Routing](#Routing)
-- [Workshop](#workshop)
 
 ---
 
@@ -34,7 +33,7 @@ Let's take a website for example. A website is just a collection of HTML and CSS
 files, images, maybe some javascript files. When you type a website address in
 your browser's address bar, the browser (client) sends a **request** to the
 server that lives at that address. The browser asks the server to give it the
-files it needs to display the website properly.
+files it needs to display the website properly. Another client can be a mobile application.
 
 ![Server flow](https://files.gitter.im/heron2014/FiiK/server.png)
 
@@ -51,14 +50,13 @@ files it needs to display the website properly.
 - easier to build desktop applications with Electron: Slack, Visual Code, Atom
 - some of the biggest companies use Node.js in production: Netflix, Walmart,
   IBM, etc.
-- JavaScript everywhere (used to be PHP, Python, JavaScript, MySQL, Apache, now
-  JavaScript full stack)
 
 ### What is the difference between javascript in a browser and Node?
 
 - Javascript is a popular programming language and it runs in any web browser with a good web browser.
 - JavaScript is mainly used for the client-side activity for one particular web application. Some of these activities can be dynamic page display in some schedule time interval, addressing business validation or basic Ajax call kind of task.
 - Node.js is an interpreter and environment for the JavaScript with some specific useful libraries which JS programming can be used separately.
+- Node.js can connect to other Internet Services: send emails, create communications in other protocols, etc.
 - Node.js is mainly used for running or accessing any operating system for the non-blocking operation. Like:
 - executing or creating a shell script
 - access to the hardware, for example the hard disk
@@ -99,6 +97,8 @@ const server = http.createServer(function (req, res) {
     } else if (req.url === "/weather") {
         console.log("Migracode page requested at " + Date());
         res.end("The weather is 24.5!")
+    }
+});
 ```
 
 
@@ -118,12 +118,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-
 app.get('/', (req, res) => {
     console.log("a client connected to the endpoint /");
     res.send('Hello World!');
 })
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
 ```
 
 This app starts a server and listens on port 3000 for connections. The app responds with “Hello World!” for requests to the root URL (/) or route. For every other path, it will respond with a 404 Not Found.
@@ -209,7 +209,7 @@ Routing refers to determining how an application responds to a client request to
 ### What is an endpoint?
 
 An endpoint is the part of the URL which comes after `/`. For example:
-`/chocolate` is the "chocolate" endpoint. It's the URL to which you send a
+`/products` is the "products" endpoint. It's the URL to which you send a
 request.
 
 ### What is URL?
@@ -229,8 +229,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-
 app.get('/', (req, res) => {
     console.log("a client connected to the endpoint /");
     res.send('Hello World!');
@@ -240,6 +238,8 @@ app.get('/weather', (req, res) => {
     console.log("a client requested the weather");
     res.send('The weather is 24.5!')
 }) 
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
 ```
 
 Each route can have one or more handler functions, which are executed when the route is matched.
@@ -249,8 +249,6 @@ Route definition takes the following structure:
 ```js
 app.METHOD(PATH, HANDLER)
 ```
-
-
 
 Where:
 
@@ -323,6 +321,9 @@ const myLogger = (req, res, next) => {
 };
 app.use(myLogger);
 ```
+
+#### Exercise: Use logger
+> Put the logger in your server and see the results
 
 
 {% include "./homework.md" %}
