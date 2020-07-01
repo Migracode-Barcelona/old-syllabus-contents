@@ -44,7 +44,7 @@ files it needs to display the website properly.
 > Chrome's **V8 JavaScript engine**. Node.js uses an **event-driven**,
 > **non-blocking** I/O model that makes it lightweight and efficient.
 
-## What is it used for?
+### What is it used for?
 
 - web servers, so creating dynamic websites
 - set up a local web development environment
@@ -54,7 +54,7 @@ files it needs to display the website properly.
 - JavaScript everywhere (used to be PHP, Python, JavaScript, MySQL, Apache, now
   JavaScript full stack)
 
-## What is the difference between javascript in a browser and Node?
+### What is the difference between javascript in a browser and Node?
 
 - Javascript is a popular programming language and it runs in any web browser with a good web browser.
 - JavaScript is mainly used for the client-side activity for one particular web application. Some of these activities can be dynamic page display in some schedule time interval, addressing business validation or basic Ajax call kind of task.
@@ -68,9 +68,11 @@ const fs = require('fs');
 fs.writeFileSync('hello.txt', 'Hey!!');
 ```
 
-> Exercise: create a Javascript and run the last code, what happens?
+#### Exercise: Running in node
 
-## A simple Node.js server
+> Create a Javascript and run the last code, what happens?
+
+### A simple Node.js server
 
 This app starts a server and listens on port 3000 for connections. The app responds with “Hello World!” for requests,
 set a **port** for our server to listen to. Think of a port as a door number; any requests that come to the server will come via
@@ -142,9 +144,8 @@ The handler function always takes a `request` and `response` object, and sends
 the response back to the client along with some information. You can decide what
 to send back in your response.
 
-
-  > Exercise A: Running a Server locally
-
+#### Exercise: Running a Server locally
+  
   > [1] First create a directory named myapp to hold your application, and make that your working directory:
 
 ```js
@@ -190,20 +191,15 @@ has been added as a dependency. It will look like this:
 
 ![package.json screenshot](https://cloud.githubusercontent.com/assets/10683087/16382664/be35f0b4-3c79-11e6-82b6-ae9e4a037c3f.png)
 
-[4] In the myapp directory, create a file named server.js and copy in the code from the example above.
+> [4] In the myapp directory, create a file named server.js and copy in the code from the example above.
 
-
-
-
-[5] Run the app with the following command:
+> [5] Run the app with the following command:
 
 ```js
 $ node app.js
 ```
 
-[6] Then, load http://localhost:3000/ in a browser to see the output of the browser and the terminal
-
-
+> [6] Then, load http://localhost:3000/ in a browser to see the output of the browser and the terminal
 
 
 ## Routing 
@@ -246,9 +242,6 @@ app.get('/weather', (req, res) => {
 }) 
 ```
 
-> **Exercise:** Add some code so that your server sends one message when the
-> endpoint is `/cities`.
-
 Each route can have one or more handler functions, which are executed when the route is matched.
 
 Route definition takes the following structure:
@@ -256,6 +249,8 @@ Route definition takes the following structure:
 ```js
 app.METHOD(PATH, HANDLER)
 ```
+
+
 
 Where:
 
@@ -265,9 +260,15 @@ Where:
 - HANDLER is the function executed when the route is matched.
 
 
+#### Exercise: Add an enpoint
+
+> Add some code so that your server sends one message when the
+> endpoint is `/cities`.
+
 ### Reading endpoint parameters 
 
-http://localhost:3000/weather/Valencia
+- http://localhost:3000/weather/Valencia
+- https://app.slack.com/client/TMSJ4SYVD/D010G6978CC/thread/CU83UPAQH-1583245406.004600
 
 ```js
 app.get('/weather/:cityName', (req, res) => {
@@ -279,7 +280,8 @@ app.get('/weather/:cityName', (req, res) => {
 
 ### Reading endpoint query 
 
-http://localhost:3000/weather?name=Valencia
+- http://localhost:3000/weather?name=Valencia
+- https://music.youtube.com/watch?v=0aJVOz5rilY&list=RDMMpsK9eOtj2ms
 
 ```js
 app.get('/weather', (req, res) => {
@@ -289,9 +291,12 @@ app.get('/weather', (req, res) => {
 }) 
 ```
 
-> Exercise: Make a calculator adding an endpoint for each operation Add,Substract,Multiply,Divide, each endpoint will receive two numbers and return the result
+#### Exercise: make a calculator
+> Make a calculator adding an endpoint for each operation [Add,Substract,Multiply,Divide], each endpoint will receive two numbers and return the result
 
 ### Responding objects
+
+A server can respond text, HTML, but also JSON objects
 
 ```js
 app.get('/weather/:cityName', (req, res) => {
