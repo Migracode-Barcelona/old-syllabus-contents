@@ -14,6 +14,10 @@ Read the Mentors Notes [here](./mentors.md)
 
 - [HTTP](#HTTP)
 - [APIs](#apis)
+- [CORS](#Postman API Client)
+- [Postman](#Postman API Client)
+- [Read POST and PUT](#Read POST and PUT)
+- [Nodemon](#Nodemon)
 - [Workshop](#workshop)
 
 ---
@@ -103,16 +107,60 @@ For now, remember when building APIs, to use **Resource** names to identify your
 endpoints and make use of the **HTTP methods (Verbs)** to describe operations
 performed on those resources.
 
-# Postman API Client
 
+# CORS
+
+Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. More info in [Wiki](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+
+Certain "cross-domain" requests, are forbidden by default by the same-origin security policy. CORS defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request.
+
+Express has a package to manage CORS, available through npm. 
+
+Find in this [link](https://expressjs.com/en/resources/middleware/cors.html) information to install and use it in your server.
+
+
+# Postman API Client
 
 Postman is a platform for API development. We can use the API Client to check and test our API, simplifying each step of building.
 
 https://www.postman.com/product/api-client/
 
-Add postman as a Chrome extension
+Add postman as a Chrome extension.
+
+When we use the methods POST and PUT, how do we read them from the server?
+
+# Read POST and PUT
+
+The contents of POST and PUT are hidden in the req object. You need to use express-formidable to be able to read them.
+Go to your terminal and install express-formidable:
+
+```js
+$ npm install express-formidable --save
+```
+
+Next, you need to require the express-formidable library so you can use it in your code.
+
+```js
+var formidable = require('express-formidable');
+```
+
+After the server requires, add the instruction to use the module:
+
+```js
+app.use(formidable());
+```
+
+Then, check in your server how are you able to read what the client sent:
+
+```js
+app.post('/', function (req, res) {
+  console.log(req.fields);
+  res.send('Got a POST request')
+})
+```
 
 # Nodemon
+
 It is a bit annoying that we have to kill and restart our server every time we want to test our changes. There is a handy npm package that can help us with that task.
 
 ```js
@@ -129,7 +177,6 @@ scripts: {
 ```
 
 now from your terminal, use the command npm run dev and that will run the server with nodemon which is a package that makes the server listen to code changes and automatically restart.
-
 
 
 # Exercise: CRUD
@@ -153,7 +200,7 @@ Taking the exercise from the last week:
 Check all the endpoints using Postman
 
 
-# Workshop - Blog
+# Workshop
 
 In the next steps, we will building a **CMS (Content Management System)** - a
 system to write, publish and save blog posts. 
