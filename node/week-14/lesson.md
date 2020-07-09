@@ -14,9 +14,9 @@ Read the Mentors Notes [here](./mentors.md)
 
 - [HTTP](#HTTP)
 - [APIs](#apis)
-- [CORS](#Postman API Client)
-- [Postman](#Postman API Client)
-- [Read POST and PUT](#Read POST and PUT)
+- [CORS](#CORS)
+- [Postman](#Postman-API-Client)
+- [Read POST and PUT](#Read-POST-and-PUT)
 - [Nodemon](#Nodemon)
 - [Workshop](#workshop)
 

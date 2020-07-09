@@ -2,11 +2,6 @@
 
 ---
 
-**Teaching this lesson?**
-
-Read the Mentors Notes [here](./mentors.md)
-
----
 
 ## What will we learn today?
 
@@ -285,15 +280,5 @@ In the code above:
 Start your server with `node server.js` and try to reach the `/hotels` endpoint to see the list of hotels currently available in your `hotels` table of your `cyf_hotels` database. You can try to create/update/delete hotels to verify that your API always returns what is stored in your database.
 
 ## Homework
-
-All of the homework can be found in [this repository](https://github.com/CodeYourFuture/Databases-Homework).
-
-### Submission
-
-Create a new branch from `Master` to start working on this weeks homework. It should be called `[YOUR_NAME]/Week2`.
-
-When you have completed the homework create a pull request back to the `CodeYourFuture/Databases-Homework` repository so your teach can feedback on it.
-
-### Tasks
 
 You should complete all of the tasks in **Week 2** of the [Database Homework repository](https://github.com/CodeYourFuture/Databases-Homework).

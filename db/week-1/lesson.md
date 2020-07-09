@@ -2,11 +2,6 @@
 
 ---
 
-**Teaching this lesson?**
-
-Read the Mentors Notes [here](./mentors.md)
-
----
 
 ## What will we learn today?
 
@@ -22,6 +17,7 @@ Read the Mentors Notes [here](./mentors.md)
 - [Communicating with the database using SQL](#communicating-with-the-database-using-sql)
   - Creating a new database
   - Creating a table
+  - DBeaver, a SQL client software
   - Inserting data
   - Retrieving data
   - Retrieving data with conditions
@@ -292,16 +288,24 @@ SELECT * FROM hotels WHERE postcode = 'CM194JS' OR postcode = 'TR209AX';
 
 ## Homework
 
-All of the homework can be found in [this repository](https://github.com/CodeYourFuture/Databases-Homework).
+0. Create a new database called `migracode_classes` (hint: use `createdb` in the terminal)
+1. Save the next instructions in a file with the name `migracode_classes.sql`, the idea is to build a script like the one we used in Exercise 5
+2. Create a new table `mentors`, for each mentor we want to save their name, how many years they lived in Barcelona, their address and their favourite programming language.
+3. Insert 5 mentors in the `mentors` table
+4. Create a new table `students`, for each student we want to save their name, address and age.
+5. Insert 10 students in the `students` table.
+6. Verify that the data you created for mentors and students are correctly stored in their respective tables (hint: use a `select` SQL statement).
+7. Create a new `classes` table to record the following information:
 
-### Submission
+   - A class has a leading mentor
+   - A class has a topic (such as Javascript, NodeJS)
+   - A class is taught at a specific date and at a specific location
 
-Fork and clone the repository above to get the homework for this week.
-
-Create a new branch from `Master` to start working on this weeks homework. It should be called `[YOUR_NAME]/Week1`.
-
-When you have completed the homework create a pull request back to the `CodeYourFuture/Databases-Homework` repository so your teach can feedback on it.
-
-### Tasks
-
-You should complete all of the tasks in **Week 1** of the [Database Homework repository](https://github.com/CodeYourFuture/Databases-Homework).
+8. Insert a few classes in the `classes` table
+9. We now want to store who among the students attends a specific class. How would you store that? Come up with a solution and insert some data if you model this as a new table.
+10. Answer the following questions using a `select` SQL statement:
+    - Retrieve all the mentors who lived more than 5 years in Barcelona
+    - Retrieve all the mentors whose favourite language is Javascript
+    - Retrieve all the students under 25 years old
+    - Retrieve all the classes taught before June this year
+    - Retrieve all the students (retrieving student ids only is fine) who attended the Javascript class (or any other class that you have in the `classes` table).
