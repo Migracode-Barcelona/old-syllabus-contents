@@ -5,12 +5,12 @@
 **What we will learn today?**
 
 * [MigraCode](#migracode)
-* [Environment](#Your-new-working-environment)
-* [Development Tools](#Development-Tools)
-  * [Visual Studio Code](#Visual-Studio-Code)
+* [Environment](#your-new-working-environment)
+* [Development Tools](#development-tools)
+  * [Visual Studio Code](#visual-studio-code)
   * [Terminal](#terminal)
   * [Git](#git)
-* [First Project](#Your-first-Migracode-Github-project)
+* [First Project](#your-first-migracode-github-project)
 * [Homework](#homework)
 
 ---
@@ -118,7 +118,7 @@ you to get familiar with it by following this tutorial:
 
 * [Learn the command line >](https://www.codecademy.com/learn/learn-the-command-line)
 
-### How do I use it on my computer?
+#### How do I use it on my computer?
 
 So now that you know what the terminal can do for you, how do you use it? Please
 find instructions for your operating system below. After you have followed the
@@ -133,7 +133,7 @@ will see something like this:
   />
 </div>
 
-### Commonly used commands
+#### Commonly used commands
 
 There's a set of commands you should become comfortable with during the course to allow you to effectively move around the filesystem and write software on your laptop.
 
@@ -176,6 +176,15 @@ and by far
 What is **Github**? Github is a very popular site where you can publish and
 share your Git repositories, share and collaborate with other people.
 
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/githubdiagram.png"
+    width="300"
+    alt="Github"
+  />
+</div>
+
+
 #### Get Started
 
 Follow this tutorial from Github to setup Git
@@ -196,6 +205,16 @@ intermediate features, like branching.
 * If you're starting a new project then you should follow these steps
   https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
+
+#### Github
+
+During our course, we will be using [Github](https://github.com) to store our
+code. Github is the most popular Git service around, and is used by many large
+companies, like Facebook, Airbnb and The Guardian.
+
+[MigraCode's Github page >](https://github.com/Code-Your-Future)
+
+
 #### Using Git through the Terminal
 
 * `git init` **_if it is a new project_**, i.e. a project not **cloned** from a
@@ -213,14 +232,20 @@ You will also typically need to set up your email and name once when you install
 Git `git config --global user.name <name>` and `git config --global user.email
 <email>`.
 
+Ok ok, let's draw this...
 
-#### Github
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/gitdraw.png"
+    width="300"
+    alt="Github"
+  />
+</div>
 
-During our course, we will be using [Github](https://github.com) to store our
-code. Github is the most popular Git service around, and is used by many large
-companies, like Facebook, Airbnb and The Guardian.
+The commands `git add .` and `git commit -m "change explanation"` are used to index and save the files in our computer repository, and we will use `git push` to send the changes to Github
 
-[MigraCode's Github page >](https://github.com/Code-Your-Future)
+
+Find in this link the complete [Git Cheat Sheet](https://davidgv.com/wp-content/uploads/2018/08/git-cheat-sheet.png), a very useful resource
 
 #### More Resources
 
