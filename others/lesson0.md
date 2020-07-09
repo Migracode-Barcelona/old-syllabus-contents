@@ -5,10 +5,12 @@
 **What we will learn today?**
 
 * [MigraCode](#migracode)
-* [Welcome task](#welcome)
-* [Terminal](#terminal-basics)
-* [Git](#git)
-* [IDEs](#ide)
+* [Environment](#Your-new-working-environment)
+* [Development Tools](#Development-Tools)
+  * [Visual Studio Code](#Visual-Studio-Code)
+  * [Terminal](#terminal)
+  * [Git](#git)
+* [First Project](#Your-first-Migracode-Github-project)
 * [Homework](#homework)
 
 ---
@@ -18,81 +20,89 @@
 * Who we are?
 * What we learn?
   * Read this Technology Survey from
-    [StackOverflow](http://stackoverflow.com/insights/survey/2017). Pay
+    [StackOverflow 2019](http://stackoverflow.com/insights/survey/2019). Pay
     particular attention to the technologies we'll be teaching you (JavaScript,
-    React, NodeJS)
+    React, NodeJS) and the evolution in the last years
 * [House Rules](house-rules.md)
   * How we work?
   * How we treat each other?
-* Standup
 
-## Welcome!
+## Your new working environment
 
-Welcome to MigraCode and to the world of Web Development! Now that you have
-built a website in CodePen and learned the basics of HTML and CSS, it's time to
-learn about the tools that web developers use in their everyday job. These tools
-will be used during the course, so it is important that you become familiarised
-with them.
+Welcome to MigraCode and to the world of Web Development! 
 
-In order to get started, we would like you to try to complete a task at home:
-move your CodePen website to a web address under
-`https://your-username.github.io/your-site-name`.
-
-In the process, you will learn how to store your code outside CodePen's website,
-in a location where other developers can make changes to it and view a history
-of all the updates that you have made.
-
-If you wish to learn more about the concepts behind the steps we are suggesting
-below, please read the rest of this document.
-
-And remember: it's ok if you are stuck and don't know how to continue. At any
-point, please ask for a mentor's help. We will cover these steps again in the
-lesson, and will explain them in more detail.
-
-### How to move your website to Github.io
-
-1. Export your website as a zip from CodePen.
-   [Help >](https://blog.codepen.io/documentation/features/exporting-pens/)
-2. Extract the contents of the zip file to a folder in your computer. Keep note
-   of the location of this folder.
-3. Read about the [terminal](#terminal-basics).
-4. Read about [git](#git).
-5. Install [Git](https://git-scm.com/download/).
-6. Put the contents of the zip folder in a Gitub repository.
-   [How does Github work? (30min) >](https://www.youtube.com/watch?v=E8TXME3bzNs)
-7. You should now have a page with your code under
-   `http://github.com/your-username/your-repository-name`. This is a view of
-   your code, and you should see a list of your files, including an
-   `index.html`.
-8. Now all that remains is to publish your website! Still under
-   `http://github.com/your-username/your-repository-name`, find the settings
-   icon in the top right corner.
+If you are the ones that are using [Ubuntu](https://ubuntu.com/), an open-source operating system, you will see this sreen:
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/repo-settings.png"
-    width="200"
-    alt="Repo settings"
+    src="assets/lesson-0/ubuntu.png"
+    width="400"
+    alt="Ubuntu"
   />
 </div>
 
-10. Find the section named "Github Pages" and select "master branch" in source,
-    then hit "Save".
+These are the tools that should be installed (in the computers we gave you everything is already installed):
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Git](https://git-scm.com/)
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+
+## Development Tools
+
+### Visual Studio Code
+
+Visual Studio Code or VS Code is an IDE, 
+IDE stands for "Integrated Development Environment". It is the software that you
+will be using to write most of your code. It is designed to help you develop
+your apps quickly, focusing on the problems that you need to solve instead of
+having to search Google for minor details.
+
+#### Auto-complete
+
+One of the most important features of an IDE is that it provides
+"auto-completion". This means that it will give you suggestions of what you can
+can write next, while you are typing something.
+
+For example, when writing a CSS property, it will tell you what values you can
+assign it to.
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/repo-settings-pages.png"
-    width="200"
-    alt="Repo settings - Github pages"
+    src="assets/lesson-0/ide-auto-complete.png"
+    width="300"
+    alt="IDE - Auto complete"
   />
 </div>
 
-11. Wait a few minutes, then refresh the page and come back to the Github Pages
-    section. You should see a green bar saying "Your site is published at
-    `http://github.com/your-username/your-repository-name`". Click the link,
-    verify that your website is there, then share it with your CYF class!
+#### File tree view
 
-## Terminal basics
+The reason why we call it "Integrated" is that you almost don't need to leave
+the window to write your app. For example, creating, renaming and moving files
+can be done directly from the IDE. This functionality can be achieved from
+something called a "Tree view", which you can usually find on the left side of
+your IDE.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/file-tree.png"
+    width="200"
+    alt="IDE - File tree"
+  />
+</div>
+
+#### Finding files
+
+When working with big projects, you will often need to find a file quickly,
+without having to go through the tree view manually.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/find-file.gif"
+    width="500"
+    alt="IDE - Find file"
+  />
+</div>
+
+### Terminal
 
 During your course journey and onwards, the **terminal** (also known as
 **command line**) will be one of your most valuable tools. It will help you to
@@ -135,25 +145,8 @@ There's a set of commands you should become comfortable with during the course t
 * `rm [file_name]` - remove a file
 * `rm -r [directory_name]` - remove a directory (**and all files inside that directory**)
 
-#### Linux
 
-The Terminal is already installed. It should be in the list of applications
-available in your computer.
-[More instructions >](http://www.wikihow.com/Open-a-Terminal-Window-in-Ubuntu)
-
-#### macOS (Apple)
-
-The Terminal is already installed. It should be in the list of applications
-available in your computer.
-[More instructions >](http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
-
-#### Windows
-
-Install [Git](https://git-scm.com/download/). It will bring with it a tool
-called "Git Bash". When the mentors ask you to open a terminal or command line,
-please open "Git Bash".
-
-## Git
+### Git
 
 We will use Git as our Version Control System (also known as Source Control).
 It's like Dropbox for developers. But much better!
@@ -183,7 +176,7 @@ and by far
 What is **Github**? Github is a very popular site where you can publish and
 share your Git repositories, share and collaborate with other people.
 
-### Get Started
+#### Get Started
 
 Follow this tutorial from Github to setup Git
 https://help.github.com/articles/set-up-git/
@@ -194,7 +187,7 @@ Then
 Try completing [this tutorial >](https://try.github.io/) as well to learn more
 intermediate features, like branching.
 
-### A typical workflow
+#### A typical workflow
 
 * If you're basing your work from another project, the first step is typically
   to **fork** their repo. Read this guide for instructions
@@ -203,7 +196,7 @@ intermediate features, like branching.
 * If you're starting a new project then you should follow these steps
   https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
-### Using Git through the Terminal
+#### Using Git through the Terminal
 
 * `git init` **_if it is a new project_**, i.e. a project not **cloned** from a
   repo (or a fork of a repo)
@@ -220,21 +213,8 @@ You will also typically need to set up your email and name once when you install
 Git `git config --global user.name <name>` and `git config --global user.email
 <email>`.
 
-### Using Git through a graphical interface
 
-If you don't feel comfortable with the terminal just yet, download the
-[Github client](https://desktop.github.com/). If possible, however, **we
-recommend becoming comfortable with the Terminal commands and understanding the
-steps for the different workflows before moving on to visual Git clients.**
-
-[Github client guides >](https://help.github.com/desktop/guides/contributing/)
-
-### Pull Requests
-
-You should also learn how to create and work with
-[Pull Requests](https://help.github.com/articles/about-pull-requests/).
-
-### Github
+#### Github
 
 During our course, we will be using [Github](https://github.com) to store our
 code. Github is the most popular Git service around, and is used by many large
@@ -242,8 +222,9 @@ companies, like Facebook, Airbnb and The Guardian.
 
 [MigraCode's Github page >](https://github.com/Code-Your-Future)
 
-### More Resources
+#### More Resources
 
+* [How does Github work? (30min) >](https://www.youtube.com/watch?v=E8TXME3bzNs)
 * Follow this tutorial to learn the basic Git commands
   https://www.codeschool.com/courses/try-git
 * Another good resource: Git - the simple guide
@@ -256,78 +237,72 @@ companies, like Facebook, Airbnb and The Guardian.
 * This Glossary has definitions of the terms normally used with Git:
   https://help.github.com/articles/github-glossary/
 
-## IDE
 
-IDE stands for "Integrated Development Environment". It is the software that you
-will be using to write most of your code. It is designed to help you develop
-your apps quickly, focusing on the problems that you need to solve instead of
-having to search Google for minor details.
+## Your first Migracode Github project
 
-### Auto-complete
+Now that you have built a website in CodePen and learned the basics of HTML and CSS, it's time to
+learn about the tools that web developers use in their everyday job. These tools
+will be used during the course, so it is important that you become familiarised
+with them.
 
-One of the most important features of an IDE is that it provides
-"auto-completion". This means that it will give you suggestions of what you can
-can write next, while you are typing something.
+In order to get started, we would like you to try to complete a task:
+move your CodePen website to a web address under
+`https://your-username.github.io/your-site-name`.
 
-For example, when writing a CSS property, it will tell you what values you can
-assign it to.
+In the process, you will learn how to store your code outside CodePen's website,
+in a location where other developers can make changes to it and view a history
+of all the updates that you have made.
+
+If you wish to learn more about the concepts behind the steps we are suggesting
+below, please read the rest of this document.
+
+And remember: it's ok if you are stuck and don't know how to continue. At any
+point, please ask for a mentor's help. We will cover these steps again in the
+lesson, and will explain them in more detail.
+
+### How to move your code to Github
+
+1. Export your website as a zip from CodePen.
+   [Help >](https://blog.codepen.io/documentation/features/exporting-pens/)
+2. Extract the contents of the zip file to a folder in your computer. Keep note
+   of the location of this folder.
+3. Put the contents of the zip folder in a Github repository.
+4. You should now have a page with your code under
+   `http://github.com/your-username/your-repository-name`. This is a view of
+   your code, and you should see a list of your files, including an
+   `index.html`.
+
+### How to publish your website in Github.io
+
+1. Now all that remains is to publish your website! Still under
+   `http://github.com/your-username/your-repository-name`, find the settings
+   icon in the top right corner.
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/ide-auto-complete.png"
-    width="300"
-    alt="IDE - Auto complete"
-  />
-</div>
-
-### File tree view
-
-The reason why we call it "Integrated" is that you almost don't need to leave
-the window to write your app. For example, creating, renaming and moving files
-can be done directly from the IDE. This functionality can be achieved from
-something called a "Tree view", which you can usually find on the left side of
-your IDE.
-
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/file-tree.png"
+    src="assets/lesson-0/repo-settings.png"
     width="200"
-    alt="IDE - File tree"
+    alt="Repo settings"
   />
 </div>
 
-### Finding files
-
-When working with big projects, you will often need to find a file quickly,
-without having to go through the tree view manually.
+2. Find the section named "Github Pages" and select "master branch" in source,
+    then hit "Save".
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/find-file.gif"
-    width="500"
-    alt="IDE - Find file"
+    src="assets/lesson-0/repo-settings-pages.png"
+    width="200"
+    alt="Repo settings - Github pages"
   />
 </div>
 
-Most IDEs will allow you to do this with a sequence of keys.
+3. Wait a few minutes, then refresh the page and come back to the Github Pages
+    section. You should see a green bar saying "Your site is published at
+    `http://github.com/your-username/your-repository-name`". Click the link,
+    verify that your website is there, then share it with your CYF class!
 
-VSCode sequence: **Windows/Linux** Ctrl + P | **Mac** Cmd + P
 
-### Install an IDE
-
-For this course, we recommend the usage of
-[VS Code](https://code.visualstudio.com/). Please go ahead and install it, then
-try opening an HTML file with it via File > Open.
-
-[Install VS Code >](https://code.visualstudio.com/)
-
-#### Other IDEs
-
-Besides VS Code, the IDEs below are also popular with web developers. Feel free
-to check out their websites and see the differences between them and VS Code.
-
-* [Atom](https://atom.io/)
-* [Webstorm](https://www.jetbrains.com/webstorm/)
 
 ## Homework
 
@@ -336,10 +311,10 @@ to check out their websites and see the differences between them and VS Code.
 * When your website is live at `https://your-username.github.io/your-site-name`,
   please send a link to the slack channel of your class.
 * Learn how to navigate your computer using a Terminal (view files, copy files).
-* Install [VS Code](https://code.visualstudio.com/).
 * Open your website with VS Code and add something to it: text, images, update
   CSS. Commit your changes to Github and verify that
   `https://your-username.github.io/your-site-name` has been updated!
+* Add, commit and push your changes to Github and check that the changes are applied in the published version
 
 It's alright if you are getting stuck or if something doesn't look right! When
 it happens, please ask your mentors or classmates for help in Slack.
