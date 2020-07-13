@@ -1,7 +1,15 @@
 # Homework
 
-You can find the homework for this week [here](https://github.com/CodeYourFuture/HTML-CSS-Homework)
+Advanced CSS Selectors
+- Read this about CSS Selectors http://learn.shayhowe.com/advanced-html-css/complex-selectors/
+- Play this game and complete it: https://flukeout.github.io/
 
-# Prepare for the next class
+HTML Reading
+- Read this page on HTML syntax https://marksheet.io/html-syntax.html
 
-1. (Est. 4-5 hours) Complete the first three lessons in this course on [Responsive Web Design Fundamentals](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893). You should complete **Why Responsive?**, **Starting Small** and **Building Up**. _Don't worry if you don't have a phone you can use for Remote Debugging. You can use the browser's Device Emulation instead._
+Delivery!
+- Fork and clone the [HTML/CSS Week 1 repo](https://github.com/CodeYourFuture/HTML-CSS-Homework) and follow the instructions, complete steps 1 to 3
+
+# Workshop (Saturday)
+
+

@@ -162,7 +162,6 @@ You can also set a transparent border, so that it takes up the space without sho
 
 > **Exercise:** Use a transparent border so that the width of each navigation menu item stays the same even when it is hovered or focused.
 
-
 # Resources
 
 1. [HTML5 - semantic elements](https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5)
