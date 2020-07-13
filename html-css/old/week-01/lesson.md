@@ -163,23 +163,7 @@ You can use more advanced CSS selectors to limit your selections. Read about [Ch
 
 Then complete exercise 8 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
-## Git Branching
 
-You have been using git to track the changes you make to your exercises project. Each time you commit, you save a copy of your files.
-
-![Visualization of git commits](../assets/git-branch-1.png)
-
-When you create a new branch, you create a separate line of commits.
-
-![Visualization of a git branch](../assets/git-branch-2.png)
-
-With branches, you can work on two copies of your project and switch back and forth.
-
-![Visualization of commits in two git branches](../assets/git-branch-3.png)
-
-Complete exercise 9 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises) to learn how to use git branches.
-
-> If you want to go deeper, read this article on [how git branching works](https://www.atlassian.com/git/tutorials/using-branches).
 
 # Resources
 

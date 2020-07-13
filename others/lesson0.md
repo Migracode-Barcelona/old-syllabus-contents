@@ -237,7 +237,7 @@ Ok ok, let's draw this...
 <div style="text-align: center;">
   <img
     src="assets/lesson-0/gitdraw.png"
-    width="300"
+    width="500"
     alt="Github"
   />
 </div>

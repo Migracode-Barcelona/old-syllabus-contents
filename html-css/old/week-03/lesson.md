@@ -433,19 +433,7 @@ The `checked` attribute can be added to a checkbox or radio button to pre-check 
 
 Complete exercise 27 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
-## <a name="merge-conflicts"></a>Git Merge Conflicts
 
-Last week you used Git to merge your changes from one branch back into your master branch.
-
-![Visualization of merging one branch into another](../assets/git-merge.png)
-
-Sometimes Git can not automatically merge one branch into another, because each branch has modified the same line of code. Git does not know which version of the line is the correct one. When this happens, we have a "merge conflict".
-
-![Visualization of a merge conflict](../assets/git-merge-conflict.png)
-
-As a developer, you have to tell Git which version of the line of code is correct.
-
-Complete exercise 28 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises) to learn how to resolve a merge conflict.
 
 ## <a name="retrospective"></a>Retrospective
 

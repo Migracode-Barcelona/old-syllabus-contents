@@ -161,17 +161,7 @@ Learn more about flexbox by reading this [helpful, visual and complete reference
 
 Complete exercises 11-17 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
-## Git Merging
 
-Last week you used Git to create a branch so that you could work on two different copies of your project at the same time.
-
-![Visualization of commits in two git branches](../assets/git-branch-3.png)
-
-This week you will learn how to merge your changes in one branch back to your master branch.
-
-![Visualization of merging one branch into another](../assets/git-merge.png)
-
-Complete exercise 18 from the [exercise project](https://github.com/Migracode-Barcelona/html-css-git-exercises).
 
 ## Resources
 
