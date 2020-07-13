@@ -2,12 +2,6 @@
 
 ---
 
-**Teaching this lesson?**
-
-Read the Mentors Notes [here](./mentors.md)
-
----
-
 ## Contents
 
 - [Semantic HTML tags](#html-syntax)
@@ -26,10 +20,6 @@ Learning objectives for this lesson can be found [here](./learning-objectives.md
 
 ![What makes a web page](../assets/webpage-parts.png)
 
-**Separation of Concerns:** In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections, such that each section addresses a separate concern. (Wikipedia)
-
-> **Principles** - During the course, we will highlight principles that apply to the specific topic but also to Computer Science and Programming in general. It is important to understand these principles, terms and apply them to your thinking in general.
-
 ## HTML Syntax
 
 You're already familiar with HTML code from your application process. If you want to refresh your memory, read this [quick guide to the HTML syntax](http://marksheet.io/html-syntax.html).
@@ -44,13 +34,13 @@ All together, let's review the basic syntax in the following example:
 </article>
 ```
 
-> **Exercise** Which parts are the **Tags** and which parts are the **Attributes**.
+> **Question** Which parts are the **Tags** and which parts are the **Attributes**?.
 
 HTML tags are arranged in a hierarchy. This is sometimes called "nesting" tags or creating an HTML "tree". Between the opening `<article>` tag and the closing `</article>` tag there are three other tags. We call these "child" tags, because they have a parent-child relationship.
 
 ![HTML Hierarchy](../assets/html-hierarchy.png)
 
-> **Exercise** As a group, let's try to name all of the parent and child tags in the following example.
+> **Question** As a group, let's try to name all of the parent and child tags in the following example.
 
 ```html
 <article>

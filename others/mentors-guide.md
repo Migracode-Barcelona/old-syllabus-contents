@@ -1,28 +1,68 @@
-From http://www.codebar.io/effective-teacher-guide
+# Summary
 
-* You don't need a laptop for our workshops. You are there to watch and guide
-  the students. If you don't feel comfortable with the tutorial you should spend
-  time on it before coming if you want to help out. Do not take over the
-  keyboard! This can be off-putting and scary.
-* Encourage the students to type and not copy paste.
-* Explain that there are no dumb questions.
-* Explain to students that it's OK to make mistakes. Always introduce yourself.
-  Say why you want to help out and are spending your own time on this, why you
-  like programming.
-* Give your students the opportunity to get to know each other. Ask their names,
-  why they are here, what they do in their day jobs. Encourage a brief
-  discussion before starting.
-* Assume that anyone you're teaching has no knowledge but infinite intelligence.
-* Work collaboratively with your student. If you have two students, you should
-  work with both. Don't focus all your attention on one of them.
-* Let students have a go at answering the questions first. Help with open and
-  leading questions. Encourage a discussion.
-* Take it slow, you are the teacher, they are the student. Allow for time
-  between questions.
-* Don't say no when the students are not doing something right. Be gentle,
-  approach it in a mild way.
-* Use pen and paper or go to a whiteboard! Often students are coming from a
-  non-technical background. Drawing and explaining with visual material is
-  really helpful.
-* Let them stumble. We learn by making mistakes, getting frustrated, and working
-  through problem in our own way. Be supportive, but let them explore.
+
+
+## Before the class
+
+Prepare the lesson: Start by drafting the Class outline, define the High level topics and their order, then follow this checklist to expand the Lesson's materials.
+
+- The lesson structure for each week is: [Lesson Template](/others/lesson-template.md)
+  - Weekday:
+    - Lesson Objectives
+    - Lesson contents
+    - Exercises
+    - Resources
+  - Homework:
+  - Weekend:
+- Homework system: github repositories of each student to track
+- [Online classes manual](https://docs.google.com/document/d/13KBKYSfzPxzGtEE5HM15M6vUOjSz71wgYNfx0SOGQQE/edit)
+
+
+Before starting, please read the following general guidelines and Checklist for a lesson. Participate in the discussion if you'd like.
+
+There are discussions about each module and every class in a module, make sure to go through them (or add a new issue/discussion point).
+
+## Tools that we use
+
+- Ubuntu
+- Visual Code
+- Terminal
+- Node
+- NPM
+- Chrome
+- PostreSQL
+- DBeaver
+
+
+
+## Classes Notes for Mentors
+
+- Before you start
+  - Week 0 - Introduction and basic setup
+- HTML/CSS
+  - [Week 1 - Semantic HTML and CSS](../html-css/week-1/mentors.md) 
+  - [Week 2 - Responsive Web and layout](../html-css/week-2/mentors.md) 
+  - [Week 3 - Bootstrap](../html-css/week-3/mentors.md)
+
+
+## Students
+
+To see the students progress ask for access in the class links
+
+- [2020-Jul-01](https://docs.google.com/spreadsheets/d/1TKd_X-bsx1qbInkAv7x5d3slkJF9sEExfCnFRyjllBk)
+- [2020-Jul-02](https://docs.google.com/spreadsheets/d/1yE7CYQG9Hs4dPGvmgvFl4BDQ0DRuLZDHDc2ZVnQ8lnc)
+
+## Feedback & Contributing
+
+Under construction: for now any feedback or contribution is completely welcome, just email to carlos@migracode.org
+
+- [Contributing](CONTRIBUTING.md)
+
+
+## Code Conduct
+
+{% include "./house-rules.md" %}
+
+## Other links
+
+

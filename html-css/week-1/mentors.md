@@ -64,6 +64,4 @@ For the second exercise, the answer will look something like this:
 
 This will be the most challenging for students. Let them fail and try again until they get it.
 
-## Homework
-
-Make sure they know that the Responsive Web Design Fundamentals course will take up the majority of their homework time, even though it's really preparation for the next class.
+{% include "./learning-objectives.md" %}
