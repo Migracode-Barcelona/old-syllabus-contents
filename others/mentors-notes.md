@@ -1,9 +1,3 @@
-
-
-
-https://syllabus.codeyourfuture.io/html-css/week-1/mentors.html
-
-
 # Summary
 
 - Online classes manual

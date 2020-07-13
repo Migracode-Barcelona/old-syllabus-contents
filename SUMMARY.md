@@ -53,4 +53,5 @@
 ### For Mentors
 
 - [Contributing](CONTRIBUTING.md)
+- [Mentors Notes](/others/mentors-notes.md)
 - [Lesson Template](/others/lesson-template.md)

@@ -1,9 +1,3 @@
-![](https://img.shields.io/badge/status-draft-darkred.svg)
-![](https://img.shields.io/badge/status-review-orange.svg)
-![](https://img.shields.io/badge/status-ready-green.svg) (have one of these
-badges on top of your Lessons and follow the guidelines/workflow defined in this
-[issue](https://github.com/Code-Your-Future/syllabus/issues/9))
-
 # [Class name]
 
 ** What we will learn today?**
@@ -40,9 +34,6 @@ High level explanation of Topic 1 - rely on the exercises
 
 4. **Research:**
 
-## Prepare for the next class
-
-1. Read this [Some Tutorial or Video etc...](https://google.com)
 
 # Escalation Policy
 
