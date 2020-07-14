@@ -187,8 +187,14 @@ share your Git repositories, share and collaborate with other people.
 
 #### Get Started
 
-Follow this tutorial from Github to setup Git
-https://help.github.com/articles/set-up-git/
+If Git is not installed, follow this tutorial from Github to [setup Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git#setting-up-git)
+
+Once is installed set your username and email adress in Git
+
+```sh
+git config --global user.name "Mona Lisa"
+git config --global user.email "email@example.com"
+```
 
 #### A typical workflow
 
@@ -206,7 +212,7 @@ During our course, we will be using [Github](https://github.com) to store our
 code. Github is the most popular Git service around, and is used by many large
 companies, like Facebook, Airbnb and The Guardian.
 
-[MigraCode's Github page >](https://github.com/Code-Your-Future)
+[MigraCode's Github page >](https://github.com/migracode-barcelona)
 
 
 #### Using Git through the Terminal
@@ -238,11 +244,11 @@ Ok ok, let's draw this...
 
 The commands `git add .` and `git commit -m "change explanation"` are used to index and save the files in our computer repository, and we will use `git push` to send the changes to Github
 
-
-Find in this link the complete [Git Cheat Sheet](https://davidgv.com/wp-content/uploads/2018/08/git-cheat-sheet.png), a very useful resource
+Find a complete [Migracode Github Guide](#git.md)
 
 #### More Resources
 
+* [Git Cheat Sheet](https://davidgv.com/wp-content/uploads/2018/08/git-cheat-sheet.png)
 * [How does Github work? (30min) >](https://www.youtube.com/watch?v=E8TXME3bzNs)
 * Follow this tutorial to learn the basic Git commands
   https://www.codeschool.com/courses/try-git
@@ -320,7 +326,6 @@ lesson, and will explain them in more detail.
     section. You should see a green bar saying "Your site is published at
     `http://github.com/your-username/your-repository-name`". Click the link,
     verify that your website is there, then share it with your CYF class!
-
 
 
 ## Homework
