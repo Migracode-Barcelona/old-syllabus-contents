@@ -1,10 +1,6 @@
 # Summary
 
-
-
-## Before the class
-
-Prepare the lesson: Start by drafting the Class outline, define the High level topics and their order, then follow this checklist to expand the Lesson's materials.
+# General information
 
 - The lesson structure for each week is: [Lesson Template](/others/lesson-template.md)
   - Weekday:
@@ -17,10 +13,19 @@ Prepare the lesson: Start by drafting the Class outline, define the High level t
 - Homework system: github repositories of each student to track
 - [Online classes manual](https://docs.google.com/document/d/13KBKYSfzPxzGtEE5HM15M6vUOjSz71wgYNfx0SOGQQE/edit)
 
+## Prepare a class (main instructors)
 
-Before starting, please read the following general guidelines and Checklist for a lesson. Participate in the discussion if you'd like.
+Before starting, please read the following general guidelines and Checklist for a lesson.
+Prepare the lesson: Start by drafting the Class outline, define the High level topics and their order, then follow this checklist to expand the Lesson's materials.
 
-There are discussions about each module and every class in a module, make sure to go through them (or add a new issue/discussion point).
+## Classes Notes for Mentors
+
+- Before you start
+  - Week 0 - Introduction and basic setup
+- HTML/CSS
+  - [Week 1 - Semantic HTML and CSS](../html-css/week-1/mentors.md) 
+  - [Week 2 - Responsive Web and layout](../html-css/week-2/mentors.md) 
+  - [Week 3 - Bootstrap](../html-css/week-3/mentors.md)
 
 ## Tools that we use
 
@@ -33,18 +38,6 @@ There are discussions about each module and every class in a module, make sure t
 - PostreSQL
 - DBeaver
 
-
-
-## Classes Notes for Mentors
-
-- Before you start
-  - Week 0 - Introduction and basic setup
-- HTML/CSS
-  - [Week 1 - Semantic HTML and CSS](../html-css/week-1/mentors.md) 
-  - [Week 2 - Responsive Web and layout](../html-css/week-2/mentors.md) 
-  - [Week 3 - Bootstrap](../html-css/week-3/mentors.md)
-
-
 ## Students
 
 To see the students progress ask for access in the class links
@@ -55,14 +48,11 @@ To see the students progress ask for access in the class links
 ## Feedback & Contributing
 
 Under construction: for now any feedback or contribution is completely welcome, just email to carlos@migracode.org
-
-- [Contributing](CONTRIBUTING.md)
-
-
-## Code Conduct
-
-{% include "./house-rules.md" %}
+There are discussions about each module and every class in a module, make sure to go through them (or add a new issue/discussion point).
 
 ## Other links
+
+- [Code of conduct](CODE_OF_CONDUCT.md)
+- [Git Contributing](CONTRIBUTING.md)
 
 

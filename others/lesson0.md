@@ -20,7 +20,7 @@
 * Who we are?
 * What we learn?
   * Read this Technology Survey from
-    [StackOverflow 2019](http://stackoverflow.com/insights/survey/2019). Pay
+    [StackOverflow 2019](https://insights.stackoverflow.com/survey/2019). Pay
     particular attention to the technologies we'll be teaching you (JavaScript,
     React, NodeJS) and the evolution in the last years
 * [House Rules](house-rules.md)

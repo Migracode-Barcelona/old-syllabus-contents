@@ -40,7 +40,6 @@
 
 - [Useful links](/others/useful-links.md)
 - [Coding Standards and Best Practices](/others/PRACTICES.md)
-- [Making a Pull Request](/others/making-a-pull-request.md)
 - [Career Development](/others/career-development.md)
 
 ### Other resources
