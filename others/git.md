@@ -1,11 +1,19 @@
-# Github
+# Github: a complete guide (under construction)
 
-* [Create a new project in Github](#Create-a-new-project-in-Github)
-* [What is a remote?](#what-is-a-remote)
-* [How to fork a GitHub repo](#how-to-fork-a-github-repo)
-* [Adding a remote](#adding-a-remote)
-* [Creating a PR](#creating-a-pr)
 
+* [Github Basics](#github-basics)
+    * [Create a new project in Github](#create-a-new-project-in-github)
+    * [Fork and Clone an existing project from Github](#fork-and-clone-an-existing-project-from-github)
+    * [Commit and push your changes to Github](#commit-and-push-your-changes-to-github)
+    * [How to publish your website in Github.io](#how-to-publish-your-website-in-github.io)
+    * [Basic Git Commands](#basic-git-commands)
+* [Advanced]
+    * [What is a remote?](#what-is-a-remote)
+    * [Adding a remote](#adding-a-remote)
+    * [Branches](#branches)
+    * [Creating a Pull Request (PR)](#creating-a-pr)
+
+# Github Basics
 
 ## Create a new project in Github
 
@@ -43,8 +51,42 @@ The command to clone is:
 git clone URL_YOU_JUST_COPIED
 ```
 
+## Commit and push your changes to Github
+
+Once you have your repository
+- `git add .` // track changes on files (create, remove, modify)
+- `git commit -m “message”` // save changes
+- `git push`  // upload your commits from origin (your laptop) to the remote (Github) in branch master (the default)
 
 ## How to publish your website in Github.io
+
+1. Now all that remains is to publish your website! Still under
+   `http://github.com/your-username/your-repository-name`, find the settings
+   icon in the top right corner.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/repo-settings.png"
+    width="200"
+    alt="Repo settings"
+  />
+</div>
+
+2. Find the section named "Github Pages" and select "master branch" in source,
+    then hit "Save".
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/repo-settings-pages.png"
+    width="200"
+    alt="Repo settings - Github pages"
+  />
+</div>
+
+3. Wait a few minutes, then refresh the page and come back to the Github Pages
+    section. You should see a green bar saying "Your site is published at
+    `http://github.com/your-username/your-repository-name`". Click the link,
+    verify that your website is there, then share it with your CYF class!
 
 
 ## Remote
@@ -60,6 +102,29 @@ You can view the remotes you have set up with:
 ```
 git remote -v
 ```
+
+
+## Basic Git commands
+
+Configuration commands:
+
+- `git config --global user.name "John Doe"`
+- `git config --global user.email johndoe@example.com`
+- `git config --list`
+
+Commands to create a project:
+
+- `git init *project name*`  //initialize GIT repository in an empty directory (locally)
+- `git add .` //track changes on files (create, remove, modify)
+- `git commit -m “message”` //save changes
+- `git remote add origin *https://github.com/yourusername/yourrepo*`
+- `git push -u origin master` //upload origin (my laptop) to the server in branch 
+- `git status` //show current status
+- `git clone *url*` //download files from URL with a file .git
+
+
+# Advanced
+
 
 # Git Branching and merging
 
@@ -205,15 +270,28 @@ git pull upstream master
 
 If you're feeling confused, don't worry. Version control is one of the most difficult things you'll learn and we'll be going over it again and again and again.
 
+
+
+## Merging and advanced Git commands
+
+- `git fetch` //fetch latest changes from origin and all branches (no merge)
+- `git pull`  //fetch latest changes from origin and all branches (with merge)
+- `git merge`
+
+Branches:
+
+- `git branch test` //creates a new local branch
+- `git checkout test` //move to branch test
+- `git checkout master` //move to branch master
+- `git checkout -b test` //create a new local branch and move into it
+- `git push origin test` //push the branch and all commits to the server
+- `git branch -d test` //remove a local branch
+- `git checkout -b test origin/test`
+- `git fetch --all`   //to get all branches from server
+
+
+
 # Making a Pull Request
-
-![](https://img.shields.io/badge/status-draft-darkred.svg)
-
-
-
-## How to fork a GitHub repo
-
-
 
 
 ## Adding a Remote

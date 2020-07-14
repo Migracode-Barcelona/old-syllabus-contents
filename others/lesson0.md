@@ -190,12 +190,6 @@ share your Git repositories, share and collaborate with other people.
 Follow this tutorial from Github to setup Git
 https://help.github.com/articles/set-up-git/
 
-Then
-[learn how to use git from the Terminal >](https://www.codecademy.com/learn/learn-git)
-
-Try completing [this tutorial >](https://try.github.io/) as well to learn more
-intermediate features, like branching.
-
 #### A typical workflow
 
 * If you're basing your work from another project, the first step is typically
