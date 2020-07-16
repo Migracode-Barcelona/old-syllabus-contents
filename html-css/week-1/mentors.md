@@ -2,6 +2,17 @@
 
 This outline provides tips to help mentors guide students to the best answers or outcomes for the lesson topics and exercises.
 
+## Information
+
+To start the Migracode course, students have to complete an online course on the basics of programming (HTML & CSS). You can find it [here](https://www.khanacademy.org/computing/computer-programming/html-css). According to what you learnt on the online course, theycreated a simple website in CodePen.
+
+This website should:
+
+Show everything you’ve learnt in the online course
+Use HTML and CSS
+Be about yourself, a hobby or anything you like
+
+
 ## Presentations
 
 - [Week 1 - CSS [Google Slides] - 28/05/2020](https://docs.google.com/presentation/d/18gCQlySM5kNaK4og4-XF8kHlyJVZUrRcbRK1zXC5SBg/edit#slide=id.p)
