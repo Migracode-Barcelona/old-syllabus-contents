@@ -53,8 +53,8 @@
 
 - [Mentors Guide](/others/mentors-guide.md) 
 - [Learning objectives Week1](/html-css/week-1/learning-objectives.md)
-- [Learning objectives Week2](/html-css/week-1/learning-objectives.md)
-- [Learning objectives Week3](/html-css/week-1/learning-objectives.md)
+- [Learning objectives Week2](/html-css/week-2/learning-objectives.md)
+- [Learning objectives Week3](/html-css/week-3/learning-objectives.md)
 - [Mentors Info Week1](/html-css/week-1/mentors.md)
 - [Mentors Info Week2](/html-css/week-2/mentors.md)
 - [Mentors Info Week3](/html-css/week-3/mentors.md)
