@@ -7,9 +7,9 @@
   - [House Rules](/others/house-rules.md)
   - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [HTML/CSS](/html-css/index.md)
-  - [Week 1 - Semantic HTML and CSS](/html-css/week-1/lesson.md) | [Homework](/html-css/week-1/homework.md) | [Mentors](/html-css/week-1/mentors.md)
-  - [Week 2 - Responsive Web and layout](/html-css/week-2/lesson.md) | [Homework](/html-css/week-2/homework.md) | [Mentors](/html-css/week-2/mentors.md)
-  - [Week 3 - Bootstrap](/html-css/week-3/lesson.md) | [Homework](/html-css/week-3/homework.md) | [Mentors](/html-css/week-3/mentors.md)
+  - [Week 1 - Semantic HTML and CSS](/html-css/week-1/lesson.md) | [Homework](/html-css/week-1/homework.md) | [Mentors](/html-css/week-1/mentors.md) | [Learning objectives](/html-css/week-1/learning-objectives.md)
+  - [Week 2 - Responsive Web and layout](/html-css/week-2/lesson.md) | [Homework](/html-css/week-2/homework.md) | [Mentors](/html-css/week-2/mentors.md) | [Learning objectives](/html-css/week-2/learning-objectives.md)
+  - [Week 3 - Bootstrap](/html-css/week-3/lesson.md) | [Homework](/html-css/week-3/homework.md) | [Mentors](/html-css/week-3/mentors.md) | [Learning objectives](/html-css/week-3/learning-objectives.md)
 - [JavaScript I](/js-core/index.md)
   - [Week 4 - Hello JavaScript](/js-core/week-04/lesson.md) | [Homework](/js-core/week-04/homework.md)
   - [Week 5 - Expressions and Arrays](/js-core/week-05/lesson.md) | [Homework](/js-core/week-05/homework.md)
@@ -52,4 +52,5 @@
 ### For Mentors
 
 - [Mentors Guide](/others/mentors-guide.md)
+- [Learning objectives](/html-css/week-1/learning-objectives.md)
 
