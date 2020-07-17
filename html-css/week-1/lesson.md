@@ -149,7 +149,6 @@ You can also set a transparent border, so that it takes up the space without sho
 
 {% include "./homework.md" %}
 
-
 # Resources
 
 1. [HTML5 - semantic elements](https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5)
