@@ -47,9 +47,3 @@ _The learning objectives under a given topic may be achieved over the multiple w
 - [ ] Can answer: What is the CSS box model?
 - [ ] Can answer: What properties modify the box model in CSS?
 
-# Git Learning Objectives
-
-## Git Branching
-
-- [ ] Can: fork a project on GitHub
-- [ ] Can: commit changes locally and push to their fork

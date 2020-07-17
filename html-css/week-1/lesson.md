@@ -65,12 +65,7 @@ In today's class, we will begin adapting styles on this example website. We'll r
   <img src="../assets/screenshot-complete.png" style="border: 1px solid #bababa; width: 48%;">
 </a>
 
-The example website you'll begin working with is available on this Code Your Future GitHub repository -
-[Bikes for Refugees](https://github.com/CodeYourFuture/bikes-for-refugees). Fork the repository to your personal account and use the following terminal commands to download the files to your projects folder.
-
-1. `cd ~`
-2. `cd <your-project-directory>`
-3. `git clone git@github.com:<your_username>/bikes-for-refugees.git`
+> **Exercise**: Fork the [HTML/CSS exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises) repository to your personal account and clone it. Find in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github) the instructions
 
 > **Exercise**: Spend a few minutes exploring the `.html` and `.css` files for this page. Why don't we put everything in one file?
 
@@ -152,6 +147,9 @@ You can also set a transparent border, so that it takes up the space without sho
 
 > **Exercise:** Use a transparent border so that the width of each navigation menu item stays the same even when it is hovered or focused.
 
+{% include "./homework.md" %}
+
+
 # Resources
 
 1. [HTML5 - semantic elements](https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5)
@@ -161,5 +159,3 @@ You can also set a transparent border, so that it takes up the space without sho
 5. [Box Model, box-sizing: border-box - CSS Tricks](https://css-tricks.com/international-box-sizing-awareness-day/)
 6. [CSS specificity - MDN](https://developer.mozilla.org/en/docs/Web/CSS/Specificity)
 7. [Pseudo classes - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
-
-{% include "./homework.md" %}
