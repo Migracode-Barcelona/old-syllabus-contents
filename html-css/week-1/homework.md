@@ -1,6 +1,6 @@
 # Homework
 
-### Readings and games:
+## Readings and games:
 
 Advanced CSS Selectors:
 
@@ -11,7 +11,7 @@ HTML Reading:
 
 - Read this page on [HTML syntax](https://marksheet.io/html-syntax.html)
 
-### Delivery:
+## Delivery:
 
 [Bikes-for-refugees](https://github.com/Migracode-Barcelona/html-css-git-exercises) week1/1-bikes-for-refugees
 
@@ -26,6 +26,7 @@ HTML Reading:
 # Workshop (Saturday)
 
 [Bikes for refugees](https://github.com/Migracode-Barcelona/html-css-git-exercises) week1/1-bikes-for-refugees
+
 - Check together the result of Bikes-for-refugees project
 
 [Personal Website](https://github.com/Migracode-Barcelona/html-css-git-exercises) week1/2-website
