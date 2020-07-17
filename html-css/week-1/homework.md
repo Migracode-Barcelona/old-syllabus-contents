@@ -13,11 +13,11 @@ HTML Reading:
 
 ## Delivery:
 
-- From the [Exercises Repo](https://github.com/Migracode-Barcelona/html-css-git-exercises) complete the exercise in the folder /week1/1-bikes-for-refugees/ by following the [steps](https://github.com/Migracode-Barcelona/html-css-git-exercises/tree/master/week1/1-bikes-for-refugees)
-- [Push](others/git.html#commit-and-push-your-changes-to-github) the changes to your repository in Github
+- From the [Exercises Repo](https://github.com/Migracode-Barcelona/html-css-git-exercises) complete the exercise in the folder `/week1/1-bikes-for-refugees/` by following these [steps](https://github.com/Migracode-Barcelona/html-css-git-exercises/tree/master/week1/1-bikes-for-refugees)
+- [Push](/others/git.html#commit-and-push-your-changes-to-github) the changes to your repository in Github
 
 # Workshop (Saturday)
 
 - Check together the result of Bikes-for-refugees
-- From the [Exercises Repo](https://github.com/Migracode-Barcelona/html-css-git-exercises) complete the exercise in the folder /week1/1-bikes-for-refugees/ by following the [steps](https://github.com/Migracode-Barcelona/html-css-git-exercises/tree/master/week1/2-website)
-- [Push](others/git.html#commit-and-push-your-changes-to-github)  the changes to your repository in Github
+- From the [Exercises Repo](https://github.com/Migracode-Barcelona/html-css-git-exercises) complete the exercise in the folder `/week1/2-website/` by following the [steps](https://github.com/Migracode-Barcelona/html-css-git-exercises/tree/master/week1/2-website)
+- [Push](/others/git.html#commit-and-push-your-changes-to-github)  the changes to your repository in Github
