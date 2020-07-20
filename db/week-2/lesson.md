@@ -281,4 +281,4 @@ Start your server with `node server.js` and try to reach the `/hotels` endpoint 
 
 ## Homework
 
-You should complete all of the tasks in **Week 2** of the [Database Homework repository](https://github.com/CodeYourFuture/Databases-Homework).
+Fork, clone and complete all of the tasks in **Week 2** of the [Database Homework repository](https://github.com/CodeYourFuture/Databases-Homework).
