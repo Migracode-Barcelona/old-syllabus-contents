@@ -62,7 +62,7 @@ The console is a tool which is mainly used to log information - it's useful for 
 
 ### Exercise (10 minutes)
 
-_(This exercise will help you understand how to run a basic JS script and explore the different ways you can run JS code)_
+(This exercise will help you understand how to run a basic JS script and explore the different ways you can run JS code)
 
 1. Create your first `js1-week1.js` script
 2. Type `console.log("Hello World!")`
@@ -72,7 +72,7 @@ _(This exercise will help you understand how to run a basic JS script and explor
 
 ### Exercise (5 minutes)
 
-_(This exercise will help you expand your understanding of console.log)_
+(This exercise will help you expand your understanding of console.log)
 
 Write 10 statements like these, but in different languages.
 
@@ -135,9 +135,9 @@ console.log(messageType); // logs 'string'
 ### Exercise (5 minutes)
 
 1. Write a program that:
-  1. creates a variable called `colors`
-  1. assigns colors "blue" and "yellow" as a comma separate string to `colors`
-  1. logs the type `colors` using `typeof`.
+    - i. creates a variable called `colors`
+    - assigns colors "blue" and "yellow" as a comma separate string to `colors`
+    - logs the type `colors` using `typeof`.
 2. What is the `typeof` a number?
 
 ## String concatenation
@@ -274,11 +274,11 @@ function add(num1, num2) {
 ### Exercise (20 minutes)
 
 1. In pairs, design and create a function that:
-  1. takes in more than one input
-  1. uses string concatenation
-  1. this means adding two strings together
-  1. performs some form of operation on a number
-  1. uses `return` to return a **string**
+    - takes in more than one input
+    - uses string concatenation
+    - this means adding two strings together
+    - performs some form of operation on a number
+    - uses `return` to return a **string**
 2. Add a comment above your function to explain what it does
 3. Call your function and run your script
 4. What's the difference between a `return` and `console.log`?
