@@ -26,10 +26,10 @@ Prepare the lesson: Start by drafting the Class outline, define the High level t
   - [Week 1 - Semantic HTML and CSS](../html-css/week-1/mentors.md) 
   - [Week 2 - Responsive Web and layout](../html-css/week-2/mentors.md) 
   - [Week 3 - Bootstrap](../html-css/week-3/mentors.md)
-- Javascript/core
+- Javascript/Core
   - [Week 1 - Hello Javascript](/js-core/week-04/mentors.md)
-  - [Week 2 - Hello Javascript](/js-core/week-05/mentors.md)
-  - [Week 3 - Hello Javascript](/js-core/week-06/mentors.md)
+  - [Week 2 - Expressions and Loops](/js-core/week-05/mentors.md)
+  - [Week 3 - More arrays](/js-core/week-06/mentors.md)
 
 
 ## Tools that we use

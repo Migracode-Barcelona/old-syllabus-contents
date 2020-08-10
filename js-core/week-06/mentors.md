@@ -1,3 +1,7 @@
+# Javascript 3 - Mentor's Outline
+
+This outline provides tips to help mentors guide students to the best answers or outcomes for the lesson topics and exercises.
+
 ## Presentations
 
 - [Week 3 - JS Core 1 [Google Slides] - 01/05/2020](https://drive.google.com/open?id=1q98KUoX5QQoFEDUl52hLxOnWkoCi2vGrehHjBBEnfdI)
