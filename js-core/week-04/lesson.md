@@ -78,7 +78,7 @@ Write 10 statements like these, but in different languages.
 
 For example:
 
-```
+```sh
 Halo, dunia! // Indonesian
 Ciao, mondo! // Italian
 Hola, mundo! // Spanish
@@ -136,9 +136,9 @@ console.log(messageType); // logs 'string'
 
 1. Write a program that:
 
-- creates a variable called `colors`
-- assigns colors "blue" and "yellow" as a comma separate string to `colors`
-- logs the type `colors` using `typeof`.
+  - creates a variable called `colors`
+  - assigns colors "blue" and "yellow" as a comma separate string to `colors`
+  - logs the type `colors` using `typeof`.
 
 2. What is the `typeof` a number?
 
@@ -277,11 +277,11 @@ function add(num1, num2) {
 
 1. In pairs, design and create a function that:
 
-- takes in more than one input
-- uses string concatenation
-- this means adding two strings together
-- performs some form of operation on a number
-- uses `return` to return a **string**
+  - takes in more than one input
+  - uses string concatenation
+  - this means adding two strings together
+  - performs some form of operation on a number
+  - uses `return` to return a **string**
 
 2. Add a comment above your function to explain what it does
 3. Call your function and run your script

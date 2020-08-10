@@ -102,6 +102,14 @@ without having to go through the tree view manually.
   />
 </div>
 
+#### Enable formatting on save
+
+* In Visual Studio open the settings file (see [https://code.visualstudio.com/docs/getstarted/settings#_creating-user-and-workspace-settings](https://code.visualstudio.com/docs/getstarted/settings#_creating-user-and-workspace-settings))
+* Search for `editor format`
+* Set `editor.formatOnSave` and `editor.formatOnPaste` to true
+
+#### Open your VS project in a Browser with one click
+
 ### Terminal
 
 During your course journey and onwards, the **terminal** (also known as

@@ -58,4 +58,7 @@
 - [Mentors Info Week1](/html-css/week-1/mentors.md)
 - [Mentors Info Week2](/html-css/week-2/mentors.md)
 - [Mentors Info Week3](/html-css/week-3/mentors.md)
+- [Mentors Info Week4](/js-core/week-04/mentors.md)
+- [Mentors Info Week5](/js-core/week-05/mentors.md)
+- [Mentors Info Week6](/js-core/week-06/mentors.md)
 
