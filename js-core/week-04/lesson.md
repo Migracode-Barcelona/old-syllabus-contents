@@ -1,6 +1,6 @@
 # JavaScript Core I - 1
 
-**Before the class**
+## Before the class
 
 - Please make sure you've forked [the js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) at the start of the class. This is the repo we will use during the class, and for homework.
 - Install Node:
@@ -23,7 +23,7 @@ Source: [https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based
 
 > A note on security: This will require you to enter a password. Don't execute a script on your terminal if you don't trust its source, especially if they use the `sudo` command to get admin access to your machine.
 
-**What we will learn today?**
+## What we will learn today?
 
 - [Install Node](#install-node)
 - [Hello World](#hello-world)
@@ -135,11 +135,9 @@ console.log(messageType); // logs 'string'
 ### Exercise (5 minutes)
 
 1. Write a program that:
-
-  - creates a variable called `colors`
-  - assigns colors "blue" and "yellow" as a comma separate string to `colors`
-  - logs the type `colors` using `typeof`.
-
+  1. creates a variable called `colors`
+  1. assigns colors "blue" and "yellow" as a comma separate string to `colors`
+  1. logs the type `colors` using `typeof`.
 2. What is the `typeof` a number?
 
 ## String concatenation
@@ -276,13 +274,11 @@ function add(num1, num2) {
 ### Exercise (20 minutes)
 
 1. In pairs, design and create a function that:
-
-  - takes in more than one input
-  - uses string concatenation
-  - this means adding two strings together
-  - performs some form of operation on a number
-  - uses `return` to return a **string**
-
+  1. takes in more than one input
+  1. uses string concatenation
+  1. this means adding two strings together
+  1. performs some form of operation on a number
+  1. uses `return` to return a **string**
 2. Add a comment above your function to explain what it does
 3. Call your function and run your script
 4. What's the difference between a `return` and `console.log`?
