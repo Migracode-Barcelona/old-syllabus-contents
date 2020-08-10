@@ -1,4 +1,4 @@
-# Javascript 3 - Mentor's Outline
+# Javascript/Core 3 - Mentor's Outline
 
 This outline provides tips to help mentors guide students to the best answers or outcomes for the lesson topics and exercises.
 

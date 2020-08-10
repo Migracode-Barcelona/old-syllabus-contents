@@ -4,7 +4,7 @@
 
 ### Fork the exercises module repo
 
-Fork the [Javascript-1 exercises](https://github.com/Migracode-Barcelona/exercises-js1) repository to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
+Fork the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
 
 ### Install Node
 
@@ -316,8 +316,8 @@ function createGreeting(name, age) {
 ### Exercise I (20 mins)
 
 1. Create the file `exercise-I.js` script in the folder `week-1/InClass`
-1. Write a function that returns the year someone is born given their age as input
-2. Using the answer from step 1, write a function that takes someone's name and age as input and returns a string that states the person's name and year they were born in a sentence
+2. Write a function that returns the year someone is born given their age as input
+3. Using the answer from step 1, write a function that takes someone's name and age as input and returns a string that states the person's name and year they were born in a sentence
 
 ## Glossary
 
