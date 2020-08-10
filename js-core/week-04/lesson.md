@@ -2,15 +2,19 @@
 
 ## Before the class
 
-- Please make sure you've forked [the js-exercises repo](https://github.com/Migracode-Barcelona/js-exercises) at the start of the class. This is the repo we will use during the class, and for homework.
-- Install Node:
+### Fork the exercises module repo
+
+Fork the [Javascript-1 exercises](https://github.com/Migracode-Barcelona/exercises-js1) repository to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
+
+### Install Node
+
 Access to a Linux console (either on Mac, Ubuntu or by using Ubuntu WSL for Windows 10) and write `node -v` in your terminal and you should see something like `v11.10.0`. If you don't see this try to install it!
 
-Windows and Mac users:
+**Windows and Mac users:**
 
 Download the _installer_ (.msi or .pkg) from [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
-Linux (Ubuntu) users:
+**Linux (Ubuntu) users:**
 
 Run the following commands in your terminal:
 
@@ -25,7 +29,6 @@ Source: [https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based
 
 ## What we will learn today?
 
-- [Install Node](#install-node)
 - [Hello World](#hello-world)
 - [Variables](#variables)
 - [String concatenation](#string-concatenation)
@@ -60,21 +63,20 @@ We'll do this in JavaScript, using a command called `console.log()`. The `consol
 
 The console is a tool which is mainly used to log information - it's useful for testing purposes.
 
-### Exercise (10 minutes)
+### Exercise A (10 minutes)
 
 (This exercise will help you understand how to run a basic JS script and explore the different ways you can run JS code)
 
-1. Create your first `js1-week1.js` script
+1. Create your first `exercise-A.js` script in the folder `week-1/InClass` in the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) you forked before
 2. Type `console.log("Hello World!")`
 3. There are 2 ways you can run this script - one way is by pressing F5 in your VS Code application. Can you find out what the second way is? Pair up and use a search engine to find out! Choose your favourite method and use that from now on.
 
-**BONUS:** there is a third way of running JS code (notice how I haven't said scipt) - do you know what that is?
-
-### Exercise (5 minutes)
+### Exercise B (5 minutes)
 
 (This exercise will help you expand your understanding of console.log)
 
-Write 10 statements like these, but in different languages.
+1. Create the file `exercise-B.js` script in the folder `week-1/InClass`
+2. Write 10 statements like these, but in different languages.
 
 For example:
 
@@ -106,10 +108,11 @@ console.log(name);
 
 The program above will print "Hello world" to the console. Notice how it uses the value assigned to the variable `greeting`.
 
-### Exercise (5 minutes)
+### Exercise C (5 minutes)
 
-1. Add a variable `greeting` to js1-week1.js and assign a greeting of your choice to the variable
-2. Print your `greeting` to the console 3 times. You should see your greeting 3 times on the console, one on each line.
+1. Create the file `exercise-C.js` script in the folder `week-1/InClass`
+2. Add a variable `greeting` to js1-week1.js and assign a greeting of your choice to the variable
+3. Print your `greeting` to the console 3 times. You should see your greeting 3 times on the console, one on each line.
 
 ## Strings
 
@@ -132,13 +135,14 @@ const messageType = typeof message;
 console.log(messageType); // logs 'string'
 ```
 
-### Exercise (5 minutes)
+### Exercise D (5 minutes)
 
-1. Write a program that:
-    - i. creates a variable called `colors`
+1. Create the file `exercise-D.js` script in the folder `week-1/InClass`
+2. Write a program that:
+    - creates a variable called `colors`
     - assigns colors "blue" and "yellow" as a comma separate string to `colors`
     - logs the type `colors` using `typeof`.
-2. What is the `typeof` a number?
+3. What is the `typeof` a number?
 
 ## String concatenation
 
@@ -166,9 +170,10 @@ const greeting = `${greetingStart}, my name is ${name}`;
 console.log(greeting); // Logs "Hello, my name is Daniel"
 ```
 
-### Exercise (5 mins)
+### Exercise E (5 mins)
 
-1. Write a program that logs a message with a greeting and your name using the two concatenation methods we used
+1. Create the file `exercise-E.js` script in the folder `week-1/InClass`
+2. Write a program that logs a message with a greeting and your name using the two concatenation methods we used
 
 ## Numbers as integers
 
@@ -189,10 +194,11 @@ const quotient = 10 / 2; // 5
 const difference = 10 - 2; // 8
 ```
 
-### Exercise (10 mins)
+### Exercise F (10 mins)
 
-1. Create two variables `numberOfStudents` and `numberOfMentors`
-2. Log a message that displays the total number of students and mentors
+1. Create the file `exercise-F.js` script in the folder `week-1/InClass`
+2. Create two variables `numberOfStudents` and `numberOfMentors`
+3. Log a message that displays the total number of students and mentors
 
 #### Expected result
 
@@ -217,10 +223,11 @@ const preciseAge = 30.612437;
 const roughAge = Math.round(preciseAge); // 31
 ```
 
-### Exercise (15 mins)
+### Exercise G (15 mins)
 
-1. Using the variables provided in the exercise calculate the percentage of mentors and students in the group (percentages must be a rounded to the nearest integer)
-2. Using online documentation, what other things can you do with the `Math` library? Pick one thing on your table that you can do other than `Math.round` and prepare an explanation for the rest of the class
+1. Create the file `exercise-G.js` script in the folder `week-1/InClass`
+2. Using the variables provided in the exercise calculate the percentage of mentors and students in the group (percentages must be a rounded to the nearest integer)
+3. Using online documentation, what other things can you do with the `Math` library? Pick one thing on your table that you can do other than `Math.round` and prepare an explanation for the rest of the class
 
 #### Expected result
 
@@ -271,9 +278,10 @@ function add(num1, num2) {
 }
 ```
 
-### Exercise (20 minutes)
+### Exercise H (20 minutes)
 
-1. In pairs, design and create a function that:
+1. Create the file `exercise-H.js` script in the folder `week-1/InClass`
+2. Design and create a function that:
     - takes in more than one input
     - uses string concatenation
     - this means adding two strings together
@@ -283,10 +291,6 @@ function add(num1, num2) {
 3. Call your function and run your script
 4. What's the difference between a `return` and `console.log`?
 5. When would you choose to use functions over the way we have been scripting so far?
-
-### Exercise (10 minutes)
-
-1. Swap your laptop with your neighbouring pair and review each other's code - what can be improved? Is the code readable?
 
 ## Calling functions inside functions
 
@@ -309,8 +313,9 @@ function createGreeting(name, age) {
 }
 ```
 
-### Exercise (20 mins)
+### Exercise I (20 mins)
 
+1. Create the file `exercise-I.js` script in the folder `week-1/InClass`
 1. Write a function that returns the year someone is born given their age as input
 2. Using the answer from step 1, write a function that takes someone's name and age as input and returns a string that states the person's name and year they were born in a sentence
 
