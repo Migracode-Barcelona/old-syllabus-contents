@@ -282,11 +282,11 @@ function add(num1, num2) {
 
 1. Create the file `exercise-H.js` script in the folder `week-1/InClass`
 2. Design and create a function that:
-    - takes in more than one input
-    - uses string concatenation
-    - this means adding two strings together
-    - performs some form of operation on a number
-    - uses `return` to return a **string**
+    1. takes in more than one input
+    1. uses string concatenation
+    1. this means adding two strings together
+    1. performs some form of operation on a number
+    1. uses `return` to return a **string**
 2. Add a comment above your function to explain what it does
 3. Call your function and run your script
 4. What's the difference between a `return` and `console.log`?
