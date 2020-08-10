@@ -119,7 +119,7 @@ function boolChecker(bool) {
 boolChecker(true);
 ```
 
-3. As a class, can you step through the function and explain what each line does?
+1. As a class, can you step through the function and explain what each line does?
 
 ## Comparison Operators
 
@@ -153,14 +153,10 @@ The `>` symbol in the expression is a **comparison operator**. Comparison operat
 
 You might see people use two other comparison operators. They are valid, but are the evil twins of `===` and `!==` and it is generally considered bad practice because of the bugs the can cause.
 
-**&#10008; - Do not use == and !=**
-
 ```sh
 == equal compares only value
 != unequal compares only value
 ```
-
-**&#10004; - Do use === and !==**
 
 ```sh
 === equal compares both value and type
