@@ -6,7 +6,7 @@
 
 Fork the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
 
-### Install Node
+### Check Node installation
 
 Access to a Linux console (either on Mac, Ubuntu or by using Ubuntu WSL for Windows 10) and write `node -v` in your terminal and you should see something like `v11.10.0`. If you don't see this try to install it!
 
@@ -24,8 +24,6 @@ Run the following commands in your terminal:
 ```
 
 Source: [https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
-
-> A note on security: This will require you to enter a password. Don't execute a script on your terminal if you don't trust its source, especially if they use the `sudo` command to get admin access to your machine.
 
 ## What we will learn today?
 
@@ -69,7 +67,7 @@ The console is a tool which is mainly used to log information - it's useful for 
 
 1. Create your first `exercise-A.js` script in the folder `week-1/InClass` in the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) you forked before
 2. Type `console.log("Hello World!")`
-3. There are 2 ways you can run this script - one way is by pressing F5 in your VS Code application. Can you find out what the second way is? Pair up and use a search engine to find out! Choose your favourite method and use that from now on.
+3. Run this script by going with the terminal to your directory and write `node exercise-A.js`, you will see the result of the console.log in the terminal
 
 ### Exercise B (5 minutes)
 
