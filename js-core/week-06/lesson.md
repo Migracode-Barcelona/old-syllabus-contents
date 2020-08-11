@@ -1,11 +1,5 @@
 # JavaScript Core I - 3
 
----
-id: lesson
-title: JavaScript Core I - 3
-sidebar_label: Lesson
----
-
 ## Contents
 
 - [Array properties](#array-properties)
