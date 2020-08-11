@@ -8,7 +8,7 @@
 
 # Practice Day (Saturday)
 
-### Playing computer I
+## Playing computer I
 
 1. You have to predict the output of this program without executing it.
 2. What is printed to the console?
@@ -43,7 +43,7 @@ for (let i = 0; i < daysOfWeek.length; i++) {
 }
 ```
 
-### Playing computer II
+## Playing computer II
 
 1. You have to predict the output of this program without executing it.
 2. What is printed to the console?
@@ -71,7 +71,7 @@ for (let i = 0; i < 5; ++i) {
 }
 ```
 
-### Playing computer III
+## Playing computer III
 
 1. Again, you have to predict the output of this program without executing it.
 2. What is printed to the console?
@@ -121,4 +121,3 @@ for (let i = 0; i < 10; ++i) {
     1. [Sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
     1. [Sum without highest and lowest number](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
     1. [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
-    
