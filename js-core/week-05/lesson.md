@@ -125,84 +125,6 @@ boolChecker(true);
 
 In the previous exercise, you used an **expression** that returns a `boolean` value. This was possible because of the **comparison operator** `===`. Using a comparison operator will always return a `boolean` value.
 
-### Assert
-We will also be using a new keyword to make sure the comparisons we do below return `true`. This is the `assert`.
-
-When given `true`, it does nothing. Nice. When given `false`, it will error. It is very good for testing things you expect to be `true`.
-
-Here's an expression that evaluates to a `boolean`.
-
-**Can you work out what will happen with the code below?**
-
-```js
-assert(1 > 2);
-// and...
-assert(2 < 1);
-```
-
-The `>` symbol in the expression is a **comparison operator**. Comparison operators compare two values. This operator checks to see if the number on the left is bigger than the number on the right.
-
-```sh
->   greater than
-<   less than
-<=  less than or equal
->=  greater than or equal
-=== same value and same type
-!== not the same value and type
-```
-
-You might see people use two other comparison operators. They are valid, but are the evil twins of `===` and `!==` and it is generally considered bad practice because of the bugs the can cause.
-
-```sh
-== equal compares only value
-!= unequal compares only value
-```
-
-```sh
-=== equal compares both value and type
-!== unequal compares both value and type
-```
-
-If you see these, suggest people change them in pull requests.
-
-### Exercise C (5 mins)
-
-1. Modify the values below to have the compare function return the desired value:
-
-```js
-const assert = require("assert");
-
-const mentorCount = // TODO
-const studentCount = // TODO
-assert(mentorCount < studentCount);
-
-const capacity = 25
-const people = // TODO
-assert(capacity > people);
-
-const name1 = // TODO
-const name2 = // TODO
-assert(name1 === name2);
-
-const number1 = // TODO
-const number2 = // TODO
-assert(number1 !== number2);
-
-const thisNumber = // TODO
-const thatNumber = // TODO
-assert(thisNumber === thatNumber);
-
-const thisArray = [1, 2, 3, 4, 5];
-const thatArray = [1, 2, 3, 4, 5];
-assert(thisArray === thatArray);
-```
-
-The array comparison doesn't work because JavaScript comparison only works as expected on `number`s, `string`s, and `boolean`s.
-
-You need to be aware of this, and its possible for you to go deeper into array comparisons outside of the lesson, though generally remember that only `number`s, `string`s, and `boolean`s work with equality.
-
-MDN has some slightly in-depth documentation [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness).
-
 ## Conditionals
 
 Like humans, computer programs make decisions based on the information given to them. **Conditionals** are a way of representing these decisions in code (remember, you saw this in a previous exercise!)
@@ -268,9 +190,20 @@ if (isHappy) {
 }
 ```
 
-What if there is more than one condition you want to handle in your function? For example, what if you can be confused as well? You can use **else if** to handle multiple conditions.
+You can use **else if** to handle multiple conditions.
 
-### Exercise D (5 mins)
+```js
+var age = 24;
+if (age >= 65) {
+    console.log("John is an old guy.")
+} else if (age < 18) {
+    console.log("John is a young boy."); 
+} else {
+    console.log("John is an adult."); 
+}
+```
+
+### Exercise C (5 mins)
 
 Can you explain what this function does line by line? What happens when you pass in a string?
 
@@ -288,7 +221,7 @@ function numberChecker(num) {
 }
 ```
 
-### Exercise E (10 mins)
+### Exercise D (10 mins)
 
 Create a function that gives you a message depending on your mood! It should:
 
@@ -320,7 +253,7 @@ function satisfiesRequirements(num) {
 
 We can test expressions with logical operators in a node console too.
 
-### Exercise (5 mins)
+### Exercise E (5 mins)
 
 Type the following expressions into your node REPL and note the output. Anything you didn't expect?
 
@@ -333,7 +266,7 @@ Type the following expressions into your node REPL and note the output. Anything
 - `!greaterThan5`
 - `!(num === 10)`
 
-### Exercise (15 mins)
+### Exercise F (15 mins)
 
 In pairs, write a function that checks a username is of an acceptable format for a user type. The function must:
 
@@ -347,27 +280,61 @@ When we're writing programs, we often find that we want to repeat a bit of code 
 
 ### while loop
 
-A `while` loop is a way to repeat code until some condition is evaluated to `false`. For example:
+
+Programs are very efficient when executing recurring tasks, but now imagine you are asked to log numbers from 1 to 100:
 
 ```js
-let i = 0;
-while (i < 20) {
-  someFunction(i);
-  i++;
+console.log("The count is 1");
+console.log("The count is 2");
+console.log("The count is 3");
+console.log("The count is 4");
+console.log("The count is 5");
+// ...
+console.log("The count is 100");
+```
+
+Although this would work you would need to write 100 lines of code to achieve the desired output. A better solution for this problem would require that we could execute a block of code multiple times. This form of control is what we call a loop.
+
+There are many ways to create a loop in a program, the first we will study is the `while` loop:
+
+### `while ( ) { //... }`
+
+```js
+var count = 1;
+while (count <= 100) {
+  console.log("The count is: " + count);
+  count += 1;
 }
 ```
 
-Notice the line **i++** - this is the same as saying **i = i + 1** It does exactly the same thing but it is just more convenient to write.
+The `while` statement creates a loop. The syntax is somehow similar to the `if` statement, it evaluates a condition inside the parentheses `(true|false)` and then it executes the code inside the `{ }` block only if that condition evaluates to `true`. 
 
-It's important that the condition inside the parenthesis becomes false at some point - otherwise, we'll have what's known as an infinite loop!
+### Exercise G (10 mins)
 
-### Exercise (10 minutes)
+Log the Apollo 11 countdown, use the message provided as the last output.
+It starts from 8 till 0!
 
-Write a function that:
+```js
+var apolloCountdownMessage = "all engine running... LIFT-OFF!";
+var countdown = 8;
 
-- Takes one number `n` as a parameter
-- Adds all numbers from `0` to `n`. For example, if the input is `3`, the output should be `0 + 1 + 2 + 3`
-- You should use a while loop
+console.log(apolloCountdownMessage);
+```
+
+Expected output
+
+```js
+8
+7
+6
+5
+4
+3
+2
+1
+0
+all engine running... LIFT-OFF!
+```
 
 ### for loop
 
@@ -375,21 +342,48 @@ The `for` loop is similar to a while loop, but with a more specialized syntax. P
 
 The `for` loop syntax has special places for each of those three things. Here's the same loop as the first while loop above, as a for loop:
 
+### `for (initialization; condition; final-expression) { //... }`
+
+
 ![For loop](https://user-images.githubusercontent.com/31692/75388870-9213a880-58dd-11ea-90e6-4e67eabf390b.png)
 
+
 ```js
-for (let i = 0; i < 20; i++) {
-  someFunction(i);
+for (let i = 0; i < 100; i++) {
+  console.log("The count is: " + counter);
 }
 ```
 
-### Exercise (10 minutes)
+The initialization is `let i = 0`, the condition is `i < 100` and the final-expression is `i++`. Those blocks can be seen inside the parentheses after the `for` keyword and separated by semicolons `;`, in the following order `(initialization; condition; final-expression)`.
 
-Write a function, similar to the last exercise, that:
+Notice the line **i++** - this is the same as saying **i = i + 1** It does exactly the same thing but it is just more convenient to write.
 
-- Takes one number `n` as a parameter
-- Adds all numbers from `0` to `n`. For example, if the input is `3`, the output should be `0 + 1 + 2 + 3`
-- You should use an for loop
+### Exercise H (10 mins)
+
+Calculate the exponential of the even numbers from 5 to 20
+Using a for loop and the helper functions provided.
+
+```js
+function exponential(number) {
+  return number * number;
+}
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+```
+
+Expected output
+
+```js
+The exponential of 6 is 36
+The exponential of 8 is 64
+The exponential of 10 is 100
+The exponential of 12 is 144
+The exponential of 14 is 196
+The exponential of 16 is 256
+The exponential of 18 is 324
+```
 
 ## Arrays
 
@@ -438,7 +432,7 @@ students[2] = "Bianca";
 console.log(students); // ["Ahmed", "Maria", "Bianca", "Nahidul", "Jack"]
 ```
 
-### Exercise (5 mins)
+### Exercise I (5 mins)
 
 In the node REPL, enter the following array:
 
@@ -455,7 +449,7 @@ Now, using the correct indexes, get the following values from the array:
 
 Then, replace 'apple' with 'raspberry', and replace 'fig' with 'pineapple'.
 
-### Exercise (5 mins)
+### Exercise J (5 mins)
 
 Complete this function so that, if the second index in the array contains the name "Amy", it returns `"Second index matched!"`
 
@@ -492,126 +486,13 @@ for (let i = 0; i < daysOfWeek.length; i++) {
 }
 ```
 
-### Exercise (10 mins)
+### Exercise K (10 mins)
 
 Write a function which takes your **students** array as an input. In the function, use a for loop to **iterate** over the array and print the name of each student to the console.
 
-### Exercise - extra credit (20 mins)
-
-In pairs, write a function which squares all numbers in an array and returns the array of squared numbers.
-
-Write a second function which takes an input of arrays and only returns an array of even numbers.
-
-How can you combine the two functions to return an array of even and squared numbers?
-
-## Extra exercises
-
-### Playing computer I
-
-1. Working in pairs or groups, you have to predict the output of this program without executing it.
-2. What is printed to the console?
-3. Have you learned anything new during this exercise?
-
-```js
-const daysOfWeek = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
-function workingDay(day) {
-  return day + " is a working day";
-}
-
-function weekendDay(day) {
-  return day + " is at the weekend!";
-}
-
-for (let i = 0; i < daysOfWeek.length; i++) {
-  if (i < 5) {
-    let day = workingDay(daysOfWeek[i]);
-    console.log(day);
-  } else {
-    let day = weekendDay(daysOfWeek[i]);
-    console.log(day);
-  }
-}
-```
-
-### Playing computer II
-
-1. Working in pairs or groups, you have to predict the output of this program without executing it.
-2. What is printed to the console?
-3. Have you learned anything new during this exercise?
-
-```js
-const a = 4;
-const b = 8;
-
-const multiplyNumbers = function (a, b) {
-  return a * b;
-};
-
-const addNumbers = function (a, b, c) {
-  return a + b + c;
-};
-
-for (let i = 0; i < 5; ++i) {
-  if (i < 3) {
-    const day = addNumbers(i, 2, a);
-    console.log(day);
-  } else {
-    const day = multiplyNumbers(i, 4);
-    console.log(day);
-  }
-}
-```
-
-### Playing computer III
-
-1. Again, working in pairs or groups, you have to predict the output of this program without executing it.
-2. What is printed to the console?
-3. What was difficult about this exercise?
-4. Have you learned anything new?
-
-```js
-let x = 2;
-let y = 4;
-let a = 2;
-let b = 20;
-
-const f1 = function (a, b) {
-  return a * b;
-};
-
-const f2 = function (a, b, c) {
-  return a + b + c;
-};
-
-console.log(x);
-x = 3;
-y = f1(x, 2);
-console.log(y);
-
-for (let i = 0; i < 10; ++i) {
-  a = a + 1;
-  if (i % 2 === 0) {
-    const d = f2(i, y, a);
-    console.log(d);
-  } else {
-    const e = f1(i, 2);
-    console.log(e);
-  }
-}
-```
 
 ## Glossary
 
-- Assert: to determine whether something is `true` or not `true`, more precisely `false`
 - Duplicate: exact copies of something (e.g. two or more files, numbers, directory can be exactly the same)
 - Index: numbers that let you know an item's position inside an array
 - Element: another name for an item in an array
@@ -621,6 +502,5 @@ for (let i = 0; i < 10; ++i) {
 
 For words like **Terminal**, **Primitive Types** please see [Glossary: JavaScript Core I - 2](../week-1/lesson.md#Glossary)
 
-## Homework
 
 {% include './homework.md' %}
