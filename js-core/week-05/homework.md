@@ -121,3 +121,4 @@ for (let i = 0; i < 10; ++i) {
     1. [Sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
     1. [Sum without highest and lowest number](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
     1. [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
+    

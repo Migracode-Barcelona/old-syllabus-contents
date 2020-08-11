@@ -23,7 +23,6 @@ By the end of this class, you should be able to:
 - Define comparator operators and list the different types
 - Use comparator operators in an `if` statement
 - Define what a logical operator is and give examples
-- Write functionality that uses the `assert` module
 - Describe what an array is and write code that interacts with them
 
 ---
@@ -280,7 +279,6 @@ When we're writing programs, we often find that we want to repeat a bit of code 
 
 ### while loop
 
-
 Programs are very efficient when executing recurring tasks, but now imagine you are asked to log numbers from 1 to 100:
 
 ```js
@@ -344,9 +342,7 @@ The `for` loop syntax has special places for each of those three things. Here's 
 
 ### `for (initialization; condition; final-expression) { //... }`
 
-
 ![For loop](https://user-images.githubusercontent.com/31692/75388870-9213a880-58dd-11ea-90e6-4e67eabf390b.png)
-
 
 ```js
 for (let i = 0; i < 100; i++) {
@@ -490,7 +486,6 @@ for (let i = 0; i < daysOfWeek.length; i++) {
 
 Write a function which takes your **students** array as an input. In the function, use a for loop to **iterate** over the array and print the name of each student to the console.
 
-
 ## Glossary
 
 - Duplicate: exact copies of something (e.g. two or more files, numbers, directory can be exactly the same)
@@ -501,6 +496,5 @@ Write a function which takes your **students** array as an input. In the functio
 - Zero-based Index: an `array` starting at `0` and not at `1`
 
 For words like **Terminal**, **Primitive Types** please see [Glossary: JavaScript Core I - 2](../week-1/lesson.md#Glossary)
-
 
 {% include './homework.md' %}

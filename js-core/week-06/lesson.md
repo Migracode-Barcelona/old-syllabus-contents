@@ -21,9 +21,6 @@ In addition, you will learn how to use `callback functions`
   * [Arrow functions](#arrow-functions)
   * [Chaining](#chaining)
 
-
-
-
 ### Switch statement
 
 It's a common pattern to see code that looks like:

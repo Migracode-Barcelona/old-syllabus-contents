@@ -7,5 +7,3 @@
     1. [5.5 Array methods](https://javascript.info/array-methods)
 
 # Practice class
-
-
