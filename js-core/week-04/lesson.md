@@ -65,7 +65,7 @@ The console is a tool which is mainly used to log information - it's useful for 
 
 (This exercise will help you understand how to run a basic JS script and explore the different ways you can run JS code)
 
-1. Create your first `exercise-A.js` script in the folder `week-1/InClass` in the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) you forked before
+1. Update your first `exercise-A.js` script in the folder `week-1/InClass` in the [Javascript/Core Module 1 repository](https://github.com/Migracode-Barcelona/exercises-js1) you forked before
 2. Type `console.log("Hello World!")`
 3. Run this script by going with the terminal to your directory and write `node exercise-A.js`, you will see the result of the console.log in the terminal
 
@@ -73,7 +73,7 @@ The console is a tool which is mainly used to log information - it's useful for 
 
 (This exercise will help you expand your understanding of console.log)
 
-1. Create the file `exercise-B.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-B.js` script in the folder `week-1/InClass`
 2. Write 10 statements like these, but in different languages.
 
 For example:
@@ -108,7 +108,7 @@ The program above will print "Hello world" to the console. Notice how it uses th
 
 ### Exercise C (5 minutes)
 
-1. Create the file `exercise-C.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-C.js` script in the folder `week-1/InClass`
 2. Add a variable `greeting` to js1-week1.js and assign a greeting of your choice to the variable
 3. Print your `greeting` to the console 3 times. You should see your greeting 3 times on the console, one on each line.
 
@@ -135,7 +135,7 @@ console.log(messageType); // logs 'string'
 
 ### Exercise D (5 minutes)
 
-1. Create the file `exercise-D.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-D.js` script in the folder `week-1/InClass`
 2. Write a program that:
     - creates a variable called `colors`
     - assigns colors "blue" and "yellow" as a comma separate string to `colors`
@@ -170,7 +170,7 @@ console.log(greeting); // Logs "Hello, my name is Daniel"
 
 ### Exercise E (5 mins)
 
-1. Create the file `exercise-E.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-E.js` script in the folder `week-1/InClass`
 2. Write a program that logs a message with a greeting and your name using the two concatenation methods we used
 
 ## Numbers as integers
@@ -194,7 +194,7 @@ const difference = 10 - 2; // 8
 
 ### Exercise F (10 mins)
 
-1. Create the file `exercise-F.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-F.js` script in the folder `week-1/InClass`
 2. Create two variables `numberOfStudents` and `numberOfMentors`
 3. Log a message that displays the total number of students and mentors
 
@@ -223,7 +223,7 @@ const roughAge = Math.round(preciseAge); // 31
 
 ### Exercise G (15 mins)
 
-1. Create the file `exercise-G.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-G.js` script in the folder `week-1/InClass`
 2. Using the variables provided in the exercise calculate the percentage of mentors and students in the group (percentages must be a rounded to the nearest integer)
 3. Using online documentation, what other things can you do with the `Math` library? Pick one thing on your table that you can do other than `Math.round` and prepare an explanation for the rest of the class
 
@@ -278,7 +278,7 @@ function add(num1, num2) {
 
 ### Exercise H (20 minutes)
 
-1. Create the file `exercise-H.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-H.js` script in the folder `week-1/InClass`
 2. Design and create a function that:
     1. takes in more than one input
     1. uses string concatenation
@@ -313,7 +313,7 @@ function createGreeting(name, age) {
 
 ### Exercise I (20 mins)
 
-1. Create the file `exercise-I.js` script in the folder `week-1/InClass`
+1. Update the file `exercise-I.js` script in the folder `week-1/InClass`
 2. Write a function that returns the year someone is born given their age as input
 3. Using the answer from step 1, write a function that takes someone's name and age as input and returns a string that states the person's name and year they were born in a sentence
 

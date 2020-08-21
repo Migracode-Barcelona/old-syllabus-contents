@@ -7,11 +7,12 @@
     * [Commit and push your changes to Github](#commit-and-push-your-changes-to-github)
     * [How to publish your website in Github.io](#how-to-publish-your-website-in-github.io)
     * [Basic Git Commands](#basic-git-commands)
-* [Advanced]
     * [What is a remote?](#what-is-a-remote)
     * [Adding a remote](#adding-a-remote)
+* [Advanced]    
     * [Branches](#branches)
     * [Creating a Pull Request (PR)](#creating-a-pr)
+    * [Git in the final projects](#git-in-the-final-projects)
 
 # Github Basics
 
@@ -174,6 +175,9 @@ Sometimes Git can not automatically merge one branch into another, because each 
 As a developer, you have to tell Git which version of the line of code is correct.
 
 Complete exercise 28 from week 3 of the [HTML, CSS and Git Exercises](https://github.com/Migracode-Barcelona/html-css-git-exercises) to learn how to resolve a merge conflict.
+
+
+https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
 
 
 ## Git Conflicts
@@ -371,6 +375,37 @@ That's it! You created your PR!
 
 ![Created PR](./assets/git/created-pr.png)
 
-## Resources
+[Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 
-1. [Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
+## Git in the final projects
+
+In the final projects you will have to manage a Git repository to work all the Team toghether, there are many ways to do it, but these are our recommendations:
+
+- Separate front and back code: Create one repository for the back-end code and another one for the front-end code
+    - Put names easy to manage, like yourprojectname_be and yourprojectname_fe
+    - You can manage everything in one repository... but take into account to manage the folders and package.json properly without breaking others work
+- One Team, One Repo: Create the repositories in the account of one member of the team, and grant the others students to work there
+    - The other members should clone directly the repository, DO NOT FORK IT! if you fork it every member of the team will work in an independent reposotory adding difficulties to manage merges of work
+    - To give push privileges to other team members, go in GiHub to your repository and go to Settings->Manage access -> Invite a collaborator
+- Use branches: once you divide your work in different team members, always are files in common that you will write at the sema time and could create conflicts, to reduce the number of merges and do not involve everybody in the common files, this is our suggestion:
+    - In each repository create a branch to each member that will make changes in the code, for example in a repository we will have these branches: master, studentA, studentB, studentC
+    - Each student will work only in his/her repository, implementing the assigned functionalities
+    - Master is the branch were everythink should work, all functionalities there are working and are not breaking others work
+    - The Team Leader, or another student will assume the role of Git Leader, will manage all the merges as follows:
+    - When the student A finishes a functionality and it is tested (working properly) will push the changes to remote and notify the Git Leader
+    - The Git Leader will move to the master version (git checkout master) and pull the changes from all branches, then will merge the branch master with the work of branch studentA, after it will solve any conflict and will check that this new functionality is working, but also the older ones.
+    - Then the Git Leader will push everyting to master and will notify all students to pull new changes from master, each student will have to solve conflicts from master and her/his branch
+    - Migracode Team and mentors will help the Git Leader to solve conflicts and manage the versions of the project.
+- Use gitignore
+
+To create this structure you will have to:
+- create a branch for each students (git checkout -b studentA)
+- push the branches to remot (git push -u origin studentA)
+- Each student should, have a copy in local of all the branches (git fectch --all)
+ 
+
+Main commands used in the management method:
+git fetch --all
+git pull
+git merge
+git echoubut -b

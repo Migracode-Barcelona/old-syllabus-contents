@@ -5,7 +5,6 @@
 * Topic 1
 * Topic 2
 * Topic 3
-* Topic 4
 
 ---
 
@@ -13,11 +12,15 @@
 
 High level explanation of Topic 1 - rely on the exercises
 
-> **Exercise**: Always have exercises
+> **Exercise A (10 min)**: Always have exercises
 
 ## Topic 2
 
+> **Exercise B (10 min)**: Always have exercises
+
 ## Topic 3
+
+> **Exercise C (10 min)**: Always have exercises
 
 # Resources
 
@@ -32,7 +35,7 @@ High level explanation of Topic 1 - rely on the exercises
 
 3. **[Bonus/Optional]** Third part/optional - Hardest
 
-4. **Research:**
+
 
 
 # Escalation Policy
