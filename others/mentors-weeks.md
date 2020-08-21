@@ -4,22 +4,22 @@
 # Index
 
 - [Week 0 - Introduction and basic setup](#week-0-introduction-and-basic-setup)
-- [HTML/CSS](#html/css)
+- [HTML/CSS](#html-css)
   - [Week 1 - Semantic HTML and CSS](#week-1-semantic-html-and-css) 
   - [Week 2 - Responsive Web and layout](#week-2-responsive-web-and-layout) 
   - [Week 3 - Bootstrap](#week-3-bootstrap)
-- [Javascript/Core I](#javascript/core-I)
+- [Javascript/Core I](#javascript-core-I)
   - [Week 1 - Hello Javascript](#week-1-hello-javascript)
   - [Week 2 - Expressions and Loops](#week-2-expressions-and-loops)
   - [Week 3 - More arrays](#week-3-more-arrays)
-- [Javascript/Core II](#javascript/core-II)
+- [Javascript/Core II](#javascript-core-II)
   - [Week 1 - Objects](#week-1-objects)
   - [Week 2 - JS in the Browser](#week-2-js-in-the-browser)
   - [Week 3 - More JS in the Browser](#week-3-more-js-in-the-browser)
 
-# Week 0 - Introduction and basic setup
+# Week 0 Introduction and basic setup
 
-# HTML/CSS
+# HTML CSS
 
 ## Week 1 Semantic HTML and CSS
 
@@ -51,7 +51,7 @@ Be about yourself, a hobby or anything you like
 
 ## Week 3 Bootstrap
 
-# Javascript/Core I
+# Javascript Core I
 
 ## Week 1 Hello Javascript
 
@@ -82,7 +82,7 @@ Be about yourself, a hobby or anything you like
 - [Week 3 - JS Core 1 [Google Slides] - 01/05/2020](https://drive.google.com/open?id=1q98KUoX5QQoFEDUl52hLxOnWkoCi2vGrehHjBBEnfdI)
   - Created by Manchester Volunteers
 
-# Javascript/Core II
+# Javascript Core II
 
 ## Week 1 Objects
 
