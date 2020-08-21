@@ -24,16 +24,3 @@
     1. [Count of positives / sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
 3. [Optional] Complete the exercises in the folder `week-2/Extra`
 4. [Push](/others/git.html#commit-and-push-your-changes-to-github) the changes to your repository in Github
-
-# References
-
-- [ ] Loops in JS: https://javascript.info/while-for
-- [ ] Switch statements: https://javascript.info/switch
-- [ ] Comparisons in JS: https://javascript.info/comparison
-- [ ] Logical operators in JS: https://javascript.info/logical-operators
-- [ ] More on operators: https://javascript.info/operators
-- [ ] `while` loops: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
-- [ ] `for` loops: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-- [ ] Arrays: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-- [ ] What are algorithms: https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms
-- [ ] Bubble sort: https://humanwhocodes.com/blog/2009/05/26/computer-science-in-javascript-bubble-sort/
