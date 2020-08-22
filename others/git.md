@@ -393,7 +393,7 @@ In the final projects you will have to manage a Git repository to work all the T
 
 There are strategies with more branches and more structurated, like the common strategy in companies, but taking into account number of people, the criticallity of our software and to not spend many hours merging. We recommend you this strategy for the final project!
 
-- 3 type of branches: _master_, _develop_ and _feature_ branches
+- 3 type of branches: _master_, _develop_ and _developers_ branches
 - 2 user roles: _Release Manager_ and _Developer_
 
 ![Git Team](./assets/git/gitteam.png)
@@ -406,8 +406,8 @@ There are strategies with more branches and more structurated, like the common s
 
 **Roles:**
 
--	Release Manager: is the one that manages _master_ and _develop_. This user, that at the same time is a Developer, do all merges between developers branches and _develop_. Also is the one that creates versions in _master_.
--	Developer: all the members on the team are developeres, they develop the assigned features in the branch.
+-	**Release Manager**: is the one that manages _master_ and _develop_. This user, that at the same time is a Developer, do all merges between developers branches and _develop_. Also is the one that creates versions in _master_.
+-	**Developer**: all the members on the team are developeres, they develop the assigned features in the branch.
 
 ### Actions and commands
 
@@ -417,54 +417,54 @@ There are strategies with more branches and more structurated, like the common s
 
 - Create and add write and push privileges to all developers
 - Create a new branch develop from master:
-    -	git checkout master //be sure you are on master branch
-    -	git checkout -b develop //Create the branch _develop_ from _master_
-    -	git push -u origin develop //Push the local branch to remote, so it is published on Github and other members can see it
+    -	`git checkout master` be sure you are on master branch
+    -	`git checkout -b develop` Create the branch _develop_ from _master_
+    -	`git push -u origin develop` Push the local branch to remote, so it is published on Github and other members can see it
 - Create a new branch for each developer from develop:
-    - git checkout -b dev_john
-    - git push -u origin develop
+    - `git checkout -b dev_john`
+    - `git push -u origin develop`
 
 **Move to working repositories (all developers):**
 
 - Each developer should get the new branches from remote and move to the assigned branch:
-    - git fetch --all
-    - git checkout dev_john
+    - `git fetch --all` Get all new branches created
+    - `git checkout dev_john` Move yo your name branch
 
 #### Daily work:
 
-- All evelopers should commit and push all your work
-    - git add .
-    - git commit -m "new feature"
-    - git push
+- All developers should commit and push all your work
+    - `git add .`
+    - `git commit -m "new feature"`
+    - `git push`
 
 #### End of a sprint:
 
 **Create the sprint version (Release Manager):**
 
-- git checkout develop 
-- git fetch --all
+- `git checkout develop`
+- `git fetch --all`
 - Merge develop branch with the branch of each developer
-    - git merge dev_john
-    - git add .
-    - git commit -m "merge with john"
-    - git push
+    - `git merge dev_john`
+    - `git add .`
+    - `git commit -m "merge with john"`
+    - `git push`
 - Check that all functionalities are working together, have a meeting to check the version and fix all integration or merge problems
 - As a closed version, move the code to _master_:
-    - git checkout master
-    - git merge develop
-    - git add .
-    - git commit -m "merge with john"
-    - git push
+    - `git checkout master`
+    - `git merge develop`
+    - `git add .`
+    - `git commit -m "merge with john"`
+    - `git push`
 - Go back to your working branch
-    - git checkout dev_me
+    - `git checkout dev_me`
 
 **Update your working branches with last version (all developers)**
 
-- git fetch --all //to get last version of all branches
-- git merge develop
-- git add .
-- git commit -m "merge with develop"
-- git push
+- `git fetch --all` to get last version of all branches
+- `git merge develop`
+- `git add .`
+- `git commit -m "merge with develop"`
+- `git push`
 
 ### Main companies Git strategy
 
@@ -472,8 +472,8 @@ Here you can find an example on how to manage planified and unplanified (with bu
 
 ![Git Company](./assets/git/gitcompany.png)
 
--	master: The master branch stores the official release history, for each published version a tag is assigned with a version number
--	hotfix: is the branch we use to fix bugs from the published version as soon as possible, without adding new features. As we can see in v0.1 version the software has a bug, we fix it in the Hotfix branch, and then we merge it directly with master. Also this change is added to develop brach for future versions.
--	release-xxx: release branches are created from develop, to have a version that should be tested in detail to become  a new version, if during the test some bugs are found are fix directly in this branch. xxx is the name o the release
--	develop: The develop branch serves as an integration branch for features. Once develop has acquired enough features for a release, a new release branch is created to test it before go to master.
--	feature-xxx. Each new feature with name xxx, should reside in its own branch. But, instead of branching off of master, feature branches use develop as their parent branch. When a feature is complete, it gets merged back into develop. Features should never interact directly with master.
+-	**_master_**: The master branch stores the official release history, for each published version a tag is assigned with a version number
+-	**_hotfix_**: is the branch we use to fix bugs from the published version as soon as possible, without adding new features. As we can see in v0.1 version the software has a bug, we fix it in the Hotfix branch, and then we merge it directly with master. Also this change is added to develop brach for future versions.
+-	**_release-xxx_**: release branches are created from develop, to have a version that should be tested in detail to become  a new version, if during the test some bugs are found are fix directly in this branch. xxx is the name o the release
+-	**_develop_**: The develop branch serves as an integration branch for features. Once develop has acquired enough features for a release, a new release branch is created to test it before go to master.
+-	**_feature-xxx_**: Each new feature with name xxx, should reside in its own branch. But, instead of branching off of master, feature branches use develop as their parent branch. When a feature is complete, it gets merged back into develop. Features should never interact directly with master.
