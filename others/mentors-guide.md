@@ -3,6 +3,8 @@
 # Index
 
 - [Introduction](#introduction)
+  - [Main instructors](#main-instructors)  
+  - [Supporting instructors](#supporting-instructors)
 - [General information](#general-information)
   - [Module Structure](#module-structure)  
   - [Example of a lesson structure](#example-of-a-lesson-structure)
@@ -16,6 +18,8 @@
 
 Basic information that **main instructors** should know:
 
+## Main instructors
+
 - Lessons structure
     - Check that you know the [module and lessons structure](#module-structure)
     - You know how to manage the [exercises repositories on Github](#exercises-repositories-in-github)
@@ -23,6 +27,8 @@ Basic information that **main instructors** should know:
     - You checked the [Notes and extra materials](mentors-weeks.html) for each lesson
     - You know what [tools are using the students](#tools-that-we-use)
     - Only for online classes, you read the [Online classes manual](https://docs.google.com/document/d/13KBKYSfzPxzGtEE5HM15M6vUOjSz71wgYNfx0SOGQQE/edit)
+
+## Supporting instructors
 
 Basic information that **supporting instructors** should know:
 
@@ -35,9 +41,9 @@ Basic information that **supporting instructors** should know:
 ## Module Structure
 
 Each module has 3 weeks lessons, and each lesson is divided as follows:
-  - Weekday (4h): explain topics through materials syllabus and presentations and coding, in every topic there are one or more exercises that you would give time to the students to do it, later you can show how to solve it
-  - Homework (20h): exercises students should complete between the Weekday and the Weekend to practice the new content. As a instructor you don't have to do anything, the Migracode's Education Team will help and push the students to have all exercises finished before the Weekend.
-  - Weekend (4h): is a day to practice, at the beginning we would do a recap and check together the homework, after it and with support, they have to do the exercises by their own. The instructor can stop the class to explain a common doubt or solve exercises together. But it is important to let them think and cope the exercises, to not always just copy what the mentor is writing.
+  - **Weekday (4h)**: explain topics through materials syllabus and presentations and coding, in every topic there are one or more exercises that you would give time to the students to do it, later you can show how to solve it
+  - **Homework (20h)**: exercises students should complete between the Weekday and the Weekend to practice the new content. As a instructor you don't have to do anything, the Migracode's Education Team will help and push the students to have all exercises finished before the Weekend.
+  - **Weekend (4h)**: is a day to practice, at the beginning we would do a recap and check together the homework, after it and with support, they have to do the exercises by their own. The instructor can stop the class to explain a common doubt or solve exercises together. But it is important to let them think and cope the exercises, to not always just copy what the mentor is writing.
 
 ## Example of a lesson structure
 
@@ -55,15 +61,15 @@ Each module has 3 weeks lessons, and each lesson is divided as follows:
 
 High level explanation of Topic 1 - rely on the exercises
 
-> **Exercise A (10 min)**: Always have exercises
+> **Exercise A (10 min)**  _exercises students should do during the class_
 
 #### Topic 2
 
-> **Exercise B (10 min)**: Always have exercises
+> **Exercise B (10 min)**
 
 #### Topic 3
 
-> **Exercise C (10 min)**: Always have exercises
+> **Exercise C (10 min)**
 
 ### Resources
 
@@ -72,27 +78,27 @@ High level explanation of Topic 1 - rely on the exercises
 
 ### Homework
 
-1. From the Javascript/Core Module 1 repository review and finish all exercises in the folder week-1/InClass
+_common tasks send as homework_
+
+1. Review and finish all exercises in the folder week-1/InClass
 2. Complete all of the exercises in the folder week-1/Homework
 3. Push the changes to your repository in Github
 4. Complete the Homework Form, to notify mentors and add comments and questions about the exercises
 
 ### Practice Day (Saturday)
 
+_common tasks to do on Saturday_
+
 1. Check together, solve doubts and fix the Homework exercises
-2. Go to CodeWars and solve as many katas as you can:
+2. List of exercises _depends on the week_
 3. [Optional] Complete the exercises in the folder week-2/Extra
 4. Push the changes to your repository in Github
-
-### Escalation Policy
-
-{% include "./escalation-policy.md" %}
 
 ---
 
 ## Exercises Repositories in Github
 
-All the exercises studedents should complete during the class, as homework and on saturday, are all inside a GitHub repository that they fork and clone every module. The structure is as follows:
+All the exercises students should complete during the class, as homework and on saturday, are all inside a GitHub repository that they fork and clone every module. The structure is as follows:
 
 ![Exercises repo folders](./assets/mentors/gitreposfolders.png)
 
