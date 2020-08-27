@@ -2,9 +2,7 @@
 
 ## Before the class
 
-### Fork the exercises module repo
-
-Fork the [Javascript/Core Module 2 repository](https://github.com/Migracode-Barcelona/exercises-js2) to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
+- Fork the [Javascript/Core Module 2 repository](https://github.com/Migracode-Barcelona/exercises-js2) to your personal account and clone it. Find help in the [Migracode GIT Guide](/others/git.html#fork-and-clone-an-existing-project-from-github). This is the repo we will use during the first Javascript module, and for homework.
 
 ## Contents
 
@@ -47,7 +45,7 @@ let laptop = {
 };
 ```
 
-### Exercise A (5 min)
+### Exercise A-1 (5 min)
 
 Describe your own laptop as a JavaScript object. Try to think of as many properties as you can!
 
@@ -61,7 +59,7 @@ let laptop = {
 };
 ```
 
-### Exercise B (5 min)
+### Exercise A-2 (5 min)
 
 Think of 5 different real world "things" that you can describe with a JavaScript object
 Assign each of them to a separate variable
@@ -69,13 +67,16 @@ Assign each of them to a separate variable
 Example:
 
 ```js
-let jumper = {
-  color: "blue",
-  isCotton: true,
+let car = {
+    brand: "Seat",
+    model: "Arona",
+    color: "white",
+    horsepower: 115,
+    doors: 5
 };
 ```
 
-### Exercise C (5 min)
+### Exercise A-3 (5 min)
 
 ```js
 /*
@@ -133,7 +134,7 @@ You can also use the bracket notation (although this is rarely used, it's good t
 console.log(laptop["brand"]);
 ```
 
-#### Exercise D (5 min)
+#### Exercise B-1 (5 min)
 
 Console.log the values of each property of "kitten"
 
@@ -149,7 +150,7 @@ let kitten = {
 };
 ```
 
-#### Exercise E (5 min)
+#### Exercise B-2 (5 min)
 
 ```js
 /*
@@ -199,7 +200,7 @@ laptop.screenSize = "15 inch";
 laptop.screenSize = 15;
 ```
 
-#### Exercise F (5 min)
+#### Exercise B-3 (5 min)
 
 ```js
 /*
@@ -214,7 +215,7 @@ console.log(kitten.name);
 // -> it should output: "Gilbert"
 ```
 
-#### Exercise G (5 min)
+#### Exercise B-4 (5 min)
 
 ```js
 /*
@@ -256,7 +257,7 @@ let kitten = {
 };
 ```
 
-#### Exercise H (5 min)
+#### Exercise C-1 (5 min)
 
 ```js
 /*
@@ -299,7 +300,7 @@ console.log(
 );
 ```
 
-#### Exercise I (5 min)
+#### Exercise C-2 (5 min)
 
 ```js
 /*
@@ -346,7 +347,7 @@ console.log(
 console.log(`Expected result: false. Actual result: ${house.isForSale}`);
 ```
 
-#### Exercise J (5 min)
+#### Exercise C-3 (5 min)
 
 ```js
 /*
@@ -484,7 +485,7 @@ console.log(athlete.goldMedals); // prints "25"
 console.log(athlete.silverMedals); // prints "8"
 ```
 
-#### Exercise K (5 min)
+#### Exercise D-1 (5 min)
 
 ```js
 /*
@@ -512,7 +513,7 @@ console.log(
 );
 ```
 
-#### Exercise L (5 min)
+#### Exercise D-2 (5 min)
 
 The following code contains syntax errors - try and fix them!
 Once you fix them, run this file, it should output the correct values!
@@ -537,7 +538,7 @@ let person = {
 };
 ```
 
-#### Exercise (3)
+#### Exercise D-3 (5 min)
 
 ```js
 /*
@@ -571,7 +572,7 @@ console.log(`Expected result: 26. Actual result: ${person.age}`);
 
 ```
 
-#### Exercise (4)
+#### Exercise D-4 (5 min)
 
 ```js
 /*
@@ -596,7 +597,7 @@ console.log(
 );
 ```
 
-#### Exercise (5)
+#### Exercise D-5 (5 min)
 
 ```js
 /*
@@ -697,7 +698,7 @@ function getName(kitten) {
 kittens.map(getName); // returns ["Fluffy", "Megatron", "Billy"]
 ```
 
-### Exercise (1)
+### Exercise E-1 (5 min)
 
 ```js
 /*
@@ -749,7 +750,7 @@ console.log("Question 3: array containing the persons younger than 28 years old 
 
 ```
 
-### Exercise (2)
+### Exercise E-2 (5 min)
 
 ```js
 /*
@@ -811,7 +812,7 @@ console.log(`Question 3) Expected result: London,Paris, actual result:  ${destin
 
 ```
 
-### Exercise (3)
+### Exercise E-3 (5 min)
 
 ```js
 /*
@@ -928,14 +929,14 @@ This method goes into our object, and returns the object property names as an ar
 Here is an example output for using `.keys()`:
 
 ```js
-let footballClubs = {
-  chelsea_fc: "England",
-  fc_barcelona: "Spain",
-  ac_milan: "Italy",
+let car = {
+  brand: "Seat",
+  model: "Arona",
+  color: "White",
 };
 
-console.log(Object.keys(footballClubs));
-// prints [ 'chelsea_fc', 'fc_barcelona', 'ac_milan' ]
+console.log(Object.keys(car));
+// prints [ 'brand', 'model', 'color' ]
 ```
 
 ### Object.values()
@@ -945,17 +946,17 @@ This method goes into our object, and returns the values of every property as an
 Here is an example output for using `.values()`:
 
 ```js
-let footballClubs = {
-  chelsea_fc: "England",
-  fc_barcelona: "Spain",
-  ac_milan: "Italy",
+let car = {
+  brand: "Seat",
+  model: "Arona",
+  color: "White",
 };
 
-console.log(Object.values(footballClubs));
-// prints [ 'England', 'Spain', 'Italy' ]
+console.log(Object.values(car));
+// prints [ 'Seat', 'Arona', 'White' ]
 ```
 
-### Exercise (1)
+### Exercise F-1 (5 min)
 
 ```js
 /*
@@ -1001,7 +1002,7 @@ console.log(highScoresValues)
 
 ```
 
-### Exercise (2)
+### Exercise F-2 (5 min)
 
 ```js
 /*
@@ -1032,7 +1033,7 @@ console.log(mentorsNamedUppercased);
 
 ```
 
-### Exercise (3)
+### Exercise F-3 (5 min)
 
 ```js
 /*
@@ -1138,7 +1139,7 @@ flowerKeys.forEach((key) => {
 // lily: 15
 ```
 
-#### Exercise (1)
+#### Exercise G-1 (5 min)
 
 ```js
 // You are given an object of student names and grades
