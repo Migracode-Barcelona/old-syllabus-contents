@@ -4,10 +4,9 @@
 
 > 1. Open in Visual Studio the repo the repository you forked last week
 > 2. Go to the folder _week-2/InClass/A-myfirstscript_
-> 3. Execute your first Website with javascript by
->    - using [vscode-live-server](https://github.com/ritwickdey/vscode-live-server) plugin to get live updates of your changes.
->      - Install the plugin
->      - Right click on `index.html` and select "Open with Live Server"
+> 3. Execute your first Website with javascript by using [vscode-live-server](https://github.com/ritwickdey/vscode-live-server)
+>    - Install the plugin by: In VSCode type ctrl+P, then type ext install ritwickdey.liveserver.
+>    - Right click on `index.html` and select "Open with Live Server"
 >    - or just open the `index.html` on your browser and refresh every time you change your code
 
 ## Learning objectives
@@ -61,7 +60,7 @@ let document = {
 
 This is how we would represent the document hierarchy above as a tree of nodes:
 
-<img src={require('!file-loader!./tree.png').default}/>
+![](tree.png)
 
 But how can we combine HTML and Javascript? The `<script>` tag allows us to include a piece of JavaScript in a HTML document.
 

@@ -1,17 +1,24 @@
-![Draft lesson](https://img.shields.io/badge/status-draft-darkred.svg)
-
 # JavaScript Core II - 3
 
-**What we will learn today?**
+## Learning objectives
 
 In this lesson you will learn about Synchronous and Asynchronous programming and what is a callback, complex concepts that write code is needed to understand them.
 Also, you will understand the architecture client/server, what HTTP works and how to use fetch.
 
+By the end of this lesson students should be able to:
+
+- Define the difference between synchronous and asynchronous code
+- Describe why writing asynchronous code is important when working with the internet
+- Write code that is able to pass a function to another function as a parameter and run it
+- Use callbacks to run code at some point in the future
+- Define a client's and server's role in the client/server architecture
+- Describe the difference between a GET and POST request
+- Explain how resources are loaded on the internet using GET and POST
+- List the steps that a browser does when loading a website from the internet
+
 **Before the class**
 
-> Please before start the class fork and clone [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3)
-
-## Index
+## Contents
 
 - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
   - [A real life example](#a-real-life-example)
@@ -95,9 +102,9 @@ third();
 As you can observe, functions in Javascript are asynchronous, the main code continues without waiting the function is finished.
 In some other programming languages, functions by default are synchronous.
 
-#### Exercise
+#### Exercise A (15 min)
 
-From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/A-timeout** do exercise.js
+In folder **InClass/A-timeout** do exercise.js
 
 ### Callbacks
 
@@ -152,9 +159,9 @@ function myCallbackFunction() {
 mainFunction(myCallbackFunction);
 ```
 
-#### Exercise
+#### Exercise B (15 min)
 
-From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/B-movies** do exercise.js
+In folder **InClass/B-movies** do exercise.js
 
 
 ## How does the web work?
@@ -190,6 +197,58 @@ There are two main types of requests: **GET** and **POST**.
 
 HTTP is the language of the internet. In our case we're using Javascript, but you can send HTTP requests with other laguages as well.
 
+### The Network Tab
+
+The network tab is a useful tool that helps us understand how content is loaded on a website.
+
+You can view it by `Right Click` > `Inspect` > `Network`.
+
+Take some time to look at the network tab when we open [this lesson](/js-core-2/week-3/lesson).
+
+The important parts of the the Network Tab are:
+
+- [Network Log](https://developers.google.com/web/tools/chrome-devtools/network#load)
+- Timeline View
+- [Resource Details](https://developers.google.com/web/tools/chrome-devtools/network#details)
+
+#### Exercise C-1 (10 min)
+
+> Let's take a look at GET requests in the Browser.
+>
+> Look at this repository here:
+>
+> - https://github.com/CodeYourFuture/Network-Tab-Example
+>
+> In your groups, you should try to work out what you expect to see in the Network tab when we look at it. You should create a list of the requests that will be made in this format.
+>
+> **You are not allowed to open the website in a browser**
+>
+> e.g.
+>
+> 1. GET index.html
+> 2. GET format.de
+> 3. GET otherfile.se
+> 4. ...
+>
+> When you have completed the list you should share it on Slack
+>
+> You can see the website online here
+>
+> - https://codeyourfuture.github.io/Network-Tab-Example/
+
+#### Exercise C-2 (10 min)
+
+> Let's take a look at POST requests in the Browser.
+>
+> You can see the website online here
+>
+> - https://codeyourfuture.github.io/Network-Tab-Example/
+>
+> At the bottom of the page you will see a series of buttons. When you click a button on the website it will send a POST request to a server.
+>
+> 1. **Using only the Network tab** work out which button is sending a post request.
+> 2. What is in the `body` of the post request?
+
 ### Fetch
 
 The interface through which browser JavaScript can make HTTP requests is called fetch. By default, fetch uses GET method.
@@ -213,8 +272,8 @@ fetch('https://fcc-weather-api.glitch.me/api/current?lat=35&lon=160')
 
 Get more information about fetch in [Developer Mozilla: Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-#### Exercise
+#### Exercise D (15 min)
 
-From [exercises-js2-week3 repo](https://github.com/Migracode-Barcelona/exercises-js2-week3) in folder **InClass/C-fetch** do exercise.js
+In folder **InClass/D-fetch** do exercise.js
 
 {% include "./homework.md" %}
