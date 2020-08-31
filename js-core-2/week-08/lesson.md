@@ -1,33 +1,37 @@
-![Draft lesson](https://img.shields.io/badge/status-draft-darkred.svg)
-
 # JavaScript Core II - 2
 
-**What we will learn today?**
+## Before the class
 
-After long days working on a black screen, with the only output of `console.log`...Today we will learn how to combine all this javascript knowledge
-with HTML and CSS in a browser, changing elements dynamically from user actions.
-
-**Before the class**
-
-> 1. Please before start the class fork and clone [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2)
-> 2. Open "A-dom-manipulation" project in VS code
-> 3. You will have to work on the `exercise.js` file for today's homework
-> 4. View your changes by
+> 1. Open in Visual Studio the repo the repository you forked last week
+> 2. Go to the folder _week-2/InClass/A-myfirstscript_
+> 3. Execute your first Website with javascript by
 >    - using [vscode-live-server](https://github.com/ritwickdey/vscode-live-server) plugin to get live updates of your changes.
 >      - Install the plugin
 >      - Right click on `index.html` and select "Open with Live Server"
 >    - or just open the `index.html` on your browser and refresh every time you change your code
 
+## Learning objectives
 
-## Index
+After long days working on a black screen, with the only output of `console.log`...But JavaScript was not meant to be run in `console.log`: it was meant to make web pages dynamic.
+Lots of websites are powered by JavaScript today, and some (like Facebook) cannot function at all without it: it's become that important to the look and feel of the website.
+
+Today we will learn how to combine all this javascript knowledge with HTML and CSS in a browser, changing elements dynamically from user actions.
+
+By the end of this lesson students should be able to:
+
+- Define what the DOM is and what it does
+- Use query selectors to retrieve elements from the DOM
+- Use event listeners to respond to events that happen on the DOM
+- Create DOM elements using JavaScript and add them to the DOM
+- Manipulate DOM elements using JavaScript to change their properties
+
+## Content
 
   - [The DOM](#the-dom)
   - [Access DOM elements](#access-dom-elements)
   - [Attach events to DOM elements](#attach-events-to-dom-elements)
   - [Create DOM elements](#create-dom-elements)
   - [Manipulate DOM elements](#manipulate-dom-elements)
-
----
 
 ### The DOM
 
@@ -47,7 +51,7 @@ Here are two examples, HTML and then JavaScript, of how the DOM might look like:
 ```
 
 ```js
-var document = {
+let document = {
   body: {
     h1: "Welcome",
     p: "Hello world!",
@@ -57,7 +61,32 @@ var document = {
 
 This is how we would represent the document hierarchy above as a tree of nodes:
 
-<img src="tree.png" alt="tree-representation" width="400"/>
+<img src={require('!file-loader!./tree.png').default}/>
+
+But how can we combine HTML and Javascript? The `<script>` tag allows us to include a piece of JavaScript in a HTML document.
+
+```js
+<h1>Testing alert</h1>
+<script>alert("hello!");</script>
+```
+
+Such a script will run as soon as its `<script>` tag is encountered while the browser reads the HTML. This page will pop up a dialog when opened—the alert function resembles prompt, in that it pops up a little window, only shows a message.
+
+Including large programs directly in HTML documents is often impractical. The `<script>` tag can be given an _src_ attribute to fetch a script file (a text file containing a JavaScript program) from a URL.
+
+```js
+<h1>Testing alert</h1>
+<script src="myfirstscript.js"></script>
+```
+
+The myfirstscript.js file includes a line with the `alert("hello!");`, and the result is exactly the same.
+
+#### Exercise A-1 (5 min)
+
+1. Look the files `index.html` and `myfirstscript.js` in the folder `week-2/InClass/A-myfirstscript`
+2. Execute the Visual Studio Live Server as explained at the beginning of this lesson
+3. See how the alert appears 
+4. Right a name in the input and click the button, right know you don't have to understand the code, but, what do you think the code is doing?
 
 ### Access DOM elements
 
@@ -69,51 +98,19 @@ document.querySelectorAll("p");
 ```
 
 Both `.querySelector` and `querySelectorAll` accept a CSS selector as an input.
-`.querySelector` selects only the first element it finds, `querySelectorAll` selects all elements (it returns an array).
+`.querySelector` selects only the first element it finds, `querySelectorAll` selects all elements (it returns a `NodeList`, which you can think of as being similar to an array; it is an ordered sequence of DOM elements which you can loop through like with an array. The difference is that many common array methods like `.map` or `.concat` can't be used on a `NodeList`. To turn a `NodeList` into an array, you can use `Array.from`, e.g. `let elementArray = Array.from(document.querySelectorAll("div"));`).
 
-We can use a `<script>` tag to add JavaScript code to an HTML page.
-You should put it in the last lines of the `<body>`
+#### Exercise B-1 (10 min)
 
-```js
-<html>
-  <head>
-  </head>
-  <body>
-    <h1 id="title">Hello HTML!</h1>
-
-    <script src="myfirstscript.js"></script>
-  </body>
-</html>
-```
-
-If the script is not in the same folder, in the src attribute you can lead the html to find the javascript file. The type and language attributes are not required. But use `type="text/javascript"` to define a javascript
-
-```js
-<script type="text/javascript" src="/js/myfirstscript.js"></script> 
-```
-
-And, how do we use the console.log() in the browser? Using the element panel, it is available in all browsers.
-
-Accessing element panel from Google Chrome is quite easy. All you do is head to the upper right side of your screen and click on the Menu bar -> More tools -> Developer tools.
-
-https://developers.google.com/web/tools/chrome-devtools/open
-
-When you access to it, you’ll see that it’s divided into different parts. Here’s a little breakdown of the most important parts:
-
-Elements: DOM panel is a tool used to change the page layout. You’ll have full control of HTML and CSS files and can modify them freely. 
-Console: panel will show you what’s new in developer tools. here is where you will see the output of console.log().
-
-
-#### Exercises
-
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task1 in exercise.js
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 1 explained in the file `exercise.js`
 
 ### Attach events to DOM elements
 
 Once you retrieve an element using `.querySelector`, you can attach an **event** to it. An event is any action that can be performed on that element. For now, we will just use the **click** event:
 
 ```js
-var myButton = document.querySelector("#myButton");
+let myButton = document.querySelector("#myButton");
 myButton.addEventListener("click", alertSomething);
 
 function alertSomething() {
@@ -123,31 +120,38 @@ function alertSomething() {
 
 You will notice in the example that we passed a second argument to `addEventListener`. That second argument is the **function** that we want to invoke when that event has happened.
 
-#### Exercises
+#### Exercise B-2 (10 min)
 
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task2 in exercise.js
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 2 explained in the file `exercise.js`
 
 The elements returned by `document.querySelector` have the same properties as a normal HTML element: for example, you can get access to their css **styles**.
 
 ```js
-var myElement = document.querySelector("#myElement");
+let myElement = document.querySelector("#myElement");
 myElement.style.backgroundColor = "red";
 ```
 
-#### Exercises
+#### Exercise B-3 (10 min)
 
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task3 in exercise.js
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 3 explained in the file `exercise.js`
 
 ### Create DOM elements
 
 Using the `document`, you can also create new elements. These elements will not appear until you append them as a child of another element though:
 
 ```js
-var paragraph = document.createElement("p"); // here we're just creating it, element is not visible yet
+let paragraph = document.createElement("p"); // here we're just creating it, element is not visible yet
 myElement.appendChild(paragraph); // now the element is added to our view, but it's empty
 ```
 
 `document.createElement` accepts as an input any element type. So for example `document.createElement("article")` will create a new article element.
+
+#### Exercise B-4 (10 min)
+
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 4 explained in the file `exercise.js`
 
 ### Manipulate DOM elements
 
@@ -158,12 +162,12 @@ paragraph.innerText = "How are you?"; // now we can see the text displaying on t
 ```
 
 We've been using `document.querySelector` to retrieve a single element.
-To retrieve an array of multiple elements (that match a specific class name for example, or a specific tag) we use `document.querySelectorAll`.
+To retrieve a list of multiple elements (that match a specific class name for example, or a specific tag) we use `document.querySelectorAll`.
 
 ```js
 //change the background of all the paragraph items on our page
-var paragraphs = document.querySelectorAll("p");
-for (var i = 0; i < paragraphs.length; i++) {
+let paragraphs = document.querySelectorAll("p");
+for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.backgroundColor = "blue";
 }
 ```
@@ -174,7 +178,7 @@ While it's really easy to change styles directly on elements using the `style` p
 
 ```js
 //before: <div id="myContainer"></div>
-var container = document.querySelector("#myContainer");
+let container = document.querySelector("#myContainer");
 container.className = "largeBlock";
 //after: <div id="myContainer" class="largeBlock"></div>
 ```
@@ -182,24 +186,34 @@ container.className = "largeBlock";
 To get the text from an Input field:
 
 ```js
-var updateTitleBtn = document.querySelector("#updateTitleBtn");
+let updateTitleBtn = document.querySelector("#updateTitleBtn");
 
 updateTitleBtn.addEventListener("click", function () {
-  var inputBox = document.querySelector("#titleInput");
-  var title = inputBox.value;
+  let inputBox = document.querySelector("#titleInput");
+  let title = inputBox.value;
 
-  var titleElement = document.querySelector("#lessonTitle");
+  let titleElement = document.querySelector("#lessonTitle");
   titleElement.innerText = title;
   inputBox.value = title;
 });
 ```
 
 The above waits for click on a button. When the button is clicked, it gets the input box element (`inputBox` variable).
-To get the entered text from it, we use the `value` property: `var title = inputBox.value`.
+To get the entered text from it, we use the `value` property: `let title = inputBox.value`.
 
-#### Exercises
+#### Exercise B-5 (10 min)
 
-From [exercises-js2-week2 repo](https://github.com/Migracode-Barcelona/exercises-js2-week2) in folder **InClass/A-dom-manipulation** do Task4, Task5 and Task6 in exercise.js
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 5 explained in the file `exercise.js`
+
+#### Exercise B-6 (10 min)
+
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 6 explained in the file `exercise.js`
+
+#### Exercise B-7 (10 min)
+
+1. Go to the folder `week-2/InClass/B-dom-manipulation`
+2. Complete the Task 7 explained in the file `exercise.js`
 
 {% include "./homework.md" %}
-
