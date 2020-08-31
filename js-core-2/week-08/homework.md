@@ -8,6 +8,6 @@
 # Practice Day (Saturday)
 
 1. Check together, solve doubts and fix the Homework exercises
-2. Complete the exercises in the folder `week-1/Homework`
-2. [Optional] Complete the exercises in the folder `week-1/Extra`
+2. Complete the exercises in the folder `week-2/Homework`
+2. [Optional] Complete the exercises in the folder `week-2/Extra`
 3. [Push](/others/git.html#commit-and-push-your-changes-to-github) the changes to your repository in Github
