@@ -16,8 +16,6 @@ By the end of this lesson students should be able to:
 - Explain how resources are loaded on the internet using GET and POST
 - List the steps that a browser does when loading a website from the internet
 
-**Before the class**
-
 ## Contents
 
 - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
@@ -203,7 +201,7 @@ The network tab is a useful tool that helps us understand how content is loaded 
 
 You can view it by `Right Click` > `Inspect` > `Network`.
 
-Take some time to look at the network tab when we open [this lesson](/js-core-2/week-3/lesson).
+Take some time to look at the network tab when we open [this lesson](/js-core-2/week-09/lesson.html).
 
 The important parts of the the Network Tab are:
 
@@ -275,5 +273,22 @@ Get more information about fetch in [Developer Mozilla: Using fetch](https://dev
 #### Exercise D (15 min)
 
 In folder **InClass/D-fetch** do exercise.js
+Going back to asynchronous programming, when the temperature will be printed?
+What if we have a code like this, predict the order of the console.log():
+
+```js
+console.log("Starting...");
+let URL = "https://fcc-weather-api.glitch.me/api/current?lat=35&lon=160";
+fetch(URL)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log("Temperature is: " + myJson.main.temp);
+  });
+console.log("Finishing...");
+```
+
+
 
 {% include "./homework.md" %}
