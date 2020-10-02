@@ -16,7 +16,11 @@
 
 # Introduction
 
-Basic information that **main instructors** should know:
+At MigraCode we believe, as we have always done, that finding professional programmers to deliver our course best prepares our students for professional life by giving them the most up to date knowledge and helping them build a network of developers for when they graduate.
+
+In [teachtogether.tech](https://teachtogether.tech/), you will find practical information to teach how to code.
+
+Basic information about our classes that **instructors** should know:
 
 ## Main instructors
 
