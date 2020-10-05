@@ -12,28 +12,7 @@
 - The learner should be able to use `DOM` manipulation to add content to the `DOM`
 - The learner should understand `window.onload` and `document.onload` and should be able to assign functions to run at specific life cycle events
 
-## Agenda
-
-The purpose of this class is to introduce to the student:
-
-1. Debugging Quiz
-2. How the web works
-3. What are `APIs` and how to interact with them
-4. How to use the `fetch` API to do AJAX calls
-
-## 1. Debugging Quiz
-
-Let's see what you remember from last week!
-
-_Answer in a thread on Slack_
-
-1. What are the four questions we ask ourselves in the Debugging Framework?
-2. What are three of the tools we could use to debug our programs?
-3. What is a `syntax` error?
-4. What is a `reference` error?
-5. What is a `type` error?
-
-## 2. How the web works - quick recap
+## 1. How the web works - quick recap
 
 In this session we will look at how computer talk to each other using the web.
 
@@ -41,7 +20,7 @@ At the core of the web is the URL, which stands for Uniform Resource Locator. We
 
 ### Methods
 
-The main methods used to send requests on the web are `GET` and `POST`. However, later in the course when we look at building APIs using Node we will also look at other methods such as `PUT`, `PATCH` and `DELETE`.
+The main methods used to send requests on the web are `GET` and `POST`. However, later in the course when we look at building APIs using Node we will also look at other methods such as `PUT` and `DELETE`.
 
 A `GET` method is a way of asking a server for a webpage, resource or a piece of data. For example, when we type a URL into a browser and submit it. The browser will send a `GET` request.
 
@@ -102,7 +81,7 @@ In Slack post answers to the following
 - What can an HTTP message contain?
 ```
 
-## 3. What are APIs and how to interact with them
+## 2. What are APIs and how to interact with them
 
 ### Explanation
 
@@ -186,12 +165,7 @@ Hint: Use your browser to access the endpoints
 
     Give an example of a company that uses an API to allow access to their data.
 
-**Question:**
-
-    What is the `myapi/` part of a url called in this url?
-    http://www.google.com/**myapi**/
-
-## 4. How to use `fetch` to do network requests
+## 3. How to use `fetch` to do network requests
 
 ### Explanation
 
@@ -297,58 +271,7 @@ fetch("https://httpstat.us/500")
   });
 ```
 
-#### Exercise
-
-In groups the students should create a page of details about the United Kingdom.
-
-The API endpoint can be found [here](https://restcountries.eu/rest/v2/name/Great%20Britain?fullText=true)
-
-The website should include
-
-- The name of the country
-- The country's capital city
-- An unordered list of the country's name in other all of the other returned languages
-
-##### Getting Started
-
-1. Go to [this Glitch Project](https://glitch.com/edit/#!/js3-2-country-exercise?path=README.md%3A3%3A80)
-2. Click `Remix to Start` to being working
-
-##### Steps
-
-Example `html` and `javascript` files can be found in the section below
-
-1. Create a `HTML`, `CSS` and `JavaScript` file to hold different types of code
-2. In your `HTML` file, write a simple basis for your website (e.g. [this](https://www.sitepoint.com/a-basic-html5-template/))
-   - Make sure all of your `HTML`, `CSS` and `JavaScript` files are linked together!
-3. Write a function using fetch that retrieves the `JSON` from the _Country API_
-   - To make sure it's working print the JSON to the console using `console.log()`
-4. Create a `h1` tag on the website using DOM manipulation and add the country's name inside it
-   - Go back to [Week 5](/js-core-2/week-2/lesson) if you need a reminder
-5. Create a `h2` tag on the website using DOM manipulation and add the capital city's name inside it
-6. Create a `ul` tag on the website using DOM manipulation
-   - For each of the translated names in the JSON, add a `li` tag
-7. Uncomment the lines inside `onLoad()` to load other countries details!
-
-**Extra**
-
-- Load the country's flag into an `img` tag
-- Add CSS to make your website look really nice
-- Add other information from the JSON to your Country Details
-
-##### Finished Example
-
-You can find the finished example of this website [here](https://codeyourfuture.github.io/completed-country-website/).
-
 #### Recap
-
-**Question (5 mins):**
-
-```
-Complete the following sentence:
-
-Fetch is a web API that allows you to **\_** from **\_**.
-```
 
 **Task (5 mins):**
 
@@ -359,9 +282,6 @@ Complete the rest of this code to connect to the following API: `https://dog.ceo
     .then(_____)
     .then(body => console.log(body))
     .catch(error => console.log(error));
-
-1. Post your code on Slack
-2. Post the image you retrieved on Slack
 ```
 
 ## Homework
