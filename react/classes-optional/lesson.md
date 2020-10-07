@@ -355,7 +355,7 @@ We can hook into this lifecycle through special component methods that are added
 
 This diagram shows the React component lifecycle:
 
-<img src={require('!file-loader!../assets/lifecycle.png').default}/>
+![](../assets/lifecycle.png)
 
 Let's look at how we can use one of the lifecycle methods ([interactive example](https://codesandbox.io/s/simple-class-component-lifecycle-m5z2v36x1y?file=/src/Lifecycle.js)):
 

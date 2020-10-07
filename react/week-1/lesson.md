@@ -43,11 +43,11 @@ React heavily relies on a concept called "components". Components are like small
 
 Let's have a look at an example: the GitHub header. What are the logical "pieces" of UI? What could be a component?
 
-<img src={require('!file-loader!../assets/components.png').default}/>
+![](../assets/components.png)
 
 Here we've highlighted some elements that could be components:
 
-<img src={require('!file-loader!../assets/components-highlighted.png').default}/>
+![](../assets/components-highlighted.png)
 
 ### Component tips
 
@@ -122,7 +122,7 @@ As you can see, this is much easier to read than both the straight `React.create
 
 Diagram of folder layout created by create-react-app. Click [here](https://excalidraw.com/#json=5666421027635200,SRigco8_OhrCb94QSj4Wow) for live diagram.
 
-<img src={require('!file-loader!../assets/diagram-of-folder-structure-for-create-react-app.png').default}/>
+![](../assets/diagram-of-folder-structure-for-create-react-app.png)
 
 ## React Components
 

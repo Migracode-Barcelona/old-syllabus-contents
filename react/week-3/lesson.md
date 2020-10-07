@@ -60,11 +60,11 @@ function MartianPhotoFetcher() {
 
 This is because React is synchronous, while `fetch` is asynchronous. If we look in the console, we'll see that the `imgSrc` will always be `null` when we try to render it. React will try to render before `fetch` has had time to get the data from the API.
 
-<img alt="Timeline of React rendering before data returned from the API" src={require('!file-loader!../assets/data-fetching-timeline-problem.png').default}/>
+![](../assets/data-fetching-timeline-problem.png)
 
 We need a way of running the `fetch` call **after** we have rendered for the first time, so that it is not _racing_ against React updating the DOM. Then once we have got the data back we can use state to tell React to re-render with the new data.
 
-<img alt="Timeline of React rendering before data returned from the API" src={require('!file-loader!../assets/data-fetching-timeline-solution.png').default}/>
+![](../assets/data-fetching-timeline-solution.png)
 
 The way we do this is with another Hook, provided by React. This one is called `useEffect`.
 
@@ -421,7 +421,7 @@ Now when the `photoDate` prop changes, React knows that the effect must be run a
 
 Here's a diagram showing when the `useEffect` callback will be run:
 
-<img src={require('!file-loader!../assets/when-will-use-effect-be-run.png').default}/>
+![](../assets/when-will-use-effect-be-run.png)
 
 To help you understand this better, try "playing computer" again, but this time think about what happens when we use `[props.photoDate]` for the dependencies argument. Think carefully about what changes with step 6 after we click the 2020 button.
 
@@ -444,7 +444,7 @@ This is because your React application is using the rules from [`eslint-plugin-r
 
 If you see a red squiggly line underneath your `useEffect` dependencies array, you can hover your mouse over and it will tell you which variable is missing so you can add it to the dependencies array. Here's an example:
 
-<img src={require('!file-loader!../assets/eslint-hooks-rule.png').default}/>
+![](../assets/eslint-hooks-rule.png)
 
 ## Working with forms in React
 
