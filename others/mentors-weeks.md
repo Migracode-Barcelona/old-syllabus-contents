@@ -5,17 +5,11 @@
 
 - [Week 0 - Introduction and basic setup](#week-0-introduction-and-basic-setup)
 - [HTML/CSS](#html-css)
-  - [Week 1 - Semantic HTML and CSS](#week-1-semantic-html-and-css) 
-  - [Week 2 - Responsive Web and layout](#week-2-responsive-web-and-layout) 
-  - [Week 3 - Bootstrap](#week-3-bootstrap)
 - [Javascript/Core I](#javascript-core-I)
-  - [Week 1 - Hello Javascript](#week-1-hello-javascript)
-  - [Week 2 - Expressions and Loops](#week-2-expressions-and-loops)
-  - [Week 3 - More arrays](#week-3-more-arrays)
 - [Javascript/Core II](#javascript-core-II)
-  - [Week 1 - Objects](#week-1-objects)
-  - [Week 2 - JS in the Browser](#week-2-js-in-the-browser)
-  - [Week 3 - More JS in the Browser](#week-3-more-js-in-the-browser)
+- [Javascript/Core III](#javascript-core-III)  
+- [React](#react)
+- [Node](#node)
 
 # Week 0 Introduction and basic setup
 
@@ -108,3 +102,50 @@ Be about yourself, a hobby or anything you like
   - Created by Manchester and Abdoulrazack
 
 ## Week 3 More JS in the Browser
+
+to be completed
+
+# React
+
+## Learning objectives
+
+By the end of the three lessons & homework, students should be able to build a React application:
+
+- Written with components
+  - Appropriately composed/nested
+  - Split across multiple files
+- Uses props to pass values between components
+  - Data like numbers/strings/objects/arrays
+  - Functions as event handlers
+- Uses state to react to user interaction
+  - E.g. a button can be clicked to increment a counter
+- That fetches data from an API
+  - Loading, success and error states are shown
+- Containing a form
+  - Form inputs that can be filled out by the user
+  - Can be submitted, triggering an update in the app
+
+### Out of scope
+
+These topics are considered out-of-scope:
+
+- Object-Orientated JavaScript (classes/inheritance)
+  - Details of `extends`/`super()` are not necessary to use React (they are an implementation detail of `Component` class), so don't go out of the way to teach this
+- Redux
+  - Want to focus on learning and practising the basics of React, before introducing new concepts
+  - Learning Redux will be easier once confident with React
+- CSS-in-JS
+- In depth functional programming
+
+## Resources
+
+### PokeDex Solution
+
+- [PokeDex In-Class - Exercise Solution - 05/06/2020](https://github.com/CodeYourFuture/pokedex-solution)
+  - Created by London and Ali Smith
+
+### CodeYourFuture Mentor's Notes
+
+- [Week 1](https://syllabus.codeyourfuture.io/react/week-1/instructors)
+- [Week 2](https://syllabus.codeyourfuture.io/react/week-2/instructors)
+- [Week 3](https://syllabus.codeyourfuture.io/react/week-3/instructors)
