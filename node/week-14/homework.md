@@ -1,3 +1,3 @@
 # Homework
 
-Complete the CMS Workshop
+Fork and clone the [node-challenge-chat-server](https://github.com/CodeYourFuture/node-challenge-chat-server)

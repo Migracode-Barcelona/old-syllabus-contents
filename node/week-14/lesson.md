@@ -1,173 +1,185 @@
-![](https://img.shields.io/badge/status-review-orange.svg)
-
 # Node - Week 2
 
----
+## Learning Objectives
 
-**Teaching this lesson?**
+By the end of this lesson students should be able to:
 
-Read the Mentors Notes [here](./mentors.md)
-
----
-
-## Contents
-
-- [HTTP](#HTTP)
-- [APIs](#apis)
-- [CORS](#CORS)
-- [Postman](#Postman-API-Client)
-- [Read POST and PUT](#Read-POST-and-PUT)
-- [Nodemon](#Nodemon)
-- [Workshop](#workshop)
+- Define what each part of CRUD is and what it does
+- Process a GET request using Express and Node to retrieve data from memory
+- Process a POST request using Express and Node and store data in memory
+- Process a DELETE request using Express and Node to remove data from memory
+- Install a third party library using `npm`
 
 ---
 
+## CRUD Continued
 
+So what will we build? we will build a **CRUD** API. CRUD stands for Create, Retrieve, Update, Delete. If you think about it, this is what most applications do:
 
-# HTTP
+- Create some "resources"
+- Retrieve them (GET them)
+- Update them
+- Delete them
 
-> It is a protocol that browser and the server uses to talk to each other
+Below are three in-class exercises which can be used to demonstrate parts of the API workshop below.
 
-![HTTP](../assets/http_diagram.png)
+### (1) Get Exercise
 
+This is an Teacher led exercise which can be used to show how we might retrieve an element by ID using a GET request.
 
-Respond with Hello World! on the homepage:
+#### Objective
 
-```js
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-```
+Change a quote API server to allow GETting a quote according to the given ID.
 
-Respond to POST request on the root route (/), the application’s home page:
+The id should be given in the URL structure like this:
 
-```js
-app.post('/', function (req, res) {
-  res.send('Got a POST request')
-})
-```
+> /quotes/2
 
-Respond to a PUT request to the /user route:
+You should use the starting project: [cyf-quotes-id-start](https://glitch.com/~cyf-quotes-id-start). This is because this project has quotes with IDs.
 
-```js
-app.put('/user', function (req, res) {
-  res.send('Got a PUT request at /user')
-})
-```
+When you remix the starting project, immediately rename it as your own.
 
-Respond to a DELETE request to the /user route:
+### (2) Post Exercise
 
-```js
-app.delete('/user', function (req, res) {
-  res.send('Got a DELETE request at /user')
-})
-```
+This is an Teacher led exercise which can be used to show how we might add an element to an array
 
-Read more on Mozilla's:
-- [An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-- [HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#HTTP_Messages)
+#### Objective
 
+Change a quote API server to allow POSTs of new quotes.
 
-# APIs
+The new quotes should be added to your quotes list, which is just an array in memory.
 
-APIs (Application Programming Interfaces) provide a way for applications to
-communicate with each other. We already consumed an API earlier in the day:
-**Github API**. We managed to _communicate_ with Github and get important
-information. We - the client - can use this information in a number of different
-ways. Our client, in this case, is a Web page but it could have easily been a
-Mobile Application, or a TV setbox etc...
+You can assume the POSTed quotes are all in the correct JSON format.
 
-> **Let's** watch this video about APIs -
-> [What is an API](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+The route should use the HTTP method POST and should use the URL:
 
-## REST API
+> /quotes
 
-[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) (REpresentational State Transfer) and RESTful APIs provide a convention and architecture for building APIs that is simple and scalable.
+You should use the starting project: [cyf-quotes-post-start](https://glitch.com/~cyf-quotes-post-start), NOT your own existing quote server. This is because our project has an HTML form for creating new quotes.
 
-There are many constraints and aspects to building a REST API, but one
-fundamental constraint is the use of a URL (Uniform Resource Locator) and HTTP
-Methods (GET, POST, PUT, DELETE etc..)
+When you remix our starting project, immediately rename it.
 
-In our _endpoint_ that we just created `/api/get-posts`, the _get_ part of the
-URL is redundant as the HTTP Method `GET` already tells that we are _GETting_ a
-_Resource_. The Resource in this case is called **posts**.
+Then you can visit / and submit the form there, when you are ready to try to submit new quotes!
 
-> **Watch**: [What is a REST API](https://www.youtube.com/watch?v=7YcW25PHnAA)
-> (up to 3 minutes)
->
-> Analyze the [TypeForm REST API](https://developer.typeform.com/create/reference/create-form/)
+### (3) Delete Exercise
 
-REST is a big topic that we will revisit again. The table below from Wikipedia
-shows how a typical RESTful API would look like.
+This is an Teacher led exercise which can be used to show how we might remove an element to an array
 
-![](../assets/REST.png)
-[Wikipedia](https://en.wikipedia.org/wiki/Representational_state_transfer#Uniform_interface)
+#### Objective
 
-For now, remember when building APIs, to use **Resource** names to identify your
-endpoints and make use of the **HTTP methods (Verbs)** to describe operations
-performed on those resources.
+Change a quote API server to allow updating a quote according to the given ID.
 
+The id should be given in the URL structure like this:
 
-# CORS
+/quotes/2
 
-Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. More info in [Wiki](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+You should use the `delete` HTTP method
 
-Certain "cross-domain" requests, are forbidden by default by the same-origin security policy. CORS defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request.
+You should use this starting project: [cyf-quotes-id-start](https://glitch.com/~cyf-quotes-id-start), NOT your own existing quote server. This is because this project has quotes with IDs.
 
-Express has a package to manage CORS, available through npm. 
+When you remix the starting project, immediately rename it as your own.
 
-Find in this [link](https://expressjs.com/en/resources/middleware/cors.html) information to install and use it in your server.
+## Workshop
 
+You can use this [Express Cheatsheet](https://github.com/nbogie/express-notes/blob/master/express-cheatsheet.md) to help you.
 
-# Postman API Client
+**API** stands for Application Programming Interface.
 
-Postman is a platform for API development. We can use the API Client to check and test our API, simplifying each step of building.
+Read this description of what an API from [How To Geek](https://www.howtogeek.com/343877/what-is-an-api/).
 
-https://www.postman.com/product/api-client/
+> Think of an API like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the restaurant prepares that food, and you don’t really need to.
+> Similarly, an API lists a bunch of operations that developers can use, along with a description of what they do. The developer doesn’t necessarily need to know how, for example, an operating system builds and presents a “Save As” dialog box. They just need to know that it’s available for use in their app.
 
-Add postman as a Chrome extension.
+An API does not have to be web-based. But in our work, since we are doing web development, we will work only with web based APIs, so you might as well hear the word **Web Service**, and we will communicate with those services using the protocol for Web: **HTTP**.
 
-When we use the methods POST and PUT, how do we read them from the server?
+> **Checkpoint:** Let us recap what we know about HTTP before continuing.
 
-# Read POST and PUT
+### Objective
 
-The contents of POST and PUT are hidden in the req object. You need to use express-formidable to be able to read them.
-Go to your terminal and install express-formidable:
+Our **API** will manage Beyoncé albums:
+
+- Create a new album,
+- Retrieve a list of albums or a single album,
+- Update an existing album's information
+- Delete an album
+
+We will build these endpoints:
+
+`GET /albums` should return all the albums
+`GET /albums/:albumId` should return a single album (that matches the passed albumId)
+`POST /albums` should save a new album
+`PUT /albums/:albumId` should update the album (that matches the passed albumId)
+`DELETE /albums/:albumId` should delete the album (that matches the passed albumId)
+
+### GET /Albums
+
+1. In `server.js` Add the endpoint for `GET /albums`.
 
 ```js
-$ npm install express-formidable --save
+const albumsData = [
+  {
+    albumId: "10",
+    artistName: "Beyoncé",
+    collectionName: "Lemonade",
+    artworkUrl100:
+      "http://is1.mzstatic.com/image/thumb/Music20/v4/23/c1/9e/23c19e53-783f-ae47-7212-03cc9998bd84/source/100x100bb.jpg",
+    releaseDate: "2016-04-25T07:00:00Z",
+    primaryGenreName: "Pop",
+    url:
+      "https://www.youtube.com/embed/PeonBmeFR8o?rel=0&amp;controls=0&amp;showinfo=0",
+  },
+  {
+    albumId: "11",
+    artistName: "Beyoncé",
+    collectionName: "Dangerously In Love",
+    artworkUrl100:
+      "http://is1.mzstatic.com/image/thumb/Music/v4/18/93/6d/18936d85-8f6b-7597-87ef-62c4c5211298/source/100x100bb.jpg",
+    releaseDate: "2003-06-24T07:00:00Z",
+    primaryGenreName: "Pop",
+    url:
+      "https://www.youtube.com/embed/ViwtNLUqkMY?rel=0&amp;controls=0&amp;showinfo=0",
+  },
+];
+
+app.get("/albums", function (req, res) {
+  res.send(albumsData);
+});
 ```
 
-Next, you need to require the express-formidable library so you can use it in your code.
+2. Test the endpoint with Postman. `GET /songs` should return a JSON reply with the array we specified.
+
+3. Add another item to the array and test that the `GET /songs` returns three items. (Remember you need to close the server `ctrl+c` and run it again `node server.js`)
+
+### Step 1: GET /albums/:albumId
+
+**Complete in-class (1) GET Exercise at this point**
+
+Sometimes, we do not want to _list_ all the information in one request, maybe we only want to get the information related to a single album. Imagine if we have a page to display the details of one album, we could call the server and get all albums then filter the one we need _client-side_, but would it not be more effective to tell the server to just return the one album we are interested in?
+
+Let us add a new endpoint to return only a single album `GET /albums/:albumId`. In this case, _albumId_ will tell us what album we can return so the call will be something like `GET /albums/10` and that will return the album with that has _albumId_ 10 ()
+
+This endpoint has something different. The endpoint `/albums/:albumId` has a _dynamic_ part, the _albumId_ will vary depending on what the client send. If we call `/albums/12` then albumId is 12, if we call `/albums/10` then we will return the album with albumId 10 and so on.
+
+How can we achieve that using `express` - `req.params` will have the value of
 
 ```js
-var formidable = require('express-formidable');
+app.get("/albums/:albumId", function (req, res) {
+  // req.params.albumId will match the value in the url after /albums/
+  console.log(req.params.albumId);
+  // now we can use the value for req.params.albumId to find the album requested
+  // how do we "find" something in an array
+
+  // finish the code yourself - it should end with res.send(album) where album is the single album you found  based on the id
+});
 ```
 
-After the server requires, add the instruction to use the module:
+### Step 1.1 - Install nodemon
 
-```js
-app.use(formidable());
-```
+It is a bit annoying that we have to _kill_ and _restart_ our server every time we want to test our changes. There is a handy **npm package** that can help us with that task.
 
-Then, check in your server how are you able to read what the client sent:
+`npm install --save-dev nodemon`
 
-```js
-app.post('/', function (req, res) {
-  console.log(req.fields);
-  res.send('Got a POST request')
-})
-```
-
-# Nodemon
-
-It is a bit annoying that we have to kill and restart our server every time we want to test our changes. There is a handy npm package that can help us with that task.
-
-```js
-$ npm install --save-dev nodemon
-```
-
-Make sure the package is added to your package.json, add this line to the script:
+Make sure the package is added to your _package.json_, add this line to the script:
 
 ```js
 scripts: {
@@ -176,54 +188,87 @@ scripts: {
 }
 ```
 
-now from your terminal, use the command npm run dev and that will run the server with nodemon which is a package that makes the server listen to code changes and automatically restart.
+now from your terminal, use the command `npm run dev` and that will run the _server_ with `nodemon` which is a package that makes the server listen to code changes and automatically restart.
 
+### Step 2: Add a new album
 
-# Exercise: CRUD
+**Complete in-class (2) Post Exercise at this point**
 
-So what will we build? we will build a CRUD API. CRUD stands for Create, Retrieve, Update, Delete. If you think about it, this is what most applications do:
+> Our analogy with the Restaurant menu is somewhat incomplete. In a restaurant, we only GET items from the menu. In the world of APIs, we also have the possibility to create items, we can provide _ingredients_ to create a new dish. In this case, we provide some data (a payload) and we use a different verb **POST** (Create) as opposed to GET.
 
-- Create some "resources"
-- Retrieve them (GET them)
-- Update them
-- Delete them
+`POST /albums` should save a new album and return `200` with JSON `{ success: true }` to the user.
 
-Taking the exercise from the last week:
+```js
+// notice .post (not .get)
+app.post("/albums", function (req, res) {
+  console.log("POST /albums route");
+});
+```
 
-1. Add an endpoint to the API server to allow GETting a vity according to the given ID. The id should be given in the URL structure like this: /citycrud/2
-2. Add an endpoint to allow POST new cities, the new cities should be added to your cities list, which is just an array in memory. The route should use the HTTP method POST and should use the URL: /citycrud
-3. Add an endpoint to the API server to allow update (PUT) a city according to the given ID. The id should be given in the URL structure like this:
-/citycrud/2
-4. Add an endpoint to the API server to allow delete a city according to the given ID. The id should be given in the URL structure like this:
-/citycrud/2
+Let's start by testing using Postman. Do a `POST` request to the endpoint and make sure it prints the console.log message we have added.
 
-Check all the endpoints using Postman
+> In Postman, change the request `method` to `POST` instead of `GET` and test our endpoint. It should log the message to the terminal but the request will hang because we did not end it, i.e. we did not say `res.send(something)`
 
+So what format does the client send the data with? It is up to us, but since we already are familiar with `json`, let us use it.
 
-# Workshop
+In order for our _server-side_ to receive and use the data sent by the client. We will need to install and use a **middleware**.
 
-In the next steps, we will building a **CMS (Content Management System)** - a
-system to write, publish and save blog posts. 
+> Middleware: We will cover middleware in more details in the next class. For now, imagine them piece of code that process a request and pass them to the next middleware until one of them returns a response (with `res.send` for example)
 
-Fork and Clone the [Node Girls Repo](https://github.com/node-girls/express-workshop), follow the instructions in this [link](https://node-girls.gitbook.io/intro-to-express/)
+[Express Body Parser](https://github.com/expressjs/body-parser#examples) makes it easier for our _endpoints_ to receive and understand different formats of data.
 
+First install the package: `npm install body-parser --save`
 
+```js
+const bodyParser = require("body-parser");
 
-## Resources
+app.use(bodyParser.json()); // before our routes definition
+```
 
-More about HTTP:
-[Tutsplus tutorial](https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039)
+Now we will receive the data as `req.body`.
 
-Take a look at the following links to learn more about Node.js.
+```js
+app.post("/albums", function (req, res) {
+  console.log("POST /albums route");
+  console.log(req.body);
+});
+```
 
-- Read: [The art of node](https://github.com/maxogden/art-of-node/#the-art-of-node)
-- Read: [Node Resources](https://node.cool#resources)
+> Exercise: Use Postman to `POST` this data to `/albums` endpoint.
 
-More about JSON:
+```json
+{
+  "albumId": "13",
+  "artistName": "Beyoncé",
+  "collectionName": "B'Day (Deluxe Edition)",
+  "artworkUrl100": "http://is5.mzstatic.com/image/thumb/Music/v4/6c/fc/6a/6cfc6a13-0633-f96b-9d72-cf56774beb4b/source/100x100bb.jpg",
+  "releaseDate": "2007-05-29T07:00:00Z",
+  "primaryGenreName": "Pop",
+  "url": "https://www.youtube.com/embed/RQ9BWndKEgs?rel=0&amp;controls=0&amp;showinfo=0"
+}
+```
 
-- https://en.wikipedia.org/wiki/JSON
-- https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+> Finish the code for the route `POST /albums` to add the album data to the albums list (how to amend to an array?)
 
+### Step 3: Delete an album
+
+**Complete in-class (3) DELETE Exercise at this point**
+
+Lets look back at our original objectives.
+
+> `DELETE /albums/:albumId` should delete the album (that matches the passed albumId)
+
+This means that `DELETE /albums/2` should delete an album with the id `2` and return `200` with JSON `{ success: true }` to the user.
+
+The code will look like this
+
+```js
+// notice .delete
+app.delete("/albums/:albumID", function (req, res) {
+  console.log("DELETE /albums route");
+});
+```
+
+Can you work out how to remove an album using this code?
 
 {% include "./homework.md" %}
