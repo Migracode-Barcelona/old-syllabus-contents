@@ -13,13 +13,10 @@ Read the Mentors Notes [here](./mentors.md)
 ## Contents
 
 - [Node Recap](#node-recap)
-- [Best Practices](#best-practices)
-- [Node Process Managers](#node-process-managers)
-- [REST](#rest)
-- [Security](#security)
 - [Authentication](#authentication)
-- [Deploying to Heroku](#Deploying-to-Heroku)
-- [Hotel Workshop](#hotel-workshop)
+- [Security](#security)
+- [Best Practices](#best-practices)
+- [Login Workshop](#login-workshop)
 
 ---
 
@@ -41,51 +38,46 @@ Middleware allow us to process requests to add functionalities that are not buil
 > - Express Documentation: [Using Middleware](https://expressjs.com/en/guide/using-middleware.html)
 > - Video: [body-parser](https://www.youtube.com/watch?v=vKlybue_yMQ) which makes it easier to work with POST requests and forms.
 
-### Routing
+## Authentication
 
 Routing refers to how an application’s endpoints (URIs) respond to the client requests. These are configured differently for each framework, and can range from basic configuration to very extensive for more complex use cases.
 
 Simple example
 
 ```js
-app.get("/", function (req, res) {
+app.get("/", function (request, response) {
   res.send("hello world");
 });
 ```
 
-More complicated example using `Passport.js` middleware for authentication
+Sometimes you need to add user functionality for your website. Example using `express-session` for authentication
 
 ```js
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) return next();
-  else res.redirect("/login");
-}
-
-app.get("/account", ensureAuthenticated, function (req, res) {
-  res.send("welcome user!");
+app.get('/', (request, response) => {
+    if (request.session.loggedin) {
+        response.send('Welcome back, ' + request.session.username + '!');
+    } else {
+        response.send('Please login to view this page!');
+    }
+    response.end();
 });
 ```
 
-> - Express Documentation: [Routing](https://expressjs.com/en/guide/routing.html)
+To understand express-session, we need to know first, what is a session and a cookie?
 
-## Best Practices
+- Session: is a single interval of time in which the user is authenticated.
+- Cookie: are used to collect identifying information about the user, such as Web surfing behavior or user preferences for a specific Web site, also are used to store user sessions. Depending on the management, Cookies are stored during a specified period of time, in the browser or in the hard drive
 
-Express have their own recommended [best practices page](https://expressjs.com/en/advanced/best-practice-performance.html)
+> - Read the [Basics on Authentication](https://www.sohamkamani.com/blog/2017/01/08/web-security-session-cookies/) to understand better the process.
 
-## Node Process Managers
+**Exercise:** Create a server using express-session by following the next [steps](https://www.geeksforgeeks.org/session-management-using-express-session-module-in-node-js/)
 
-These process managers monitor for any changes in your node.js application and automatically restart the server, perfect for development and production.
+> - Example: [express-session-example](https://medium.com/javascript-in-plain-english/storing-user-sessions-on-the-server-with-express-session-422fe11bc500)
+> - Documentation: [express-session](http://expressjs.com/en/resources/middleware/session.html)
 
-> Popular PMs include:
->
-> - [nodemon](http://nodemon.io/)
-> - [pm2](https://expressjs.com/en/advanced/pm.html#pm2)
-
-## REST
-
-REST is a convention of how to design your API, whether it is for your own frontend, or other frontends and clients.
-
-> - Read: Resource naming in [REST](http://www.restapitutorial.com/lessons/restfulresourcenaming.html) convention
+> For more information of other and more complex authentication methods read:
+> - [OAuth 2.0 Authorization Framework: Bearer Token Usage](https://tools.ietf.org/html/rfc6750)
+> - [Json Web Tokens](https://medium.com/@weinberger.ariel/json-web-token-jwt-the-only-explanation-youll-ever-need-cf53f0822f50)
 
 ## Security
 
@@ -99,80 +91,18 @@ Node has built in support for HTTPS, and once you have your own certificates you
 > - Read/Watch: [What is an SSL Certificate?](https://www.globalsign.com/en/ssl-information-center/what-is-an-ssl-certificate/)
 > - Read: [Heroku SSL](https://devcenter.heroku.com/articles/ssl)
 
-## Authentication
+## Best Practices
 
-Sometimes you need to add user functionality for your website. To do this you can make use of external libraries like [passport](www.passportjs.org) to add authentication to your website.
+Express have their own recommended [best practices page](https://expressjs.com/en/advanced/best-practice-performance.html)
 
-> For more information read:
->
-> - [OAuth 2.0 Authorization Framework: Bearer Token Usage](https://tools.ietf.org/html/rfc6750)
-> - [Bearer Strategy](https://github.com/jaredhanson/passport-http-bearer)
+### REST
 
+REST is a convention of how to design your API, whether it is for your own frontend, or other frontends and clients.
 
-# Deploying to Heroku
+> - Read: Resource naming in [REST](http://www.restapitutorial.com/lessons/restfulresourcenaming.html) convention
 
-Heroku is a cloud platform as a service (PaaS) that lets companies build,
-deliver, monitor, and scale apps. Developers use Heroku to deploy, manage, and
-scale modern apps. Heroku is fully managed, giving developers the freedom to
-focus on their core product without the distraction of maintaining servers,
-hardware, or infrastructure.
+## Login Workshop
 
-1. [Signup for an account](https://signup.heroku.com/) on Heroku
-   - It will send a verification to your email so make sure you've entered a
-     valid email
-1. Download the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-1. We need to do a small tweak to our app to be ready to be deployed on Heroku.
-
-On server.js, add the `process.env.PORT` bit of code
-
-```js
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Server is listening on port 3000. Ready to accept requests!");
-});
-```
-
-This tells our server to look for an **environment variable** called `PORT` and
-use it to run the server, otherwise use Port 3000. When the server runs on
-heroku, then Heroku sets the `PORT` to the correct value.
-
-`git add` and `commit` your change.
-
-4. Now open the command line in the folder where you have your
-   **express-workshop** repo running. If you run the command `git remote -v`,
-   you should see one remote **origin** pointing to your repo.
-
-Run these commands:
-
-`heroku login`
-
-> This will ask you for your heroku email and password that you used to
-> register.
-
-Once you're logged in:
-
-`heroku create`
-
-> The heroku create command creates a new application on Heroku – along with a
-> git remote that must be used to receive your application source.
-
-If you check `git remote -v`, you should see a second remote called **heroku**.
-
-Now push your code to heroku `git push heroku master`. The push will run few
-commands from Heroku, then you should see a url similar to
-`https://some-random-name-XXXX.herokuapp.com` - go to the URL and if all goes
-well, your app should be up and running.
-
-To read more about Heroku and deploying Node Apps to Heroku, check:
-
-1. [Deploying with Git](https://devcenter.heroku.com/articles/git)
-1. [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-
-## Hotel Workshop
-
-Get in to groups of 3/4 and checkout the [workshop brief](./workshop.html).
-
-> **Exercise**: Please fork and clone [CYF-Hotel](https://github.com/CodeYourFuture/cyf-hotel) repository and follow the exercises in the `README.MD`.
+Get in to groups of 3/4 and checkout the [login workshop](https://github.com/Migracode-Barcelona/migracode-users-session).
 
 {% include "./homework.md" %}
-
-{% include "../../others/escalation-policy.md" %}
