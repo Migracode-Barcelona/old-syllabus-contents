@@ -70,10 +70,87 @@ To understand express-session, we need to know first, what is a session and a co
 
 > - Read the [Basics on Authentication](https://www.sohamkamani.com/blog/2017/01/08/web-security-session-cookies/) to understand better the process.
 
-**Exercise:** Create a server using express-session by following the next [steps](https://www.geeksforgeeks.org/session-management-using-express-session-module-in-node-js/)
+**Exercise 1:** Create a server with the following code. What is the code doing? Tip: remember the steps to create a server
+
+```js
+const express = require("express") 
+const session = require('express-session') 
+const app = express() 
+    
+// Port Number Setup 
+var PORT = process.env.port || 3000 
+   
+// Session Setup 
+app.use(session({ 
+  
+    // It holds the secret key for session 
+    secret: 'Your_Secret_Key', 
+  
+    // Forces the session to be saved 
+    // back to the session store 
+    resave: true, 
+  
+    // Forces a session that is "uninitialized" 
+    // to be saved to the store 
+    saveUninitialized: true
+})) 
+   
+app.get("/", function(req, res){ 
+       
+    // req.session.key = value 
+    req.session.name = 'GeeksforGeeks'
+    return res.send("Session Set") 
+}) 
+   
+app.get("/session", function(req, res){ 
+   
+    var name = req.session.name 
+    return res.send(name) 
+   
+    /*  To destroy session you can use 
+        this function  
+     req.session.destroy(function(error){ 
+        console.log("Session Destroyed") 
+    }) 
+    */
+}) 
+    
+app.listen(PORT, function(error){ 
+    if(error) throw error 
+    console.log("Server created Successfully on PORT :", PORT) 
+}) 
+```
 
 > - Example: [express-session-example](https://medium.com/javascript-in-plain-english/storing-user-sessions-on-the-server-with-express-session-422fe11bc500)
 > - Documentation: [express-session](http://expressjs.com/en/resources/middleware/session.html)
+
+**Exercise 2:** Create a server with the following code. What is the code doing? After executing it, go to the Inspector, and analize the request headers...Set-Cookie should be there!
+
+```js
+const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const app = express();
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  cookie: {
+    maxAge: 24 * 60 * 60 * 365 * 1000
+  }
+}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get('/', (req, res) => {
+  if (req.session.views) {
+    req.session.views++;
+  }
+  else {
+    req.session.views = 1;
+  }
+  res.send(`${req.session.views} views`);
+})
+app.listen(3000);
+```
 
 > For more information of other and more complex authentication methods read:
 > - [OAuth 2.0 Authorization Framework: Bearer Token Usage](https://tools.ietf.org/html/rfc6750)
