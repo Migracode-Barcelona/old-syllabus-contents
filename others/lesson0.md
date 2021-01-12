@@ -6,7 +6,7 @@
 
 * [MigraCode](#migracode)
 * [Operating Systems](#operating_systems)
-* [The Command Line or Terminal](#the_command_line_or_terminal)
+* [The Command Line](#the_command_line)
 * [Visual Studio Code](#visual-studio-code)
 * [Git](#git)
 
@@ -77,7 +77,7 @@ Demo of Ubuntu:
 - The filesystem: we can navigate through folders and files using File Manager
 - Ubuntu software: a tool to install software easily
 
-## The Command Line or Terminal
+## The Command Line
 
 The **Command Line**, also knows as **Bash**, **Terminal** or **Shell** (**Línea de Comandos** ó **Símbolo de sistema** in Spanish) is a way of controlling a computer based on a text interface. 
 
