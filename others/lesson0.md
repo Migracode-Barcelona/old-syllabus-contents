@@ -106,7 +106,7 @@ find instructions for your operating system below.
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/gitbash.png"
+    src="assets/lesson-0/gitbash.PNG"
     width="400"
     alt="Windows Git Bash"
   />
@@ -135,7 +135,7 @@ Think of flags as accessories. You have your basic command like rm that deletes 
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/command-syntax.png"
+    src="assets/lesson-0/command-syntax.PNG"
     width="400"
     alt="Command Syntax"
   />
@@ -147,7 +147,7 @@ When you're stuck and need help with a Linux command, help is usually only a few
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/help.png"
+    src="assets/lesson-0/help.PNG"
     width="400"
     alt=""
   />
@@ -164,14 +164,14 @@ The first thing you usually want to do when learning about the Linux filesystem 
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/commands1.png"
+    src="assets/lesson-0/commands1.PNG"
     width="400"
     alt=""
   />
 </div>
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/commands2.png"
+    src="assets/lesson-0/commands2.PNG"
     width="400"
     alt=""
   />
@@ -183,7 +183,7 @@ These commands can be used to: find out information about files, display files, 
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/commands3.png"
+    src="assets/lesson-0/commands3.PNG"
     width="400"
     alt=""
   />
@@ -195,7 +195,7 @@ The following commands are used to find files. “ls” is good for finding file
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/commands4.png"
+    src="assets/lesson-0/commands4.PNG"
     width="400"
     alt=""
   />
@@ -207,7 +207,7 @@ Here are some other commands that are useful to know:
 
 <div style="text-align: center;">
   <img
-    src="assets/lesson-0/commands5.png"
+    src="assets/lesson-0/commands5.PNG"
     width="400"
     alt=""
   />
