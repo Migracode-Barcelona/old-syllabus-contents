@@ -5,13 +5,10 @@
 **What we will learn today?**
 
 * [MigraCode](#migracode)
-* [Environment](#your-new-working-environment)
-* [Development Tools](#development-tools)
-  * [Visual Studio Code](#visual-studio-code)
-  * [Terminal](#terminal)
-  * [Git](#git)
-* [First Project](#your-first-migracode-github-project)
-* [Homework](#homework)
+* [Operating Systems](#operating_systems)
+* [The Command Line or Terminal](#the_command_line_or_terminal)
+* [Visual Studio Code](#visual-studio-code)
+* [Git](#git)
 
 ---
 
@@ -27,9 +24,43 @@
   * How we work?
   * How we treat each other?
 
-## Your new working environment
+Welcome to MigraCode and to the world of Web Development!!!
 
-Welcome to MigraCode and to the world of Web Development! 
+## Operating Systems
+
+An Operating System (OS) is a powerful, and usually large, program that controls and manages the hardware and software on a computer. All computers and computer-like devices require operating systems, including laptops, tablets, desktops, and smartphones. The OS performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.
+
+Most common operating systems for desktop and laptop computers are:
+- Microsoft Windows (Windows 95, Windows 7, Windows 10,...), 
+- Linux (Debian, Red Hat, Ubuntu,..)
+- macOS
+- Chrome OS
+- Android and iOS are operating systems for mobile devices.
+
+### Unix
+
+Unix is ​​a family of operating systems. The first version was developed from 1969. Unix is ​​characterized by being portable and multitasking.
+
+Nowadays, Unix operating systems are widely used in a multitude of devices that range from the most capable supercomputers to the most popular mobile phones, through the computers that we use daily at our desks. The philosophy of Unix systems is characterized by:
+
+- a hierarchical file system,
+- a large collection of small programs that can work in series,
+- the use of text files to store the data,
+- treating devices as files.
+
+Linux and MacOS are examples of Unix systems.
+
+### Linux
+
+Linux is a family of Unix-like operating systems that use the Linux kernel.
+The name comes from the original programmer, a student named Linus Torvals, who in 1991, completing the GNU tools developed by the GNU project of the Free Software Foundation, created the first version of this operating system.
+
+Linux development is one of the clearest examples of free, open source software development by a diverse community of programmers all over the world. Anyone can use the operating system, study it and modify it. The open source nature of Linux is protected by the GPL (GNU General Public License).
+
+### Ubuntu
+
+Ubuntu is a Linux distribution. It is aimed at desktop users and its strengths are its ease of use and installation. Although the desktop is somewhat different from Windows or Mac OS, a user who is accustomed to any of the other operating systems will not have many problems becoming familiar with Ubuntu.
+Ubuntu is based on a maintained distribution by a community called Debian. Debian's main goal is to create a robust operating system that includes the largest possible proportion of free programs.
 
 If you are the ones that are using [Ubuntu](https://ubuntu.com/), an open-source operating system, you will see this sreen:
 
@@ -41,10 +72,163 @@ If you are the ones that are using [Ubuntu](https://ubuntu.com/), an open-source
   />
 </div>
 
-These are the tools that should be installed (in the computers we gave you everything is already installed):
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/)
-- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+Demo of Ubuntu:
+- The fiendly Desktop
+- The filesystem: we can navigate through folders and files using File Manager
+- Ubuntu software: a tool to install software easily
+
+## The Command Line or Terminal
+
+The **Command Line**, also knows as **Bash**, **Terminal** or **Shell** (**Línea de Comandos** ó **Símbolo de sistema** in Spanish) is a way of controlling a computer based on a text interface. 
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/ubuntu-bash.png"
+    width="400"
+    alt="Ubuntu Bash"
+  />
+</div>
+
+It will help you to interact with you computer faster, by helping you to:
+
+* Create and delete files.
+* Install web development tools.
+* Start a server.
+
+### How do I use it on my computer?
+
+So now that you know what the terminal can do for you, how do you use it? Please
+find instructions for your operating system below. 
+
+- MacOS: You can find the Terminal.app in your Applications, in the folder Utilities. An alternative way to open the Terminal is to search with Spotlight and type in “terminal”. Select the application called terminal and press the return key. This should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
+- Linux: You can open Terminal by directly pressing [ctrl+alt+T] or you can search it up by clicking the “Dash” icon, typing in “terminal” in the search box, and opening the Terminal application. Again, this should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
+- Windows: Windows has its own **Command Prompt**, it is very similar to the Unix command line, but some commands are not exactly the same, find the main differences in this [link](https://enexdi.sciencesconf.org/data/pages/windows_vs_mac_commands_1.pdf). Because of these differences and with theobjective to learn UNIX commands, we can use the **Git Bash**. Go to the Windows "Start" button and search the program **Git Bash**, once you open it you will see a screen like this one:
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/gitbash.png"
+    width="400"
+    alt="Windows Git Bash"
+  />
+</div>
+
+**Exercise:** After you have followed the instructions, open a terminal and write `ls`, then press the `Enter` key. What do you see?
+
+### Commonly used commands
+
+There's a set of commands you should become comfortable with during the course to allow you to effectively move around the filesystem and write software on your laptop.
+
+* `cd` - change directory. To move up into the parent directory use: `cd ..`
+* `ls` - list the contents of a directory. Can also be used as `ls [directory_name]` to list the contents of a specific directory without actually moving (with `cd`) to it
+* `pwd` - print the full location of your current directory
+* `mkdir [name]` - create a new directory, with the given `name` after a space
+* `touch [file_name]` - create a new file, with the given name (don't forget to add the extension, like `.css` or `.html`)
+* `rm [file_name]` - remove a file
+* `rm -r [directory_name]` - remove a directory (**and all files inside that directory**)
+
+To understand commands we need to understand the structure and how to look for help easily:
+
+#### Command Syntax
+
+Flags are a way to set options and pass in arguments to the commands you run. Commands you run will change their behavior based on what flags are set. You should read the documentation of each command to know what flags are available.
+Think of flags as accessories. You have your basic command like rm that deletes file and if you give him -r it learns to delete folders, if you give him -f it gets powers and can delete no matter what, and if you give him -rf it, well, it can delete folders no matter what.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/command-syntax.png"
+    width="400"
+    alt="Command Syntax"
+  />
+</div>
+
+#### Getting Help
+
+When you're stuck and need help with a Linux command, help is usually only a few keystrokes away! Help on most Linux commands is typically built right into the commands themselves, available through online help programs (“man pages” and “info pages”), and of course online.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/help.png"
+    width="400"
+    alt=""
+  />
+</div>
+
+### More commands
+
+#### Commands for Navigating the filesystem
+
+The first thing you usually want to do when learning about the Linux filesystem is take some time to look around and see what's there! These next few commands will: 
+- a) Tell you where you are, 
+- b) take you somewhere else, and 
+- c) show you what's there. The following table describes the basic operation of the pwd, cd, and ls commands, and compares them to certain DOS commands that you might already be familiar with.
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/commands1.png"
+    width="400"
+    alt=""
+  />
+</div>
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/commands2.png"
+    width="400"
+    alt=""
+  />
+</div>
+
+#### Working With Files and Directories
+
+These commands can be used to: find out information about files, display files, and manipulate them in other ways (copy, move, delete).
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/commands3.png"
+    width="400"
+    alt=""
+  />
+</div>
+
+#### Finding things
+
+The following commands are used to find files. “ls” is good for finding files if you already know approximately where they are, but sometimes you need more powerful tools such as these:
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/commands4.png"
+    width="400"
+    alt=""
+  />
+</div>
+
+#### Other Utilities
+
+Here are some other commands that are useful to know:
+
+<div style="text-align: center;">
+  <img
+    src="assets/lesson-0/commands5.png"
+    width="400"
+    alt=""
+  />
+</div>
+
+Some tips to be a master using commands:
+
+- Autocomplete: when you are writing the name of an existing command or folder, press TAB to automplete
+- History: press up-arrow to see the last commands you executed, so you don't have to write again the most used commands
+
+### Exercises
+
+Open a terminal and create the following structure
+
+### Videos and tutorials
+
+Watch, read and practice with these videos and tutorials:
+
+* [Tutorial: Terminal for Beginners!](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a)
+* [Basic commands tutorial 10 mins](https://youtu.be/vhZLTp6N4XA)
+* [Intro to Ubuntu and useful command tutorial 45 mins](https://youtu.be/KSh9-6FIu1w)
 
 ## Development Tools
 
@@ -109,50 +293,6 @@ without having to go through the tree view manually.
 * Set `editor.formatOnSave` and `editor.formatOnPaste` to true
 
 #### Open your VS project in a Browser with one click
-
-### Terminal
-
-During your course journey and onwards, the **terminal** (also known as
-**command line**) will be one of your most valuable tools. It will help you to
-interact with you computer faster, by helping you to:
-
-* Create and delete files.
-* Install web development tools.
-* Start a server.
-* Use source control (explained [later in this lesson](#git)).
-
-All this will make sense as we progress with the lessons. For now, we would like
-you to get familiar with it by following this tutorial:
-
-* [Learn the command line >](https://www.codecademy.com/learn/learn-the-command-line)
-
-#### How do I use it on my computer?
-
-So now that you know what the terminal can do for you, how do you use it? Please
-find instructions for your operating system below. After you have followed the
-instructions, open a terminal and write `ls`, then press the `Enter` key. You
-will see something like this:
-
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/terminal.png"
-    width="300"
-    alt="Terminal"
-  />
-</div>
-
-#### Commonly used commands
-
-There's a set of commands you should become comfortable with during the course to allow you to effectively move around the filesystem and write software on your laptop.
-
-* `cd` - change directory. To move up into the parent directory use: `cd ..`
-* `ls` - list the contents of a directory. Can also be used as `ls [directory_name]` to list the contents of a specific directory without actually moving (with `cd`) to it
-* `pwd` - print the full location of your current directory
-* `mkdir [name]` - create a new directory, with the given `name` after a space
-* `touch [file_name]` - create a new file, with the given name (don't forget to add the extension, like `.css` or `.html`)
-* `rm [file_name]` - remove a file
-* `rm -r [directory_name]` - remove a directory (**and all files inside that directory**)
-
 
 ### Git
 
