@@ -81,19 +81,15 @@ Demo of Ubuntu:
 
 The **Command Line**, also knows as **Bash**, **Terminal** or **Shell** (**Línea de Comandos** ó **Símbolo de sistema** in Spanish) is a way of controlling a computer based on a text interface. 
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/ubuntu-bash.png"
-    width="400"
-    alt="Ubuntu Bash"
-  />
-</div>
+![Ubuntu Bash](assets/lesson-0/ubuntu-bash.png)
 
-It will help you to interact with you computer faster, by helping you to:
+Ok, but why I should use it?
 
-* Create and delete files.
-* Install web development tools.
-* Start a server.
+* Once you know the basics, will help you to interact with you computer faster
+* Some software for developers shold be used from a terminal
+* You have more control to the software
+* It allow to create scripts (list of commands) and automate manual tasks
+* In movies they use it to be like a hacker
 
 ### How do I use it on my computer?
 
@@ -104,15 +100,9 @@ find instructions for your operating system below.
 - Linux: You can open Terminal by directly pressing [ctrl+alt+T] or you can search it up by clicking the “Dash” icon, typing in “terminal” in the search box, and opening the Terminal application. Again, this should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
 - Windows: Windows has its own **Command Prompt**, it is very similar to the Unix command line, but some commands are not exactly the same, find the main differences in this [link](https://enexdi.sciencesconf.org/data/pages/windows_vs_mac_commands_1.pdf). Because of these differences and with theobjective to learn UNIX commands, we can use the **Git Bash**. Go to the Windows "Start" button and search the program **Git Bash**, once you open it you will see a screen like this one:
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/gitbash.PNG"
-    width="400"
-    alt="Windows Git Bash"
-  />
-</div>
+![Windows Git Bash](assets/lesson-0/gitbash.PNG)
 
-**Exercise:** After you have followed the instructions, open a terminal and write `ls`, then press the `Enter` key. What do you see?
+After you have followed the instructions, open a terminal and write `ls`, then press the `Enter` key. What do you see?
 
 ### Commonly used commands
 
@@ -133,25 +123,13 @@ To understand commands we need to understand the structure and how to look for h
 Flags are a way to set options and pass in arguments to the commands you run. Commands you run will change their behavior based on what flags are set. You should read the documentation of each command to know what flags are available.
 Think of flags as accessories. You have your basic command like rm that deletes file and if you give him -r it learns to delete folders, if you give him -f it gets powers and can delete no matter what, and if you give him -rf it, well, it can delete folders no matter what.
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/command-syntax.PNG"
-    width="400"
-    alt="Command Syntax"
-  />
-</div>
+![Command Syntax](assets/lesson-0/command-syntax.PNG)
 
 #### Getting Help
 
 When you're stuck and need help with a Linux command, help is usually only a few keystrokes away! Help on most Linux commands is typically built right into the commands themselves, available through online help programs (“man pages” and “info pages”), and of course online.
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/help.PNG"
-    width="400"
-    alt=""
-  />
-</div>
+![Help](assets/lesson-0/help.PNG)
 
 ### More commands
 
@@ -162,56 +140,27 @@ The first thing you usually want to do when learning about the Linux filesystem 
 - b) take you somewhere else, and 
 - c) show you what's there. The following table describes the basic operation of the pwd, cd, and ls commands, and compares them to certain DOS commands that you might already be familiar with.
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/commands1.PNG"
-    width="400"
-    alt=""
-  />
-</div>
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/commands2.PNG"
-    width="400"
-    alt=""
-  />
-</div>
+![Commands1](assets/lesson-0/commands1.PNG)
+
+![Commands2](assets/lesson-0/commands2.PNG)
 
 #### Working With Files and Directories
 
 These commands can be used to: find out information about files, display files, and manipulate them in other ways (copy, move, delete).
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/commands3.PNG"
-    width="400"
-    alt=""
-  />
-</div>
+![Commands3](assets/lesson-0/commands3.PNG)
 
 #### Finding things
 
 The following commands are used to find files. “ls” is good for finding files if you already know approximately where they are, but sometimes you need more powerful tools such as these:
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/commands4.PNG"
-    width="400"
-    alt=""
-  />
-</div>
+![Commands4](assets/lesson-0/commands4.PNG)
 
 #### Other Utilities
 
 Here are some other commands that are useful to know:
 
-<div style="text-align: center;">
-  <img
-    src="assets/lesson-0/commands5.PNG"
-    width="400"
-    alt=""
-  />
-</div>
+![Commands5](assets/lesson-0/commands5.PNG)
 
 Some tips to be a master using commands:
 
@@ -220,7 +169,34 @@ Some tips to be a master using commands:
 
 ### Exercises
 
-Open a terminal and create the following structure
+**Exercise T-1:** Open a terminal and create the following structure:
+
+* terminal-exercises-1
+  * src
+    * css
+    * html
+
+To check out we can run ls with R option (ls -R) from folder /terminal-exercises-1   
+
+**Exercise T-2:** add files to the css and html folders, the final structure should be like:
+
+* terminal-exercises-1
+  * src
+    * css
+      * file1.css
+    * html
+      * file2.html
+
+**Exercise T-3:** go to the folder /terminal-exercises-1, create a file with the name index.html, once created move it to the folder /html
+The final structure should be like:
+
+* terminal-exercises-1
+  * src
+    * css
+      * file1.css
+    * html
+      * file2.html
+      * index.html
 
 ### Videos and tutorials
 
