@@ -2,7 +2,7 @@
 
 # Lesson 0
 
-**What we will learn today?**
+**What we will learn today**
 
 * [MigraCode](#migracode)
 * [Operating Systems](#operating_systems)
@@ -14,15 +14,15 @@
 
 ## MigraCode
 
-* Who we are?
-* What we learn?
+* Who we are
+* What we teach
   * Read this Technology Survey from
     [StackOverflow 2019](https://insights.stackoverflow.com/survey/2019). Pay
     particular attention to the technologies we'll be teaching you (JavaScript,
     React, NodeJS) and the evolution in the last years
 * [House Rules](house-rules.md)
-  * How we work?
-  * How we treat each other?
+  * How we work
+  * How we treat each other
 
 Welcome to MigraCode and to the world of Web Development!!!
 
@@ -30,8 +30,8 @@ Welcome to MigraCode and to the world of Web Development!!!
 
 An Operating System (OS) is a powerful, and usually large, program that controls and manages the hardware and software on a computer. All computers and computer-like devices require operating systems, including laptops, tablets, desktops, and smartphones. The OS performs all the basic tasks like file management, memory management, process management, handling input and output, and controlling peripheral devices such as disk drives and printers.
 
-Most common operating systems for desktop and laptop computers are:
-- Microsoft Windows (Windows 95, Windows 7, Windows 10,...), 
+The most common operating systems for desktop and laptop computers are:
+- Microsoft Windows (Windows 95, Windows 7, Windows 10,...)
 - Linux (Debian, Red Hat, Ubuntu,..)
 - macOS
 - Chrome OS
@@ -39,9 +39,9 @@ Most common operating systems for desktop and laptop computers are:
 
 ### Unix
 
-Unix is ​​a family of operating systems. The first version was developed from 1969. Unix is ​​characterized by being portable and multitasking.
+Unix is ​​a family of operating systems. The first version was developed starting in 1969. Unix is ​​characterized by being portable and multitasking.
 
-Nowadays, Unix operating systems are widely used in a multitude of devices that range from the most capable supercomputers to the most popular mobile phones, through the computers that we use daily at our desks. The philosophy of Unix systems is characterized by:
+Unix operating systems are widely used in a multitude of devices that range from the most capable supercomputers to the mobile phones and computers that we use daily. The philosophy of Unix systems is characterized by:
 
 - a hierarchical file system,
 - a large collection of small programs that can work in series,
@@ -53,16 +53,16 @@ Linux and MacOS are examples of Unix systems.
 ### Linux
 
 Linux is a family of Unix-like operating systems that use the Linux kernel.
-The name comes from the original programmer, a student named Linus Torvals, who in 1991, completing the GNU tools developed by the GNU project of the Free Software Foundation, created the first version of this operating system.
+The name comes from the original programmer, a student named Linus Torvals, who in 1991, working with the GNU project of the Free Software Foundation, created the first version of this operating system.
 
 Linux development is one of the clearest examples of free, open source software development by a diverse community of programmers all over the world. Anyone can use the operating system, study it and modify it. The open source nature of Linux is protected by the GPL (GNU General Public License).
 
 ### Ubuntu
 
-Ubuntu is a Linux distribution. It is aimed at desktop users and its strengths are its ease of use and installation. Although the desktop is somewhat different from Windows or Mac OS, a user who is accustomed to any of the other operating systems will not have many problems becoming familiar with Ubuntu.
+Ubuntu is a Linux distribution. It is an open-source operating system aimed at desktop users, and its strengths are that it is easy to use and install. Although the desktop is somewhat different from Windows or Mac OS, a user who is accustomed to any of these operating systems will not have many problems becoming familiar with Ubuntu.
 Ubuntu is based on a maintained distribution by a community called Debian. Debian's main goal is to create a robust operating system that includes the largest possible proportion of free programs.
 
-If you are the ones that are using [Ubuntu](https://ubuntu.com/), an open-source operating system, you will see this sreen:
+If you are using [Ubuntu](https://ubuntu.com/), you will see this sreen:
 
 <div style="text-align: center;">
   <img
@@ -73,32 +73,31 @@ If you are the ones that are using [Ubuntu](https://ubuntu.com/), an open-source
 </div>
 
 Demo of Ubuntu:
-- The fiendly Desktop
-- The filesystem: we can navigate through folders and files using File Manager
+- The friendly Desktop
+- The filesystem: navigate through folders and files using File Manager
 - Ubuntu software: a tool to install software easily
 
 ## The Command Line
 
-The **Command Line**, also knows as **Bash**, **Terminal** or **Shell** (**Línea de Comandos** ó **Símbolo de sistema** in Spanish) is a way of controlling a computer based on a text interface. 
+The **Command Line**, also knows as **Bash**, **Terminal** or **Shell** (**Línea de Comandos** ó **Símbolo de sistema** in Spanish) is a way of controlling a computer, based on a text interface. 
 
 ![Ubuntu Bash](assets/lesson-0/ubuntu-bash.png)
 
-Ok, but why I should use it?
+Why should I use the command line/terminal?
 
-* Once you know the basics, will help you to interact with you computer faster
-* Some software for developers shold be used from a terminal
-* You have more control to the software
-* It allow to create scripts (list of commands) and automate manual tasks
-* In movies they use it to be like a hacker
+* Once you know the basics, it helps you to interact with you computer faster
+* Some software for developers must always be used from a terminal
+* You have more control over the software
+* It allows you to create scripts (lists of commands) and automate manual tasks
+* It is what hackers use in movies.
 
-### How do I use it on my computer?
+### How do I use the terminal on my computer?
 
-So now that you know what the terminal can do for you, how do you use it? Please
-find instructions for your operating system below. 
+Here are the instructions for the three operating system: 
 
 - MacOS: You can find the Terminal.app in your Applications, in the folder Utilities. An alternative way to open the Terminal is to search with Spotlight and type in “terminal”. Select the application called terminal and press the return key. This should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
-- Linux: You can open Terminal by directly pressing [ctrl+alt+T] or you can search it up by clicking the “Dash” icon, typing in “terminal” in the search box, and opening the Terminal application. Again, this should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
-- Windows: Windows has its own **Command Prompt**, it is very similar to the Unix command line, but some commands are not exactly the same, find the main differences in this [link](https://enexdi.sciencesconf.org/data/pages/windows_vs_mac_commands_1.pdf). Because of these differences and with theobjective to learn UNIX commands, we can use the **Git Bash**. Go to the Windows "Start" button and search the program **Git Bash**, once you open it you will see a screen like this one:
+- Linux: You can open the Terminal by directly pressing [ctrl+alt+T] or you can search for it by clicking the dash (#) icon, typing in “terminal” in the search box, and opening the Terminal application. This should open up an app with a black background. When you see your username followed by a dollar sign, you’re ready to start using the command line.
+- Windows: Windows has its own **Command Prompt**. It is very similar to the Unix command line, but some commands are not exactly the same. For the main differences go to this [link](https://enexdi.sciencesconf.org/data/pages/windows_vs_mac_commands_1.pdf). Because of these differences, and because we want to learn UNIX commands, we use the **Git Bash**. Go to the Windows "Start" button and search the program **Git Bash**. When you open it you will see a screen like this one:
 
 ![Windows Git Bash](assets/lesson-0/gitbash.PNG)
 
@@ -106,12 +105,12 @@ After you have followed the instructions, open a terminal and write `ls`, then p
 
 ### Commonly used commands
 
-There's a set of commands you should become comfortable with during the course to allow you to effectively move around the filesystem and write software on your laptop.
+There's a set of commands you will become comfortable with during the course. These commands allow you to effectively move around the filesystem and write software on your laptop.
 
-* `cd` - change directory. To move up into the parent directory use: `cd ..`
+* `cd` - change directory. To move up one level and into the parent directory use: `cd ..`
 * `ls` - list the contents of a directory. Can also be used as `ls [directory_name]` to list the contents of a specific directory without actually moving (with `cd`) to it
-* `pwd` - print the full location of your current directory
-* `mkdir [name]` - create a new directory, with the given `name` after a space
+* `pwd` - present working directory: print the full location of your current directory
+* `mkdir [name]` - make directory: create a new directory, with the given `name` after a space
 * `touch [file_name]` - create a new file, with the given name (don't forget to add the extension, like `.css` or `.html`)
 * `rm [file_name]` - remove a file
 * `rm -r [directory_name]` - remove a directory (**and all files inside that directory**)
