@@ -118,10 +118,19 @@ There's a set of commands you will become comfortable with during the course. Th
 
 #### Command Syntax and using flags
 
-Flags are a way to set options for the commands you run. Commands you run will change their behavior based on what flags are set. You should read the documentation of each command to know what flags are available.
+Commands can be run by themselves or you can pass in additional arguments to make them do different things. For this, you us flags. Flags are a way to set options and the commands you run will change their behavior based on what flags are set. You should read the documentation of each command to know what flags are available.
 Think of flags as accessories. You have your basic command like rm (remove) that deletes a file. If you add -r (stands for recursive), the command rm -r deletes a folder plus all subfolders and files inside them. If you add -f (stands for force), the command rm -f removes everything you ask. 
 
-![Command Syntax](assets/lesson-0/command-syntax.PNG)
+**Syntax** `command [-argument] [-argument] [--argument] (filename)`  
+
+Example | Flags
+--------|-------
+`ls` | List all files in current directory
+`ls -l` | List files in long format
+`ls -l --color` | As above, with colorized output
+`cat filename` | Show contents of a file
+`cat -n filename` | Show contents of a file, with line numbers
+
 
 #### Getting Help
 
