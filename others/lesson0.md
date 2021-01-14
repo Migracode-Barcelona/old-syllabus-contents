@@ -107,9 +107,9 @@ After you have followed the instructions, open a terminal and write `ls`, then p
 
 There's a set of commands you will become comfortable with during the course. These commands allow you to effectively move around the filesystem and write software on your laptop.
 
-* `cd` - change directory. To move up one level and into the parent directory use: `cd ..`
+* `cd` - change directory. To move up one folder level and into the parent directory use: `cd ..`
 * `ls` - list the contents of a directory. Can also be used as `ls [directory_name]` to list the contents of a specific directory without actually moving (with `cd`) to it
-* `pwd` - present working directory: print the full location of your current directory
+* `pwd` - print working directory: print the full location of the folder you are working in
 * `mkdir [name]` - make directory: create a new directory, with the given `name` after a space
 * `touch [file_name]` - create a new file, with the given name (don't forget to add the extension, like `.css` or `.html`)
 * `rm [file_name]` - remove a file
