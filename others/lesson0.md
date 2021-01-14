@@ -120,7 +120,6 @@ There's a set of commands you will become comfortable with during the course. Th
 
 Flags are a way to set options for the commands you run. Commands you run will change their behavior based on what flags are set. You should read the documentation of each command to know what flags are available.
 Think of flags as accessories. You have your basic command like rm (remove) that deletes a file. If you add -r (stands for recursive), the command rm -r deletes a folder plus all subfolders and files inside them. If you add -f (stands for force), the command rm -f removes everything you ask. 
-, if you give him -f it gets powers and can delete no matter what, and if you give him -rf it, well, it can delete folders no matter what.
 
 ![Command Syntax](assets/lesson-0/command-syntax.PNG)
 
