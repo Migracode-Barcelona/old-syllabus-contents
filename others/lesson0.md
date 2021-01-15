@@ -134,7 +134,7 @@ Example | Flags
 
 #### Getting Help
 
-When you're stuck and need help with a Linux command, help is usually only a few keystrokes away! Help on most Linux commands is typically built right into the commands themselves, available through online help programs (“man pages” and “info pages”), and of course online.
+When you're stuck and need help with a command, help is usually only a few keystrokes away. Help on most commands is built right into the commands themselves, available through online help programs (such as <https://linux.die.net/man>), and of course online.
 
 ![Help](assets/lesson-0/help.PNG)
 
