@@ -136,26 +136,51 @@ Example | Flags
 
 When you're stuck and need help with a command, help is usually only a few keystrokes away. Help on most commands is built right into the commands themselves, available through online help programs (such as <https://linux.die.net/man>), and of course online.
 
-![Help](assets/lesson-0/help.PNG)
+**Using a command's built-in help**  
+Many (but not all) commands have simple help screens that can be called with special command flags. These flags usually look like `-h` or `--help`.  
+Example: `grep --help`
+
+**Online manuals: the man pages**  
+The best source of information for most commands are the manual pages, also known as the man pages. To read a command's man page, type `man *command*`.  
+
+Example | Info
+--------|-------
+`man ls` | Get help on the ls command
+`man man` | Get the manual for info on the manual!
+
 
 ### More commands
 
 #### Commands for Navigating the filesystem
 
-The first thing you usually want to do when learning about the Linux filesystem is take some time to look around and see what's there! These next few commands will: 
-- a) Tell you where you are, 
-- b) take you somewhere else, and 
-- c) show you what's there. The following table describes the basic operation of the pwd, cd, and ls commands, and compares them to certain DOS commands that you might already be familiar with.
+The first thing you need to do when learning about the filesystem is to take some time to look around. These next few commands will: 
+1. Tell you where you are, 
+1. take you somewhere else, and 
+1. show you what's there. 
 
-![Commands1](assets/lesson-0/commands1.PNG)
+The following table describes the basic operation of the pwd, cd, and ls commands, and compares them to certain DOS commands in case you are already familiar with those (if you do not know any DOS commands, just ignore that part of the table).
 
-![Commands2](assets/lesson-0/commands2.PNG)
+Command | DOS command | Description
+--------|-------------|------------
+`pwd` | `cd` | print working directory: shows current location
+`cd` | `cd`, `chdir` | change directory; returns to the home directory
+`cd directory` | `cd directory` | change into the specified directory
+`cd ~` |  | ~ means home directory; shortcut to the home directory
+`cd ..` | `cd ..` | move up one directory
+`cd -` |  | returns to the directory of your previous location
+`ls` | `dir /w` | list all files in current directory
+`ls directory` | `dir directory` | list all files in the specified directory
+`ls -l` | `dir` | list all files in long format: one file per line, with info about the file
+`ls -a` | `dir /a` | list all files, including hidden files (= filenames that start with .)
+`ls -ld directory` |  | show detailed information about the directory
+`ls /usr/bin/d*` | `dir d*.*` | list all files starting with d in the `/usr/bin` directory
+
 
 #### Working With Files and Directories
 
-These commands can be used to: find out information about files, display files, and manipulate them in other ways (copy, move, delete).
+These commands can be used to find information about files, display files, and to manipulate files in other ways for example, copy, move, or delete.
 
-![Commands3](assets/lesson-0/commands3.PNG)
+
 
 #### Finding things
 
