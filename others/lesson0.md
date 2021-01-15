@@ -424,7 +424,7 @@ In the process, you will learn how to store your code outside CodePen's website,
 
 1. Export your website as a zip file from CodePen. [Help >](https://blog.codepen.io/documentation/features/exporting-pens/)
 2. Extract the contents of the zip file to a folder on your computer. **Make a note** of the location of this folder.
-3. Put the contents of the this folder in a Github repository. To do this, you first need to create a new repository in your account on GitHub that has exactly the same name as the folder of the website on your computer. Upload the code from your computer into your GitHub repository, by using the `git add .`, `git commit -m "Your message"` and `git push` commands.
+3. Upload the contents of this folder to a Github repository. To do this, you first need to create a new repository in your account on GitHub that has exactly the same name as the folder of the website on your computer. To upload the code from your computer into your GitHub repository: make sure you are in the directory where you have your website code (use `cd` to get into that directory). Then use the `git add .`, `git commit -m "Your message"` and `git push` commands as explained.
 4. You should now have a repository with your code in your GitHub account: `http://github.com/your-username/your-repository-name`. Here you can see your code, and there should be an overview of your files, including an `index.html` file.
 
 ### How to publish your website in Github.io with GitHub Pages
@@ -466,4 +466,4 @@ In the process, you will learn how to store your code outside CodePen's website,
 * Add, commit and push your changes to Github and check that the changes are applied in the published version.
 
 It's alright if you get stuck or if something doesn't look right! When
-that happens, please ask your teachers or classmates for help in Slack, or use the #support-technical channel.
+that happens, please ask your teachers or classmates for help in Slack, or use the **#support-technical** channel.
