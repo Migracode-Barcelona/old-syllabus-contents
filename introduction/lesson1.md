@@ -306,9 +306,3 @@ We introduced a few new things in this class, and it can be a bit confusing to k
 ## Homework
 
 {% include "./homework1.md" %}
-
-## Feedback
-
-It's really helpful if you give us feedback for this lesson. This helps us improve it for future students!
-
-<Feedback module="Git" week="Week 1" />
