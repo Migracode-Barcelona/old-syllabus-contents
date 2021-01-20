@@ -268,6 +268,26 @@ without having to go through the tree view manually.
 * Search for `editor format`
 * Set `editor.formatOnSave` and `editor.formatOnPaste` to true
 
+#### Use the Terminal from Visual Code
+
+You can open a Terminal in the same Visual Code window, just to to Terminal>New Terminal
+
+Important: if you are using Windows, the default Terminal is the Windows console, follow this [guide](https://medium.com/danielpadua/git-bash-with-vscode-593d5998f6be) to open instead the Git Bash
+
+#### Extensions
+
+You can install extensions to Visual Code to improve even more the management of your code.
+Click the Extensions option in the left navbar and install your favourite extensions ([guide](https://code.visualstudio.com/docs/editor/extension-gallery))
+
+Recommended extensions:
+
+- Babel JavaScript
+- CSS Intellisense
+- vscode-file-peek
+- bracket-pair-colorizer
+- gitlens
+- markdown-all-in-one
+
 #### Open your VS project in a Browser with one click
 
 ### Git

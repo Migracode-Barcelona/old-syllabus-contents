@@ -3,7 +3,8 @@
 ### Course
 
 - Before you start
-  - [Week 0 - Introduction and basic setup](/others/lesson0.md)
+  - [Week 1 - Introduction and terminal](/introduction/lesson0.md)
+  - [Week 2 - Git and Github](/introduction/lesson1.md)  
   - [House Rules](/others/house-rules.md)
   - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [HTML/CSS](/html-css/index.md)
