@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/status-review-orange.svg)
 
-# Lesson 0
+# Introduction
 
 **What we will learn today?**
 
