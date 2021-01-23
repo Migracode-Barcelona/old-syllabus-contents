@@ -32,7 +32,7 @@ Which parts are the **Tags** and which parts are the **Attributes**.
 
 HTML tags are arranged in a hierarchy. This is sometimes called "nesting" tags or creating an HTML "tree". Between the opening `<article>` tag and the closing `</article>` tag there are three other tags. We call these "child" tags, because they have a parent-child relationship.
 
-<img src={require('!file-loader!../assets/html-hierarchy.png').default}/>
+![Html hierarchy](../assets/html-hierarchy.png)
 
 ### Exercise (5 minutes)
 
@@ -54,12 +54,9 @@ As a group, let's try to name all of the parent and child tags in the following 
 
 In today's class, we will begin adapting styles on this example website. We'll review some of the HTML/CSS basics you already encountered during your application process and learn some new techniques. By the end of the third lesson, we will have worked together to improve the example site on the left so that it looks like the screenshot on the right.
 
-<a href="../assets/screenshot-start.png" target="blank">
- <img src={require('!file-loader!../assets/screenshot-start.png').default}/>
-</a>
-<a href="../assets/screenshot-complete.png" target="blank">
- <img src={require('!file-loader!../assets/screenshot-complete.png').default}/>
-</a>
+![Start](../assets/screenshot-start.png)
+
+![Complete](../assets/screenshot-complete.png)
 
 The example website you'll begin working with is available on this Code Your Future GitHub repository -
 [Bikes for Refugees](https://github.com/CodeYourFuture/bikes-for-refugees). Fork the repository to your personal account and then clone the repository
