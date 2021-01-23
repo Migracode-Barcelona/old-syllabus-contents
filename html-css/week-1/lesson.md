@@ -160,11 +160,8 @@ Use a transparent border so that the width of each navigation menu item stays th
 
 ## CSS Project (60 minutes+)
 
-In this repository you will find a CSS Project for you to complete using what you've learnt so far today.
-
-Work in pairs to complete all the mistakes in the project and fix them.
-
-[Zoo Project](https://github.com/CodeYourFuture/HTML-CSS-Challenges/tree/main/zoo-css-challenge)
+1. In this repository you will find a CSS Project for you to complete using what you've learnt so far today. Fork it [Zoo project repository](https://github.com/CodeYourFuture/HTML-CSS-Challenges) to your GitHub account.
+2. Clone it to your computer and complete all the mistakes in the project and fix them by following these instructions [Zoo Project Readme](https://github.com/CodeYourFuture/HTML-CSS-Challenges/tree/main/zoo-css-challenge)
 
 {% include "./homework.md" %}
 
