@@ -9,9 +9,6 @@
 - [Box model: `margin`/`padding`/`border` etc...](#box-model)
 
 ---
-**Separation of Concerns:** In computer science, separation of concerns (SoC) is a design principle for separating a computer program into distinct sections, such that each section addresses a separate concern. (Wikipedia)
-
-> **Principles** - During the course, we will highlight principles that apply to the specific topic but also to Computer Science and Programming in general. It is important to understand these principles, terms and apply them to your thinking in general.
 
 ## HTML Syntax
 
@@ -88,9 +85,7 @@ We'll cover the following semantic tags:
 
 ### Exercise (10 minutes)
 
-_Paired Programming Challenge_
-
-Work in pairs to determine where to place these new Tags and Attributes in the index.html file. Who benefits when we write "semantic" HTML?
+Determine where to place these new Tags and Attributes in the index.html file. Who benefits when we write "semantic" HTML?
 
 ## CSS Selectors
 
@@ -100,9 +95,7 @@ During your application process, you became familiar with CSS selectors. We'll r
 
 ### Exercise (10 minutes)
 
-_Paired Programming Exercise_
-
-Work in pairs to make the blue buttons on the page red (`#ce5f31`). The white button, which says "Volunteer", should remain white but the text should change to red.
+Make the blue buttons on the page red (`#ce5f31`). The white button, which says "Volunteer", should remain white but the text should change to red.
 
 ## Pseudo Classes
 
